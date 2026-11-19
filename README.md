@@ -406,7 +406,7 @@ Potential functionality includes:
 
 ## **Documentation**
 
-- Forge:  https://github.com/LeighDev92/Forge/wiki
+- Forge:  https://leighdev92.github.io/Forge/index.html
 - Dear ImGui: https://github.com/ocornut/imgui/wiki
 
 ## **Example Project - Lunar Orbiter**
