@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "951b9ef1f8870037",
+        "id": "ec948d6d748c5999",
         "type": "tabs",
         "children": [
           {
-            "id": "3e158cd795ec63a0",
+            "id": "09e75931b960bbf4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -188,12 +188,22 @@
       "bases:Create new base": false
     }
   },
-  "active": "3e158cd795ec63a0",
+  "active": "09e75931b960bbf4",
   "lastOpenFiles": [
+    "html/_input_manager_8h.html",
+    "html/search/typedefs_1.js",
+    "html/search/typedefs_0.js",
+    "html/search/variables_5.js",
+    "html/search/variables_4.js",
+    "html/search/variables_3.js",
+    "html/search/variables_2.js",
+    "html/search/variables_1.js",
+    "html/search/functions_12.js",
+    "html/search/functions_11.js",
+    "html/search/functions_10.js",
+    "Forge Documentation.md",
     "forge_sequence_diagram.png",
     "Forge_2026-11-17_17-59-43.png",
-    "Forge.base",
-    "Forge Documentation.md",
     "Untitled.canvas"
   ]
 }

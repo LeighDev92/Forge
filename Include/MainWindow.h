@@ -3,6 +3,9 @@
 
 namespace Forge
 {
+	/**
+	 * @brief The primary application window, derived from the base Window class.
+	 */
 	class FORGE_API MainWindow : public Window
 	{
 	public:

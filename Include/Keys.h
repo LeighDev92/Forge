@@ -3,6 +3,7 @@
 
 namespace Forge
 {
+    /** @brief Describes a keyboard input transition. */
     enum class KeyEvent
     {
         Unknown = 0,
@@ -13,6 +14,7 @@ namespace Forge
         Count
     };
 
+    /** @brief Identifies supported keyboard keys and mouse buttons. */
     enum class Key
     {
         Unknown = 0,
@@ -157,7 +159,17 @@ namespace Forge
         Count
     };
 
+    /**
+     * @brief Converts a windows virtual key code to to the corresponding enum Key value.
+     * @param vk The windows virtual key to convert.
+     * @return The enum value of the virtual key.
+     */
     FORGE_API Key VirtualKeyToKey(WPARAM vk);
 
+    /**
+     * @brief Converts an enum Key value to a wide string.
+     * @param key The key to convert.
+     * @return The enum key value as a wide string.
+     */
     FORGE_API const wchar_t* KeyToString(Key key);
 }

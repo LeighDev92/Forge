@@ -63,12 +63,12 @@ namespace Forge
 
     float Icosphere::GetRadius() const
     {
-        return 0.0f;
+        return _radius;
     }
 
-    float Icosphere::GetSubdivisions() const
+    int Icosphere::GetSubdivisions() const
     {
-        return 0.0f;
+        return _subdivisions;
     }
 
     void Icosphere::CreateBaseIcosahedron(

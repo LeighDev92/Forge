@@ -4,6 +4,9 @@
 
 namespace Forge
 {
+	/** 
+	* @brief Specialized icosphere used to represent a sky surrounding the scene.
+	*/
 	class FORGE_API SkySphere : public Icosphere
 	{
 	public:
