@@ -77,19 +77,19 @@ namespace Forge
 
         // key events and state
         std::unordered_set<Key> pressed_keys;
-        std::unordered_map<Key, std::vector<Binding<KeyCallback>>> bound_key_events_pressed;
-        std::unordered_map<Key, std::vector<Binding<KeyCallback>>> bound_key_events_released;
+        std::unordered_map<Key, std::vector<Binding<KeyCallback>>> _boundKeyEventsPressed;
+        std::unordered_map<Key, std::vector<Binding<KeyCallback>>> _boundKeyEventsReleased;
 
         // mouse events and state
-        MouseState mouse_state;
-        std::unordered_set<MouseButton> pressed_mouse_buttons;
-        std::unordered_map<MouseButton, std::vector<Binding<MouseButtonCallback>>> bound_mouse_button_events_pressed;
-        std::unordered_map<MouseButton, std::vector<Binding<MouseButtonCallback>>> bound_mouse_button_events_released;
-        std::vector<Binding<MouseMoveCallback>> bound_mouse_move_events;
-        std::vector<Binding<MouseScrollCallback>> bound_mouse_scroll_horizontal_events;
-        std::vector<Binding<MouseScrollCallback>> bound_mouse_scroll_vertical_events;
+        MouseState _mouseState;
+        std::unordered_set<MouseButton> _pressedMouseButtons;
+        std::unordered_map<MouseButton, std::vector<Binding<MouseButtonCallback>>> _boundMouseButtonEventsPressed;
+        std::unordered_map<MouseButton, std::vector<Binding<MouseButtonCallback>>> _boundMouseButtonEventsReleased;
+        std::vector<Binding<MouseMoveCallback>> _boundMouseMoveEvents;
+        std::vector<Binding<MouseScrollCallback>> _boundMouseScrollHorizontalEvents;
+        std::vector<Binding<MouseScrollCallback>> _boundMouseScrollVerticalEvents;
 
-        BindingID next_binding_id = 0;
+        BindingID _nextBindingID = 0;
     };
 }
 

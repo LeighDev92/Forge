@@ -20,11 +20,13 @@ namespace Forge
 	public:
 		static Application* Get();
 
-		Application(HINSTANCE _hInstance, int _nCMDShow);
+		Application(HINSTANCE hInstance, int nCMDShow);
 		~Application();
 
 		int Run();
-		virtual void ProcessFrame(float deltaTime);
+
+		virtual void BeginFrame(float deltaTime);
+		virtual void EndFrame(float deltaTime);
 
 		InputManager* GetInputManager() const;
 		GraphicsManager* GetGraphicsManager() const;
@@ -42,26 +44,26 @@ namespace Forge
 		LPCWSTR GetMainWindowClass() const;
 
 	protected:
-		static Application* instance;
+		static Application* _instance;
 		
-		std::unique_ptr<MainWindow> main_window;
-		std::unique_ptr<InputManager> input_manager;							
-		std::unique_ptr<GraphicsManager> graphics_manager;
+		std::unique_ptr<MainWindow> _mainWindow;
+		std::unique_ptr<InputManager> _inputManager;							
+		std::unique_ptr<GraphicsManager> _graphicsManager;
 
-		std::vector<Mesh> meshes;
+		std::vector<Mesh> _meshes;											// collection of meshes
 
-		Camera camera;
+		Camera _currentCamera;												// Camera used for rendering
 
-		HINSTANCE hInstance;									// Window Instance handle    
-		int nCMDShow;											// WinMain Show Options
+		HINSTANCE _hInstance;												// Window Instance handle    
+		int _nCMDShow;														// WinMain Show Options
 
-		WCHAR szTitle[MAX_LOADSTRING];							// The title bar text
-		WCHAR szAuthor[MAX_LOADSTRING];							// The author of this program
-		WCHAR szWindowClass[MAX_LOADSTRING];					// The main window class name
+		WCHAR _szTitle[MAX_LOADSTRING];										// The title bar text
+		WCHAR _szAuthor[MAX_LOADSTRING];									// The author of this program
+		WCHAR _szWindowClass[MAX_LOADSTRING];								// The main window class name
 
-		HACCEL hAccelTable;										// Handle to the Accelerator Table
+		HACCEL _hAccelTable;												// Handle to the Accelerator Table
 
-		std::chrono::steady_clock::time_point start_time;		// Application start time
-		std::chrono::steady_clock::time_point last_frame_time;	// Time since last frame
+		std::chrono::steady_clock::time_point _applicationStartTime;		// Application start time
+		std::chrono::steady_clock::time_point _lastFrameTime;				// Time since last frame
 	};
 }

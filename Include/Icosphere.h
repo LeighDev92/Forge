@@ -18,9 +18,9 @@ namespace Forge
         float GetSubdivisions() const;
 
     protected:
-        float Radius;
-        int Subdivisions;
-        bool Inverted;
+        float _radius;
+        int _subdivisions;
+        bool _inverted;
 
         void CreateBaseIcosahedron(std::vector<FVector>& triangles);
         void Subdivide(std::vector<FVector>& triangles);

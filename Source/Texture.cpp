@@ -26,7 +26,7 @@ namespace Forge
 
 	bool Texture::LoadTextureFromFile(std::string filename)
 	{
-		loaded = Application::Get()->GetGraphicsManager()->CreateTextureFromFile(pTextureView, filename.c_str());
+		loaded = Application::Get()->GetGraphicsManager()->CreateTextureFromFile(_textureView, filename.c_str());
 		return loaded;
 	}
 
@@ -238,7 +238,7 @@ namespace Forge
 		}
 
 		// create the shader resource view
-		result = device->CreateShaderResourceView(texture.Get(), nullptr, pTextureView.GetAddressOf());
+		result = device->CreateShaderResourceView(texture.Get(), nullptr, _textureView.GetAddressOf());
 
 		if (FAILED(result))
 		{
@@ -258,6 +258,6 @@ namespace Forge
 
 	const Microsoft::WRL::ComPtr<ID3D11ShaderResourceView>& Texture::GetShaderResource() const
 	{
-		return pTextureView;
+		return _textureView;
 	}
 }

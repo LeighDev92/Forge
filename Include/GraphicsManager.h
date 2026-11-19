@@ -25,7 +25,10 @@ namespace Forge
 		bool IsPositionOnSphereVisibleToCamera(FVector position, FTransform transform) const;
 
 		void PresentFrame();
+
+		void ClearScreen(float red, float green, float blue) noexcept;
 		void ClearRenderTargetView(float red, float green, float blue) noexcept;
+		void ClearDepthStencilView() noexcept;
 
 		const ComPtr<ID3D11Device> GetDevice() const;
 		const ComPtr<ID3D11DeviceContext> GetDeviceContext() const;
@@ -44,25 +47,25 @@ namespace Forge
 		void CreateConstantBuffers();
 
 #ifdef _DEBUG
-		ComPtr<ID3D11Debug> pDebug;
+		ComPtr<ID3D11Debug> _debug;
 #endif
-		ComPtr<ID3D11Device> pDevice;
-		ComPtr<IDXGISwapChain> pSwapChain;
-		ComPtr<ID3D11DeviceContext> pDeviceContext;
-		ComPtr<ID3D11RenderTargetView> pRenderTargetView;
-		ComPtr<ID3D11DepthStencilView> pDepthStencilView;
-		ComPtr<ID3D11DepthStencilState> pDepthStencilState;
-		ComPtr<ID3D11VertexShader> pVertexShader;
-		ComPtr<ID3D11PixelShader> pPixelShader;
-		ComPtr<ID3D11PixelShader> pWireframePixelShader;
-		ComPtr<ID3D11InputLayout> pInputLayout;
-		ComPtr<ID3D11RasterizerState> pSolidRasterizerState;
-		ComPtr<ID3D11RasterizerState> pWireframeRasterizerState;
-		ComPtr<ID3D11SamplerState> pTextureSamplerState;
-		ComPtr<ID3D11Buffer> pModelConstantBuffer;
-		ComPtr<ID3D11Buffer> pMaterialConstantBuffer;
-		ComPtr<ID3D11Buffer> pLightingConstantBuffer;
+		ComPtr<ID3D11Device> _device;
+		ComPtr<IDXGISwapChain> _swapChain;
+		ComPtr<ID3D11DeviceContext> _deviceContext;
+		ComPtr<ID3D11RenderTargetView> _renderTargetView;
+		ComPtr<ID3D11DepthStencilView> _depthStencilView;
+		ComPtr<ID3D11DepthStencilState> _depthStencilState;
+		ComPtr<ID3D11VertexShader> _vertexShader;
+		ComPtr<ID3D11PixelShader> _pixelShader;
+		ComPtr<ID3D11PixelShader> _wireframePixelShader;
+		ComPtr<ID3D11InputLayout> _inputLayout;
+		ComPtr<ID3D11RasterizerState> _solidRasterizerState;
+		ComPtr<ID3D11RasterizerState> _wireframeRasterizerState;
+		ComPtr<ID3D11SamplerState> _textureSamplerState;
+		ComPtr<ID3D11Buffer> _modelConstantBuffer;
+		ComPtr<ID3D11Buffer> _materialConstantBuffer;
+		ComPtr<ID3D11Buffer> _lightingConstantBuffer;
 
-		Camera* pCamera;
+		Camera* _camera;
 	};
 }

@@ -6,37 +6,37 @@
 
 namespace Forge
 {
-	Application* Application::instance = nullptr;
+	Application* Application::_instance = nullptr;
 
 	Application* Application::Get()
 	{
-		return instance;
+		return _instance;
 	}
-	Application::Application(HINSTANCE _hInstance, int _nCMDShow)
+	Application::Application(HINSTANCE hInstance, int nCMDShow)
 	{
-		hInstance = _hInstance;
-		nCMDShow = _nCMDShow;
+		_hInstance = hInstance;
+		_nCMDShow = nCMDShow;
 
-		instance = this;
+		_instance = this;
 
 		// Initialize global strings from string table defined in Forge.rc
-		LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
-		LoadStringW(hInstance, IDS_AUTHOR, szAuthor, MAX_LOADSTRING);
-		LoadStringW(hInstance, IDC_FORGE, szWindowClass, MAX_LOADSTRING);
+		LoadStringW(_hInstance, IDS_APP_TITLE, _szTitle, MAX_LOADSTRING);
+		LoadStringW(_hInstance, IDS_AUTHOR, _szAuthor, MAX_LOADSTRING);
+		LoadStringW(_hInstance, IDC_FORGE, _szWindowClass, MAX_LOADSTRING);
 
-		hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_FORGE));
+		_hAccelTable = LoadAccelerators(_hInstance, MAKEINTRESOURCE(IDC_FORGE));
 
-		main_window = std::make_unique<MainWindow>();
-		input_manager =  std::make_unique<InputManager>();
+		_mainWindow = std::make_unique<MainWindow>();
+		_inputManager =  std::make_unique<InputManager>();
 
-		if (main_window)
+		if (_mainWindow)
 		{
-			HWND hWnd = main_window->GetHWND();
+			HWND hWnd = _mainWindow->GetHWND();
 			RECT rect = Application::Get()->GetMainWindowViewport();
 			try {
-				graphics_manager = std::make_unique<GraphicsManager>(main_window->GetHWND());
-				camera.SetPosition({ 0.f,-10.f, 0.f });
-				graphics_manager->SetCamera(&camera);
+				_graphicsManager = std::make_unique<GraphicsManager>(_mainWindow->GetHWND());
+				_currentCamera.SetPosition({ 0.f,-10.f, 0.f });
+				_graphicsManager->SetCamera(&_currentCamera);
 			}
 			catch (const std::runtime_error& e) {
 				OutputDebugStringA(e.what());
@@ -49,18 +49,18 @@ namespace Forge
 			exit(-1);
 		}
 
-		start_time = last_frame_time = std::chrono::steady_clock::now();
+		_applicationStartTime = _lastFrameTime = std::chrono::steady_clock::now();
 	}
 
 	Application::~Application()
 	{
-		input_manager.release();
-		graphics_manager.release();
-		main_window.release();
-		input_manager = nullptr;
-		graphics_manager = nullptr;
-		main_window = nullptr;
-		instance = nullptr;
+		_inputManager.release();
+		_graphicsManager.release();
+		_mainWindow.release();
+		_inputManager = nullptr;
+		_graphicsManager = nullptr;
+		_mainWindow = nullptr;
+		_instance = nullptr;
 	}
 
 	int Application::Run()
@@ -90,43 +90,48 @@ namespace Forge
 			}
 
 			auto time_now = std::chrono::steady_clock::now();
-			auto elapsed = std::chrono::duration<float>(time_now - last_frame_time);
+			auto elapsed = std::chrono::duration<float>(time_now - _lastFrameTime);
 			float deltaTime = elapsed.count();
 
 			if (deltaTime > 0.f)
 			{
-				ProcessFrame(elapsed.count());
-				graphics_manager->PresentFrame();
-				last_frame_time = std::chrono::steady_clock::now();
+				BeginFrame(deltaTime);
+				EndFrame(deltaTime);
+				_lastFrameTime = std::chrono::steady_clock::now();
 			}
 		}
 
 		return msg.wParam;
 	}
 
-	void Application::ProcessFrame(float deltaTime)
+	void Application::BeginFrame(float deltaTime)
 	{
-		graphics_manager->ClearRenderTargetView(0.f, 0.f, 0.f);
+		_graphicsManager->ClearScreen(0.f, 0.f, 0.f);
 
-		for (Mesh& mesh : meshes)
+		for (Mesh& mesh : _meshes)
 		{
-			graphics_manager->DrawMesh(&mesh, true, false);
+			_graphicsManager->DrawMesh(&mesh, true, false);
 		}
+	}
+
+	void Application::EndFrame(float deltaTime)
+	{
+		_graphicsManager->PresentFrame();
 	}
 
 	InputManager* Application::GetInputManager() const
 	{
-		return input_manager.get();
+		return _inputManager.get();
 	}
 	
 	GraphicsManager* Application::GetGraphicsManager() const
 	{
-		return graphics_manager.get();
+		return _graphicsManager.get();
 	}
 
 	Camera* Application::GetCamera()
 	{
-		return &camera;
+		return &_currentCamera;
 	}
 
 	int Application::AddMesh(Mesh* mesh)
@@ -136,22 +141,22 @@ namespace Forge
 			return -1;
 		}
 
-		meshes.push_back(*mesh);
+		_meshes.push_back(*mesh);
 
-		return meshes.size() - 1;
+		return _meshes.size() - 1;
 	}
 
 	void Application::RemoveMesh(Mesh* mesh)
 	{
-		auto it = std::find_if(meshes.begin(), meshes.end(),
+		auto it = std::find_if(_meshes.begin(), _meshes.end(),
 			[mesh](Mesh& existingMesh)
 			{
 				return &existingMesh == mesh;
 			});
 
-		if (it != meshes.end())
+		if (it != _meshes.end())
 		{
-			meshes.erase(it);
+			_meshes.erase(it);
 		}
 	}
 
@@ -159,40 +164,40 @@ namespace Forge
 	{
 		RECT rect = {800, 600};
 
-		if (main_window)
+		if (_mainWindow)
 		{
-			GetClientRect(main_window->GetHWND(), &rect);
+			GetClientRect(_mainWindow->GetHWND(), &rect);
 		}
 
 		return rect;
 	}
 	HINSTANCE Application::GetHInstance() const
 	{
-		return hInstance;
+		return _hInstance;
 	}
 
 	int Application::GetCMDShow() const
 	{
-		return nCMDShow;
+		return _nCMDShow;
 	}
 
 	HACCEL Application::GetAcceleratorTable() const
 	{
-		return hAccelTable;
+		return _hAccelTable;
 	}
 
 	LPCWSTR Application::GetTitle() const
 	{
-		return szTitle;
+		return _szTitle;
 	}
 
 	LPCWSTR Application::GetAuthor() const
 	{
-		return szAuthor;
+		return _szAuthor;
 	}
 
 	LPCWSTR Application::GetMainWindowClass() const
 	{
-		return szWindowClass;
+		return _szWindowClass;
 	}
 }

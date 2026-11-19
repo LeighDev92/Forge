@@ -36,8 +36,8 @@ namespace Forge
 		OutputDebugStringW(buffer);
 
 		// Check whether any callbacks are bound to this key's release event.
-		auto it = bound_key_events_released.find(key);
-		if (it == bound_key_events_released.end())
+		auto it = _boundKeyEventsReleased.find(key);
+		if (it == _boundKeyEventsReleased.end())
 			return;
 
 		// Notify all callbacks bound to this key release.
@@ -59,8 +59,8 @@ namespace Forge
 		OutputDebugStringW(buffer);
 
 		// Check whether any callbacks are bound to this key's press event.
-		auto it = bound_key_events_pressed.find(key);
-		if (it == bound_key_events_pressed.end())
+		auto it = _boundKeyEventsPressed.find(key);
+		if (it == _boundKeyEventsPressed.end())
 			return;
 
 		// Notify all callbacks bound to this key press.
@@ -85,15 +85,15 @@ namespace Forge
 			return;
 
 		// Remove the button from the set of currently pressed mouse buttons.
-		pressed_mouse_buttons.erase(button);
+		_pressedMouseButtons.erase(button);
 
 		wchar_t buffer[256];
 		swprintf_s(buffer, _countof(buffer), L"InputManager: %s was released.\n", MouseButtonToString(button));
 		OutputDebugStringW(buffer);
 
 		// Check whether any callbacks are bound to this button's release event.
-		auto it = bound_mouse_button_events_released.find(button);
-		if (it == bound_mouse_button_events_released.end())
+		auto it = _boundMouseButtonEventsReleased.find(button);
+		if (it == _boundMouseButtonEventsReleased.end())
 			return;
 
 		// Notify all callbacks bound to this mouse button release.
@@ -108,15 +108,15 @@ namespace Forge
 			return;
 
 		// Add the button to the set of currently pressed mouse buttons.
-		pressed_mouse_buttons.insert(button);
+		_pressedMouseButtons.insert(button);
 
 		wchar_t buffer[256];
 		swprintf_s(buffer, _countof(buffer), L"InputManager: %s was pressed.\n", MouseButtonToString(button));
 		OutputDebugStringW(buffer);
 
 		// Check whether any callbacks are bound to this button's press event.
-		auto it = bound_mouse_button_events_pressed.find(button);
-		if (it == bound_mouse_button_events_pressed.end())
+		auto it = _boundMouseButtonEventsPressed.find(button);
+		if (it == _boundMouseButtonEventsPressed.end())
 			return;
 
 		// Notify all callbacks bound to this mouse button press.
@@ -137,17 +137,17 @@ namespace Forge
 	// previous mouse event.
 	void InputManager::ProcessMouseMove(int xPos, int yPos)
 	{
-		mouse_state.deltaX = xPos - mouse_state.x;
-		mouse_state.deltaY = yPos - mouse_state.y;
-		mouse_state.x = xPos;
-		mouse_state.y = yPos;
+		_mouseState.deltaX = xPos - _mouseState.x;
+		_mouseState.deltaY = yPos - _mouseState.y;
+		_mouseState.x = xPos;
+		_mouseState.y = yPos;
 
 		wchar_t buffer[256];
-		swprintf_s(buffer, _countof(buffer), L"InputManager: mouse was moved (X: %d, Y: %d, delta X: %d, delta Y: %d).\n", mouse_state.x, mouse_state.y, mouse_state.deltaX, mouse_state.deltaY);
+		swprintf_s(buffer, _countof(buffer), L"InputManager: mouse was moved (X: %d, Y: %d, delta X: %d, delta Y: %d).\n", _mouseState.x, _mouseState.y, _mouseState.deltaX, _mouseState.deltaY);
 		OutputDebugStringW(buffer);
 
 		// Notify all callbacks that are listening for mouse movement.
-		BroadcastMouseMoveEvent(mouse_state);
+		BroadcastMouseMoveEvent(_mouseState);
 	}
 
 	// Processes a mouse scroll event and notifies callbacks registered for
@@ -169,10 +169,10 @@ namespace Forge
 			return 0;
 
 		// Select the binding map corresponding to the requested key event.
-		auto& events = event == KeyEvent::Up ? bound_key_events_released : bound_key_events_pressed;
+		auto& events = event == KeyEvent::Up ? _boundKeyEventsReleased : _boundKeyEventsPressed;
 
 		// Generate a globally unique ID for this binding.
-		BindingID new_id = ++next_binding_id;
+		BindingID new_id = ++_nextBindingID;
 
 		// Find existing bindings for this key.
 		auto it = events.find(key);
@@ -196,8 +196,8 @@ namespace Forge
 	void InputManager::UnBindKeyEvent(BindingID id)
 	{
 		// Search all key release bindings for the specified ID.
-		for (auto it = bound_key_events_released.begin();
-			it != bound_key_events_released.end();)
+		for (auto it = _boundKeyEventsReleased.begin();
+			it != _boundKeyEventsReleased.end();)
 		{
 			auto& bindings = it->second;
 
@@ -217,7 +217,7 @@ namespace Forge
 			// Remove the key from the map if it no longer has any bindings.
 			if (bindings.empty())
 			{
-				it = bound_key_events_released.erase(it);
+				it = _boundKeyEventsReleased.erase(it);
 			}
 			else
 			{
@@ -226,8 +226,8 @@ namespace Forge
 		}
 
 		// Search all key press bindings for the specified ID.
-		for (auto it = bound_key_events_pressed.begin();
-			it != bound_key_events_pressed.end();)
+		for (auto it = _boundKeyEventsPressed.begin();
+			it != _boundKeyEventsPressed.end();)
 		{
 			auto& bindings = it->second;
 
@@ -247,7 +247,7 @@ namespace Forge
 			// Remove the key from the map if it no longer has any bindings.
 			if (bindings.empty())
 			{
-				it = bound_key_events_pressed.erase(it);
+				it = _boundKeyEventsPressed.erase(it);
 			}
 			else
 			{
@@ -264,10 +264,10 @@ namespace Forge
 			return 0;
 
 		// Select the binding map corresponding to the requested button event.
-		auto& events = event == MouseEvent::ButtonUp ? bound_mouse_button_events_released : bound_mouse_button_events_pressed;
+		auto& events = event == MouseEvent::ButtonUp ? _boundMouseButtonEventsReleased : _boundMouseButtonEventsPressed;
 
 		// Generate a globally unique ID for this binding.
-		BindingID new_id = ++next_binding_id;
+		BindingID new_id = ++_nextBindingID;
 
 		// Find existing bindings for this mouse button.
 		auto it = events.find(button);
@@ -291,8 +291,8 @@ namespace Forge
 	void InputManager::UnBindMouseButtonEvent(BindingID id)
 	{
 		// Search all mouse button press bindings for the specified ID.
-		for (auto it = bound_mouse_button_events_pressed.begin();
-			it != bound_mouse_button_events_pressed.end();)
+		for (auto it = _boundMouseButtonEventsPressed.begin();
+			it != _boundMouseButtonEventsPressed.end();)
 		{
 			auto& bindings = it->second;
 
@@ -312,7 +312,7 @@ namespace Forge
 			// Remove the button from the map if it no longer has any bindings.
 			if (bindings.empty())
 			{
-				it = bound_mouse_button_events_pressed.erase(it);
+				it = _boundMouseButtonEventsPressed.erase(it);
 			}
 			else
 			{
@@ -321,8 +321,8 @@ namespace Forge
 		}
 
 		// Search all mouse button release bindings for the specified ID.
-		for (auto it = bound_mouse_button_events_released.begin();
-			it != bound_mouse_button_events_released.end();)
+		for (auto it = _boundMouseButtonEventsReleased.begin();
+			it != _boundMouseButtonEventsReleased.end();)
 		{
 			auto& bindings = it->second;
 
@@ -342,7 +342,7 @@ namespace Forge
 			// Remove the button from the map if it no longer has any bindings.
 			if (bindings.empty())
 			{
-				it = bound_mouse_button_events_released.erase(it);
+				it = _boundMouseButtonEventsReleased.erase(it);
 			}
 			else
 			{
@@ -355,9 +355,9 @@ namespace Forge
 	BindingID InputManager::BindMouseMoveEvent(MouseMoveCallback callback)
 	{
 		// Generate a globally unique ID for this binding.
-		BindingID new_id = ++next_binding_id;
+		BindingID new_id = ++_nextBindingID;
 
-		bound_mouse_move_events.emplace_back(new_id, std::move(callback));
+		_boundMouseMoveEvents.emplace_back(new_id, std::move(callback));
 
 		return new_id;
 	}
@@ -365,15 +365,15 @@ namespace Forge
 	// Removes a mouse movement binding using its unique BindingID.
 	void InputManager::UnBindMouseMoveEvent(BindingID id)
 	{
-		bound_mouse_move_events.erase(std::remove_if(
-			bound_mouse_move_events.begin(),
-			bound_mouse_move_events.end(),
+		_boundMouseMoveEvents.erase(std::remove_if(
+			_boundMouseMoveEvents.begin(),
+			_boundMouseMoveEvents.end(),
 			[id](const auto& current)
 			{
 				return current.id == id;
 			}
 		),
-			bound_mouse_move_events.end()
+			_boundMouseMoveEvents.end()
 		);
 	}
 
@@ -386,11 +386,11 @@ namespace Forge
 
 		// Select the binding list corresponding to the requested scroll direction.
 		auto& event = scroll_event == MouseEvent::ScrollVertical
-			? bound_mouse_scroll_vertical_events
-			: bound_mouse_scroll_horizontal_events;
+			? _boundMouseScrollVerticalEvents
+			: _boundMouseScrollHorizontalEvents;
 
 		// Generate a globally unique ID for this binding.
-		BindingID new_id = ++next_binding_id;
+		BindingID new_id = ++_nextBindingID;
 
 		event.emplace_back(new_id, std::move(callback));
 
@@ -401,27 +401,27 @@ namespace Forge
 	void InputManager::UnBindMouseScrollEvent(BindingID id)
 	{
 		// Search vertical scroll bindings.
-		bound_mouse_scroll_vertical_events.erase(std::remove_if(
-			bound_mouse_scroll_vertical_events.begin(),
-			bound_mouse_scroll_vertical_events.end(),
+		_boundMouseScrollVerticalEvents.erase(std::remove_if(
+			_boundMouseScrollVerticalEvents.begin(),
+			_boundMouseScrollVerticalEvents.end(),
 			[id](const auto& current)
 			{
 				return current.id == id;
 			}
 		),
-			bound_mouse_scroll_vertical_events.end()
+			_boundMouseScrollVerticalEvents.end()
 		);
 
 		// Search horizontal scroll bindings.
-		bound_mouse_scroll_horizontal_events.erase(std::remove_if(
-			bound_mouse_scroll_horizontal_events.begin(),
-			bound_mouse_scroll_horizontal_events.end(),
+		_boundMouseScrollHorizontalEvents.erase(std::remove_if(
+			_boundMouseScrollHorizontalEvents.begin(),
+			_boundMouseScrollHorizontalEvents.end(),
 			[id](const auto& current)
 			{
 				return current.id == id;
 			}
 		),
-			bound_mouse_scroll_horizontal_events.end()
+			_boundMouseScrollHorizontalEvents.end()
 		);
 	}
 
@@ -434,7 +434,7 @@ namespace Forge
 		for (const auto& key : pressed_keys_copy)
 			ProcessKeyUp(key);
 
-		auto pressed_mouse_buttons_copy = pressed_mouse_buttons;
+		auto pressed_mouse_buttons_copy = _pressedMouseButtons;
 		for (const auto& mouse_button : pressed_mouse_buttons_copy)
 			ProcessMouseButtonUp(mouse_button);
 	}
@@ -444,8 +444,8 @@ namespace Forge
 	{
 		// Select the binding map corresponding to the event type.
 		auto events = event == KeyEvent::Up
-			? &bound_key_events_released
-			: &bound_key_events_pressed;
+			? &_boundKeyEventsReleased
+			: &_boundKeyEventsPressed;
 
 		auto it = events->find(key);
 		if (it == events->end())
@@ -463,8 +463,8 @@ namespace Forge
 	{
 		// Select the binding map corresponding to the event type.
 		auto events = event == MouseEvent::ButtonUp
-			? &bound_mouse_button_events_released
-			: &bound_mouse_button_events_pressed;
+			? &_boundMouseButtonEventsReleased
+			: &_boundMouseButtonEventsPressed;
 
 		auto it = events->find(button);
 		if (it == events->end())
@@ -480,7 +480,7 @@ namespace Forge
 	// Broadcasts the current mouse state to all mouse movement callbacks.
 	void InputManager::BroadcastMouseMoveEvent(MouseState state) const
 	{
-		for (const auto& binding : bound_mouse_move_events)
+		for (const auto& binding : _boundMouseMoveEvents)
 		{
 			binding.callback(state);
 		}
@@ -491,14 +491,14 @@ namespace Forge
 	{
 		if (direction == MouseEvent::ScrollVertical)
 		{
-			for (const auto& binding : bound_mouse_scroll_vertical_events)
+			for (const auto& binding : _boundMouseScrollVerticalEvents)
 			{
 				binding.callback(delta);
 			}
 		}
 		else if (direction == MouseEvent::ScrollHorizontal)
 		{
-			for (const auto& binding : bound_mouse_scroll_horizontal_events)
+			for (const auto& binding : _boundMouseScrollHorizontalEvents)
 			{
 				binding.callback(delta);
 			}
@@ -526,12 +526,12 @@ namespace Forge
 	// Returns whether the specified mouse button is currently pressed.
 	bool InputManager::IsMouseButtonDown(MouseButton button) const
 	{
-		return pressed_mouse_buttons.count(button);
+		return _pressedMouseButtons.count(button);
 	}
 
 	// Returns a copy of the current mouse state.
 	MouseState InputManager::GetMouseState() const
 	{
-		return mouse_state;
+		return _mouseState;
 	}
 }

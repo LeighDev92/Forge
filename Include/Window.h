@@ -27,6 +27,6 @@ namespace Forge
 
 		static INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam);
 
-		HWND hWnd;
+		HWND _hWnd;
 	};
 }

@@ -9,30 +9,31 @@ namespace Forge
 {
 	Camera::Camera(FVector pos, FRotator rot, float fov)
 	{
-		position = pos;
-		rotation = rot;
-		FOV = abs(fov);
+		_position = pos;
+		_rotation = rot;
+		_FOV = abs(fov);
+		_shouldOrbitTarget = false;
 	}
 
 	FVector Camera::GetPosition() const
 	{
-		return position;
+		return _position;
 	}
 
 	FRotator Camera::GetRotation() const
 	{
-		return rotation;
+		return _rotation;
 	}
 
 	float Camera::GetFOV() const
 	{
-		return FOV;
+		return _FOV;
 	}
 
 	FVector Camera::GetForwardVector() const
 	{
-		float pitch = rotation.Pitch * PI / 180.f;
-		float yaw = rotation.Yaw * PI / 180.f;
+		float pitch = _rotation.Pitch * PI / 180.f;
+		float yaw = _rotation.Yaw * PI / 180.f;
 
 		return FVector(
 			-sinf(yaw) * cosf(pitch),
@@ -41,38 +42,60 @@ namespace Forge
 		).Normalized();
 	}
 
+	FVector Camera::GetRightVector() const
+	{
+		FVector worldUp(0.f, 0.f, 1.f);
+		return FVector::Cross(GetForwardVector(), worldUp).Normalized();
+	}
+
+	FVector Camera::GetUpVector() const
+	{
+		return FVector::Cross(GetRightVector(), GetForwardVector()).Normalized();
+	}
+
 	float Camera::GetOrbitDistance() const
 	{
-		return OrbitDistance;
+		return _orbitDistance;
 	}
 
 	void Camera::SetPosition(FVector pos)
 	{
-		position = pos;
+		_position = pos;
 	}
 
 	void Camera::SetRotation(FRotator rot)
 	{
-		rotation = rot;
+		_rotation = rot;
 	}
+
 	void Camera::SetFOV(float fov)
 	{
-		FOV = abs(fov);
+		_FOV = abs(fov);
 	}
+
 	void Camera::Orbit(int deltaX, int deltaY)
 	{
+		if (!_shouldOrbitTarget)
+		{
+			return;
+		}
+
 		constexpr float sensitivity = 0.3f;
 
-		OrbitYaw -= deltaX * sensitivity;
-		OrbitPitch += deltaY * sensitivity;
+		_rotation.Yaw -= deltaX * sensitivity;
+		_rotation.Pitch -= deltaY * sensitivity;
 
-		OrbitPitch = std::clamp(OrbitPitch, -89.f, 89.f);
+		_rotation.Pitch = std::clamp(_rotation.Pitch, -89.f, 89.f);
 
 		UpdateOrbitPosition();
 	}
+
 	void Camera::Zoom(int amount)
 	{
-		FVector offset = GetPosition() - OrbitTarget;
+		constexpr float minDistance = 5.f;
+		constexpr float maxDistance = 30.f;
+
+		FVector offset = GetPosition() - _orbitTargetPosition;
 
 		float currentDistance = sqrtf(
 			offset.X * offset.X +
@@ -83,31 +106,56 @@ namespace Forge
 		if (currentDistance <= 0.0001f)
 			return;
 
-		OrbitDistance = std::clamp(
-			OrbitDistance - amount,
-			5.f,
-			30.f
+		_orbitDistance = std::clamp(
+			_orbitDistance - amount,
+			minDistance,
+			maxDistance
 		);
 
-		float scale = OrbitDistance / currentDistance;
+		float scale = _orbitDistance / currentDistance;
 
-		FVector newPosition = OrbitTarget + offset * scale;
+		FVector newPosition = _orbitTargetPosition + offset * scale;
 
 		SetPosition(newPosition);
 	}
+
+	void Camera::LookAt(const FVector& target)
+	{
+		FVector direction = (target - _position).Normalized();
+
+		_rotation.Yaw = atan2f(-direction.X, direction.Y) * 180.f / PI;
+		_rotation.Pitch = asinf(direction.Z) * 180.f / PI;
+	}
+
+	void Camera::SetOrbitTarget(bool enable)
+	{
+		_shouldOrbitTarget = enable;
+
+		if (_shouldOrbitTarget)
+		{
+			LookAt(_orbitTargetPosition);
+
+			FVector offset = _position - _orbitTargetPosition;
+
+			float currentDistance = sqrtf(
+				offset.X * offset.X +
+				offset.Y * offset.Y +
+				offset.Z * offset.Z
+			);
+
+			_orbitDistance = currentDistance;
+			Orbit(0, 0);
+		}
+	}
+
+	void Camera::SetOrbitTargetPosition(const FVector& position)
+	{
+		_orbitTargetPosition = position;
+	}
+
 	void Camera::UpdateOrbitPosition()
 	{
-		float yaw = OrbitYaw * PI / 180.f;
-		float pitch = OrbitPitch * PI / 180.f;
-
-		float cosPitch = cosf(pitch);
-
-		FVector offset(
-			OrbitDistance * cosPitch * sinf(yaw),
-			-OrbitDistance * cosPitch * cosf(yaw),
-			OrbitDistance * sinf(pitch)
-		);
-
-		SetPosition(OrbitTarget + offset);
+		FVector offset = GetForwardVector() * -_orbitDistance;
+		SetPosition(_orbitTargetPosition + offset);
 	}
 }

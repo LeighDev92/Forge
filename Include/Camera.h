@@ -12,6 +12,8 @@ namespace Forge
 		FRotator GetRotation() const;
 		float GetFOV() const;
 		FVector GetForwardVector() const;
+		FVector GetRightVector() const;
+		FVector GetUpVector() const;
 		float GetOrbitDistance() const;
 
 		void SetPosition(FVector pos);
@@ -19,17 +21,21 @@ namespace Forge
 		void SetFOV(float fov);
 		void Orbit(int deltaX, int deltaY);
 		void Zoom(int amount);
+		
+		void LookAt(const FVector& target);
+
+		void SetOrbitTarget(bool enable);
+		void SetOrbitTargetPosition(const FVector& position);
 
 	private:
-		FVector position;
-		FRotator rotation;
-		float FOV;
+		FVector _position;
+		FRotator _rotation;
+		float _FOV;
 
-		FVector OrbitTarget = FVector(0.f, 0.f, 0.f);
+		bool _shouldOrbitTarget;
+		FVector _orbitTargetPosition;
 
-		float OrbitDistance = 10.f;
-		float OrbitYaw = 0.f;
-		float OrbitPitch = 0.f;
+		float _orbitDistance;
 
 		void UpdateOrbitPosition();
 	};

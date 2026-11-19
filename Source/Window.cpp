@@ -44,10 +44,10 @@ namespace Forge
     {
         Application* app = Application::Get();
 
-        hWnd = CreateWindowW(app->GetMainWindowClass(), app->GetTitle(), WS_OVERLAPPEDWINDOW,
+        _hWnd = CreateWindowW(app->GetMainWindowClass(), app->GetTitle(), WS_OVERLAPPEDWINDOW,
             CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, app->GetHInstance(), this);
 
-        if (!hWnd)
+        if (!_hWnd)
         {
             return FALSE;
         }
@@ -57,17 +57,17 @@ namespace Forge
 
     BOOL Window::Show() const
     {
-        return ShowWindow(hWnd, Application::Get()->GetCMDShow());
+        return ShowWindow(_hWnd, Application::Get()->GetCMDShow());
     }
 
     BOOL Window::Update() const
     {
-        return UpdateWindow(hWnd);
+        return UpdateWindow(_hWnd);
     }
 
     HWND Window::GetHWND()
     {
-        return hWnd;
+        return _hWnd;
     }
 
     LRESULT Window::HandleMessage(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

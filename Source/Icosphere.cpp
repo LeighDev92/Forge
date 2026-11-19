@@ -9,9 +9,9 @@ namespace Forge
 {
     Icosphere::Icosphere(float radius, int subdivisions, bool inverted)
     {
-        Radius = std::abs(radius);
-        Subdivisions = std::min(std::max(0, subdivisions), 8);
-        Inverted = inverted;
+        _radius = std::abs(radius);
+        _subdivisions = std::min(std::max(0, subdivisions), 8);
+        _inverted = inverted;
         Generate();
     }
 
@@ -30,7 +30,7 @@ namespace Forge
         CreateBaseIcosahedron(triangles);
 
         // Subdivide the triangles
-        for (int i = 0; i < Subdivisions; i++)
+        for (int i = 0; i < _subdivisions; i++)
         {
             Subdivide(triangles);
         }
@@ -43,20 +43,20 @@ namespace Forge
     {
         radius = std::abs(radius);
 
-        if (radius != Radius)
+        if (radius != _radius)
         {
-            Radius = radius;
+            _radius = radius;
             Generate();
         }
     }
 
     void Icosphere::SetSubdivisions(int subdivisions)
     {
-        Subdivisions = std::min(std::max(0, subdivisions), 8);
+        _subdivisions = std::min(std::max(0, subdivisions), 8);
 
-        if (subdivisions != Subdivisions)
+        if (subdivisions != _subdivisions)
         {
-            Subdivisions = subdivisions;
+            _subdivisions = subdivisions;
             Generate();
         }
     }
@@ -147,7 +147,7 @@ namespace Forge
 
     void Icosphere::AddTriangle(std::vector<FVector>& output, const FVector& a, const FVector& b, const FVector& c)
     {
-        if (Inverted)
+        if (_inverted)
         {
             output.push_back(a);
             output.push_back(c);
@@ -221,9 +221,9 @@ namespace Forge
                 if (uv2.X < 0.5f) uv2.X += 1.0f;
             }
 
-            FVector v0 = triangles[i] * Radius;
-            FVector v1 = triangles[i + 1] * Radius;
-            FVector v2 = triangles[i + 2] * Radius;
+            FVector v0 = triangles[i] * _radius;
+            FVector v1 = triangles[i + 1] * _radius;
+            FVector v2 = triangles[i + 2] * _radius;
 
             Vertices.emplace_back(v0, v0.Normalized(), uv0, Color::White);
             Vertices.emplace_back(v1, v1.Normalized(), uv1, Color::White);

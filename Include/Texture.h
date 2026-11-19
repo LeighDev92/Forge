@@ -17,6 +17,6 @@ namespace Forge
 	private:
 
 		bool loaded;
-		Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> pTextureView;
+		Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> _textureView;
 	};
 }

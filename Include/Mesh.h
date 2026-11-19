@@ -19,6 +19,10 @@ namespace Forge
 		FRotator GetRotation() const;
 		const Material& GetMaterial() const;
 
+		FVector GetForwardVector() const;
+		FVector GetRightVector() const;
+		FVector GetUpVector() const;
+
 		const std::vector<Vertex>& GetVertices() const;
 		const std::vector<unsigned int>& GetIndices() const;
 

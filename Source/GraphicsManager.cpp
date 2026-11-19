@@ -107,11 +107,13 @@ namespace Forge
 		return XMMatrixAffineTransformation(scale, XMVectorZero(), rotation, translation);
 	}
 
-	XMMATRIX GetViewMatrix(FVector camera_position)
+	XMMATRIX GetViewMatrix(FVector cameraPosition, FVector cameraForwardVector, FVector cameraUpVector)
 	{
-		XMVECTOR eyePosition = XMVectorSet(camera_position.X, camera_position.Z, camera_position.Y, 1.0f);  // Camera position
-		XMVECTOR focusPosition = XMVectorSet(0.0f, 0.0f, 0.0f, 1.0f);  // Look-at point (world center)
-		XMVECTOR upDirection = XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);    // Up axis (+Y)
+		XMVECTOR eyePosition = XMVectorSet(cameraPosition.X, cameraPosition.Z, cameraPosition.Y, 1.0f);  // Camera position
+
+		FVector position = cameraPosition + cameraForwardVector * 10.f;
+		XMVECTOR focusPosition = XMVectorSet(position.X, position.Z, position.Y, 1.0f);  // Look-at point (world center)
+		XMVECTOR upDirection = XMVectorSet(cameraUpVector.X, cameraUpVector.Z, cameraUpVector.Y, 0.0f);    // Up axis (+Y)
 
 		return XMMatrixLookAtLH(eyePosition, focusPosition, upDirection);
 	}
@@ -168,9 +170,9 @@ namespace Forge
 	{
 
 #ifdef _DEBUG
-		if (pDebug)
+		if (_debug)
 		{
-			pDebug->ReportLiveDeviceObjects(D3D11_RLDO_DETAIL);
+			_debug->ReportLiveDeviceObjects(D3D11_RLDO_DETAIL);
 		}
 #endif
 
@@ -178,16 +180,16 @@ namespace Forge
 
 	void GraphicsManager::Resize(UINT width, UINT height)
 	{
-		if (!pSwapChain || !pDevice || !pDeviceContext)
+		if (!_swapChain || !_device || !_deviceContext)
 			return;
 
 		// Release anything referencing the old back buffer
-		pRenderTargetView.Reset();
-		pDepthStencilView.Reset();
+		_renderTargetView.Reset();
+		_depthStencilView.Reset();
 
-		pDeviceContext->OMSetRenderTargets(0, nullptr, nullptr);
+		_deviceContext->OMSetRenderTargets(0, nullptr, nullptr);
 
-		HRESULT result = pSwapChain->ResizeBuffers(0,width,height,DXGI_FORMAT_UNKNOWN,0);
+		HRESULT result = _swapChain->ResizeBuffers(0,width,height,DXGI_FORMAT_UNKNOWN,0);
 
 		if (FAILED(result))
 		{
@@ -197,7 +199,7 @@ namespace Forge
 
 		ComPtr<ID3D11Texture2D> backBuffer;
 
-		result = pSwapChain->GetBuffer(0, IID_PPV_ARGS(&backBuffer));
+		result = _swapChain->GetBuffer(0, IID_PPV_ARGS(&backBuffer));
 
 		if (FAILED(result))
 		{
@@ -205,7 +207,7 @@ namespace Forge
 			throw std::runtime_error("[Graphics Manager] - Failed to get a handle on the back buffer");
 		}
 
-		result = pDevice->CreateRenderTargetView(backBuffer.Get(), nullptr, &pRenderTargetView);
+		result = _device->CreateRenderTargetView(backBuffer.Get(), nullptr, &_renderTargetView);
 
 		if (FAILED(result))
 		{
@@ -225,7 +227,7 @@ namespace Forge
 
 		Microsoft::WRL::ComPtr<ID3D11Texture2D> depthBuffer;
 
-		result = pDevice->CreateTexture2D(&depthDesc, nullptr, depthBuffer.GetAddressOf());
+		result = _device->CreateTexture2D(&depthDesc, nullptr, depthBuffer.GetAddressOf());
 
 		if (FAILED(result))
 		{
@@ -233,7 +235,7 @@ namespace Forge
 			throw std::runtime_error("[Graphics Manager] - Failed to create depth buffer");
 		}
 
-		result = pDevice->CreateDepthStencilView(depthBuffer.Get(), nullptr, pDepthStencilView.GetAddressOf());
+		result = _device->CreateDepthStencilView(depthBuffer.Get(), nullptr, _depthStencilView.GetAddressOf());
 
 		if (FAILED(result))
 		{
@@ -242,7 +244,7 @@ namespace Forge
 		}
 
 		// Rebind the new render target and depth buffer.
-		pDeviceContext->OMSetRenderTargets(1u, pRenderTargetView.GetAddressOf(), pDepthStencilView.Get());
+		_deviceContext->OMSetRenderTargets(1u, _renderTargetView.GetAddressOf(), _depthStencilView.Get());
 
 		// Update the viewport.
 		D3D11_VIEWPORT viewport = {};
@@ -251,12 +253,12 @@ namespace Forge
 		viewport.MinDepth = 0.0f;
 		viewport.MaxDepth = 1.0f;
 
-		pDeviceContext->RSSetViewports(1, &viewport);
+		_deviceContext->RSSetViewports(1, &viewport);
 	}
 
 	void GraphicsManager::DrawMesh(Mesh* mesh, bool draw_solid, bool draw_wireframe)
 	{
-		if (!pDeviceContext || !pDevice || !mesh)
+		if (!_deviceContext || !_device || !mesh)
 		{
 			return;
 		}
@@ -275,15 +277,18 @@ namespace Forge
 		const unsigned int num_vertices = vertices.size();
 		const unsigned int num_indices = indices.size();
 
-		const FVector cameraPosition = pCamera != nullptr ? pCamera->GetPosition() : FVector(0.f, -10.f, 0.f);
+		const FVector cameraPosition = _camera != nullptr ? _camera->GetPosition() : FVector(0.f, -10.f, 0.f);
+		const FVector cameraForwardVector = _camera != nullptr ? _camera->GetForwardVector() : FVector(0.f, 1.f, 0.f);
+		const FVector cameraUpVector = _camera != nullptr ? _camera->GetUpVector() : FVector(0.f, 0.f, 1.f);
+
 		const FVector cameraPosition_dx11 = { cameraPosition.X, cameraPosition.Z, cameraPosition.Y };
 
 		// Update Constant Buffers
 		ModelConstantBuffer model_constant_buffer;
 		model_constant_buffer.model = XMMatrixTranspose(GetModelMatrix(mesh->GetTransform()));
-		model_constant_buffer.view = XMMatrixTranspose(GetViewMatrix(cameraPosition));
+		model_constant_buffer.view = XMMatrixTranspose(GetViewMatrix(cameraPosition, cameraForwardVector, cameraUpVector));
 		model_constant_buffer.projection = XMMatrixTranspose(GetProjectionMatrix(XM_PIDIV4, 0.1f, 1000.f, false));
-		UpdateConstantBuffer<ModelConstantBuffer>(pDeviceContext, pModelConstantBuffer, model_constant_buffer);
+		UpdateConstantBuffer<ModelConstantBuffer>(_deviceContext, _modelConstantBuffer, model_constant_buffer);
 
 		LightingConstantBuffer lighting_constant_buffer;
 		lighting_constant_buffer.num_point_lights = 1;
@@ -292,7 +297,7 @@ namespace Forge
 		lighting_constant_buffer.point_lights[0].position = cameraPosition_dx11;
 		lighting_constant_buffer.point_lights[0].radius = 1000.f;
 		lighting_constant_buffer.camera_position = { 0.f, 0.f, -10.f };
-		UpdateConstantBuffer<LightingConstantBuffer>(pDeviceContext, pLightingConstantBuffer, lighting_constant_buffer);
+		UpdateConstantBuffer<LightingConstantBuffer>(_deviceContext, _lightingConstantBuffer, lighting_constant_buffer);
 
 		MaterialConstantBuffer material_constant_buffer;
 		material_constant_buffer.diffuseColor = material.GetDiffuseColor();
@@ -300,7 +305,7 @@ namespace Forge
 		material_constant_buffer.hasDisplacement = displacement_map.IsValidTexture();
 		material_constant_buffer.displacementStrength = material.GetDisplacementStrength();
 		material_constant_buffer.isLit = material.IsLit();
-		UpdateConstantBuffer<MaterialConstantBuffer>(pDeviceContext, pMaterialConstantBuffer, material_constant_buffer);
+		UpdateConstantBuffer<MaterialConstantBuffer>(_deviceContext, _materialConstantBuffer, material_constant_buffer);
 
 		// Bind Data
 		const UINT start_slot = 0u;
@@ -308,52 +313,52 @@ namespace Forge
 		const UINT strides[] = { sizeof(Vertex) };
 		const UINT offsets[] = { 0u };
 		ID3D11Buffer* vertex_buffers[] = { pVertexBuffer.Get() };
-		ID3D11Buffer* constant_buffers[] = { pModelConstantBuffer.Get(), pMaterialConstantBuffer.Get(), pLightingConstantBuffer.Get() };
-		ID3D11RenderTargetView* render_target_views[] = { pRenderTargetView.Get() };
+		ID3D11Buffer* constant_buffers[] = { _modelConstantBuffer.Get(), _materialConstantBuffer.Get(), _lightingConstantBuffer.Get() };
+		ID3D11RenderTargetView* render_target_views[] = { _renderTargetView.Get() };
 		ID3D11ShaderResourceView* shader_resources[] = { main_texture.GetShaderResource().Get(), displacement_map.GetShaderResource().Get() };
-		ID3D11SamplerState* sampler_states[] = { pTextureSamplerState.Get() };
+		ID3D11SamplerState* sampler_states[] = { _textureSamplerState.Get() };
 
-		pDeviceContext->IASetVertexBuffers(0, 1, vertex_buffers, strides, offsets);
-		pDeviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
-		pDeviceContext->IASetInputLayout(pInputLayout.Get());
+		_deviceContext->IASetVertexBuffers(0, 1, vertex_buffers, strides, offsets);
+		_deviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+		_deviceContext->IASetInputLayout(_inputLayout.Get());
 
-		pDeviceContext->VSSetShader(pVertexShader.Get(), nullptr, 0u);
-		pDeviceContext->VSSetShaderResources(1u, 1u, &shader_resources[1]);
-		pDeviceContext->VSSetSamplers(0u, 1u, sampler_states);
-		pDeviceContext->VSSetConstantBuffers(0u, 2u, &constant_buffers[0]);
+		_deviceContext->VSSetShader(_vertexShader.Get(), nullptr, 0u);
+		_deviceContext->VSSetShaderResources(1u, 1u, &shader_resources[1]);
+		_deviceContext->VSSetSamplers(0u, 1u, sampler_states);
+		_deviceContext->VSSetConstantBuffers(0u, 2u, &constant_buffers[0]);
 
-		pDeviceContext->PSSetShader(pPixelShader.Get(), nullptr, 0u);
-		pDeviceContext->PSSetShaderResources(0u, 1u, shader_resources);
-		pDeviceContext->PSSetSamplers(0u, 1u, sampler_states);
-		pDeviceContext->PSSetConstantBuffers(1u, 2u, &constant_buffers[1]);
+		_deviceContext->PSSetShader(_pixelShader.Get(), nullptr, 0u);
+		_deviceContext->PSSetShaderResources(0u, 1u, shader_resources);
+		_deviceContext->PSSetSamplers(0u, 1u, sampler_states);
+		_deviceContext->PSSetConstantBuffers(1u, 2u, &constant_buffers[1]);
 
-		pDeviceContext->OMSetRenderTargets(1u, render_target_views, pDepthStencilView.Get());
-		pDeviceContext->OMSetDepthStencilState(pDepthStencilState.Get(), 0);
+		_deviceContext->OMSetRenderTargets(1u, render_target_views, _depthStencilView.Get());
+		_deviceContext->OMSetDepthStencilState(_depthStencilState.Get(), 0);
 
-		pDeviceContext->RSSetState(pSolidRasterizerState.Get());
+		_deviceContext->RSSetState(_solidRasterizerState.Get());
 
 		// Draw
 		if (num_indices && draw_solid)
 		{
-			pDeviceContext->IASetIndexBuffer(pIndexBuffer.Get(), DXGI_FORMAT_R32_UINT, 0u);
-			pDeviceContext->DrawIndexed(num_indices, 0u, 0u);
+			_deviceContext->IASetIndexBuffer(pIndexBuffer.Get(), DXGI_FORMAT_R32_UINT, 0u);
+			_deviceContext->DrawIndexed(num_indices, 0u, 0u);
 		}
 		else if(draw_solid)
 		{
-			pDeviceContext->Draw(num_vertices, 0u);
+			_deviceContext->Draw(num_vertices, 0u);
 		}
 
 		if (draw_wireframe)
 		{
-			pDeviceContext->RSSetState(pWireframeRasterizerState.Get());
-			pDeviceContext->PSSetShader(pWireframePixelShader.Get(), nullptr, 0);
+			_deviceContext->RSSetState(_wireframeRasterizerState.Get());
+			_deviceContext->PSSetShader(_wireframePixelShader.Get(), nullptr, 0);
 
 			if (num_indices)
-				pDeviceContext->DrawIndexed(num_indices, 0, 0);
+				_deviceContext->DrawIndexed(num_indices, 0, 0);
 			else
-				pDeviceContext->Draw(num_vertices, 0);
+				_deviceContext->Draw(num_vertices, 0);
 
-			pDeviceContext->RSSetState(pSolidRasterizerState.Get());
+			_deviceContext->RSSetState(_solidRasterizerState.Get());
 		}
 	}
 
@@ -361,14 +366,18 @@ namespace Forge
 	{
 		if (camera != nullptr)
 		{
-			pCamera = camera;
+			_camera = camera;
 		}
 	}
 
 	FVector2D GraphicsManager::ConvertToClipPosition(FVector local, FTransform transform)
 	{
+		const FVector cameraPosition = _camera != nullptr ? _camera->GetPosition() : FVector(0.f, -10.f, 0.f);
+		const FVector cameraForwardVector = _camera != nullptr ? _camera->GetForwardVector() : FVector(0.f, 1.f, 0.f);
+		const FVector cameraUpVector = _camera != nullptr ? _camera->GetUpVector() : FVector(0.f, 0.f, 1.f);
+
 		XMMATRIX model = GetModelMatrix(transform);
-		XMMATRIX view = GetViewMatrix(pCamera->GetPosition());
+		XMMATRIX view = GetViewMatrix(cameraPosition, cameraForwardVector, cameraUpVector);
 		XMMATRIX projection = GetProjectionMatrix(XM_PIDIV4, 0.1f, 1000.f, false);
 		XMVECTOR world_position = XMVector3TransformCoord(XMVectorSet(local.X, local.Y, local.Z, 1.f), model);
 		XMVECTOR clip_position = XMVector4Transform(world_position, XMMatrixMultiply(view, projection));
@@ -385,7 +394,7 @@ namespace Forge
 
 		D3D11_VIEWPORT viewport;
 		UINT num_viewports = 1u;
-		pDeviceContext->RSGetViewports(
+		_deviceContext->RSGetViewports(
 			&num_viewports,
 			&viewport
 		);
@@ -407,7 +416,7 @@ namespace Forge
 
 	bool GraphicsManager::IsPositionOnSphereVisibleToCamera(FVector position, FTransform transform) const
 	{
-		FVector cameraPosition = pCamera->GetPosition();
+		FVector cameraPosition = _camera->GetPosition();
 		FTransform moonTransform = transform;
 
 		XMVECTOR localPosition = XMVectorSet(
@@ -458,56 +467,49 @@ namespace Forge
 
 	void GraphicsManager::PresentFrame()
 	{
-		if (pSwapChain)
+		if (_swapChain)
 		{
 			UINT sync_interval = 1u;					// target 60FPS
 			UINT flags = 0u;							
-			pSwapChain->Present(sync_interval, flags);
+			_swapChain->Present(sync_interval, flags);
 		}
+	}
+
+	void GraphicsManager::ClearScreen(float red, float green, float blue) noexcept
+	{
+		ClearRenderTargetView(red, green, blue);
+		ClearDepthStencilView();
 	}
 
 	void GraphicsManager::ClearRenderTargetView(float red, float green, float blue) noexcept
 	{
-		if (!pDeviceContext || !pRenderTargetView)
+		if (!_deviceContext || !_renderTargetView)
 			return;
 
 		const float color[] = { red, green, blue, 1.0f };
-		pDeviceContext->ClearRenderTargetView(pRenderTargetView.Get(), color);
+		_deviceContext->ClearRenderTargetView(_renderTargetView.Get(), color);
+	}
 
-		pDeviceContext->ClearDepthStencilView(pDepthStencilView.Get(), D3D11_CLEAR_DEPTH, 1.f, 0u);
+	void GraphicsManager::ClearDepthStencilView() noexcept
+	{
+		if (!_deviceContext || !_depthStencilView)
+			return;
+
+		_deviceContext->ClearDepthStencilView(_depthStencilView.Get(), D3D11_CLEAR_DEPTH, 1.f, 0u);
 	}
 
 	const ComPtr<ID3D11Device> GraphicsManager::GetDevice() const
 	{
-		return pDevice;
+		return _device;
 	}
 
 	const ComPtr<ID3D11DeviceContext> GraphicsManager::GetDeviceContext() const
 	{
-		return pDeviceContext;
+		return _deviceContext;
 	}
 
 	bool GraphicsManager::CreateTextureFromFile(ComPtr<ID3D11ShaderResourceView>& texture, const char* filename)
 	{
-/*
-		HRESULT result = DirectX::CreateWICTextureFromFile(
-			pDevice.Get(),
-			pDeviceContext.Get(),
-			filename,
-			nullptr,
-			texture.GetAddressOf()
-		);
-
-		if (FAILED(result))
-		{
-			OutputDebugString(_com_error(result).ErrorMessage());
-			throw std::runtime_error("[Graphics Manager] - Failed to create texture");
-			return false;
-		}
-
-				return true;
-*/
-
 		int width, height, originalChannels;
 
 		// load image data
@@ -541,7 +543,7 @@ namespace Forge
 
 		Microsoft::WRL::ComPtr<ID3D11Texture2D> texture2d;
 
-		HRESULT result = pDevice->CreateTexture2D(
+		HRESULT result = _device->CreateTexture2D(
 			&textureDesc,
 			&textureData,
 			texture2d.GetAddressOf()
@@ -554,7 +556,7 @@ namespace Forge
 		}
 
 		// Create the shader resource view
-		result = pDevice->CreateShaderResourceView(
+		result = _device->CreateShaderResourceView(
 			texture2d.Get(),
 			nullptr,
 			texture.GetAddressOf()
@@ -604,10 +606,10 @@ namespace Forge
 			0,
 			D3D11_SDK_VERSION,
 			&swap_chain_desc,
-			&pSwapChain,
-			&pDevice,
+			&_swapChain,
+			&_device,
 			nullptr,
-			&pDeviceContext
+			&_deviceContext
 		);
 
 		if (FAILED(result))
@@ -617,20 +619,20 @@ namespace Forge
 		}
 
 #ifdef _DEBUG
-		pDevice.As(&pDebug); // pDevice->QueryInterface(IID_PPV_ARGS(&pDebug)); <-- Same thing
+		_device.As(&_debug);
 #endif
 	}
 	
 	void GraphicsManager::CreateRenderTargets()
 	{
-		if (pSwapChain && pDevice)
+		if (_swapChain && _device)
 		{
 			ID3D11Resource* pBackBuffer = nullptr;
-			HRESULT result = pSwapChain->GetBuffer(0, __uuidof(ID3D11Resource), reinterpret_cast<void**>(&pBackBuffer));
+			HRESULT result = _swapChain->GetBuffer(0, __uuidof(ID3D11Resource), reinterpret_cast<void**>(&pBackBuffer));
 
 			if (pBackBuffer)
 			{
-				result = pDevice->CreateRenderTargetView(pBackBuffer, nullptr, &pRenderTargetView);
+				result = _device->CreateRenderTargetView(pBackBuffer, nullptr, &_renderTargetView);
 				pBackBuffer->Release();
 			}
 		}
@@ -648,7 +650,7 @@ namespace Forge
 		}
 
 		// Create Vertex Shader
-		result = pDevice->CreateVertexShader(pBlob->GetBufferPointer(), pBlob->GetBufferSize(), nullptr, &pVertexShader);
+		result = _device->CreateVertexShader(pBlob->GetBufferPointer(), pBlob->GetBufferSize(), nullptr, &_vertexShader);
 		if (FAILED(result))
 		{
 			throw std::runtime_error("[GraphicsManager] Failed to create Vertex Shader");
@@ -662,7 +664,7 @@ namespace Forge
 		}
 
 		// Create Pixel Shader
-		result = pDevice->CreatePixelShader(pBlob->GetBufferPointer(), pBlob->GetBufferSize(), nullptr, &pPixelShader);
+		result = _device->CreatePixelShader(pBlob->GetBufferPointer(), pBlob->GetBufferSize(), nullptr, &_pixelShader);
 		if (FAILED(result))
 		{
 			throw std::runtime_error("[GraphicsManager] DrawMesh: Failed to create Pixel Shader");
@@ -677,7 +679,7 @@ namespace Forge
 		}
 
 		// Create Wireframe Pixel Shader
-		result = pDevice->CreatePixelShader(pBlob->GetBufferPointer(), pBlob->GetBufferSize(), nullptr, &pWireframePixelShader);
+		result = _device->CreatePixelShader(pBlob->GetBufferPointer(), pBlob->GetBufferSize(), nullptr, &_wireframePixelShader);
 
 		if (FAILED(result))
 		{
@@ -704,7 +706,7 @@ namespace Forge
 
 		UINT num_elements = std::size(input_element_desc);
 		
-		result = pDevice->CreateInputLayout(input_element_desc, num_elements, pBlob->GetBufferPointer(), pBlob->GetBufferSize(), &pInputLayout);
+		result = _device->CreateInputLayout(input_element_desc, num_elements, pBlob->GetBufferPointer(), pBlob->GetBufferSize(), &_inputLayout);
 		if (FAILED(result))
 		{
 			throw std::runtime_error("[GraphicsManager] DrawTestMesh: Failed to create Input Layout");
@@ -727,7 +729,7 @@ namespace Forge
 
 		UINT num_viewports = 1u;
 		D3D11_VIEWPORT viewports[] = { viewport };
-		pDeviceContext->RSSetViewports(num_viewports, viewports);
+		_deviceContext->RSSetViewports(num_viewports, viewports);
 
 		D3D11_RASTERIZER_DESC solid_state_desc = {};
 		solid_state_desc.CullMode = D3D11_CULL_BACK;
@@ -735,7 +737,7 @@ namespace Forge
 		solid_state_desc.DepthClipEnable = TRUE;
 		solid_state_desc.FillMode = D3D11_FILL_SOLID;
 
-		HRESULT result = pDevice->CreateRasterizerState(&solid_state_desc, pSolidRasterizerState.GetAddressOf());
+		HRESULT result = _device->CreateRasterizerState(&solid_state_desc, _solidRasterizerState.GetAddressOf());
 
 		if (FAILED(result))
 		{
@@ -748,7 +750,7 @@ namespace Forge
 		wireframe_state_desc.FrontCounterClockwise = FALSE;
 		wireframe_state_desc.DepthClipEnable = TRUE;
 
-		result = pDevice->CreateRasterizerState(&wireframe_state_desc, pWireframeRasterizerState.GetAddressOf());
+		result = _device->CreateRasterizerState(&wireframe_state_desc, _wireframeRasterizerState.GetAddressOf());
 
 		if (FAILED(result))
 		{
@@ -775,7 +777,7 @@ namespace Forge
 
 		Microsoft::WRL::ComPtr<ID3D11Texture2D> pDepthBuffer;
 
-		HRESULT result = pDevice->CreateTexture2D(&depthDesc, nullptr, pDepthBuffer.GetAddressOf());
+		HRESULT result = _device->CreateTexture2D(&depthDesc, nullptr, pDepthBuffer.GetAddressOf());
 
 		if (FAILED(result))
 		{
@@ -783,7 +785,7 @@ namespace Forge
 			throw std::runtime_error("[Graphics Manager] - Failed to create depth buffer");
 		}
 
-		result = pDevice->CreateDepthStencilView(pDepthBuffer.Get(), nullptr, pDepthStencilView.GetAddressOf());
+		result = _device->CreateDepthStencilView(pDepthBuffer.Get(), nullptr, _depthStencilView.GetAddressOf());
 
 		if (FAILED(result))
 		{
@@ -796,7 +798,7 @@ namespace Forge
 		depth_stencil_desc.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ALL;
 		depth_stencil_desc.DepthFunc = D3D11_COMPARISON_LESS;
 
-		result = pDevice->CreateDepthStencilState(&depth_stencil_desc, pDepthStencilState.GetAddressOf());
+		result = _device->CreateDepthStencilState(&depth_stencil_desc, _depthStencilState.GetAddressOf());
 
 		if (FAILED(result))
 		{
@@ -817,7 +819,7 @@ namespace Forge
 		samplerDesc.MinLOD = 0;
 		samplerDesc.MaxLOD = D3D11_FLOAT32_MAX;
 
-		HRESULT result = pDevice->CreateSamplerState(&samplerDesc, pTextureSamplerState.GetAddressOf());
+		HRESULT result = _device->CreateSamplerState(&samplerDesc, _textureSamplerState.GetAddressOf());
 
 		if (FAILED(result))
 		{
@@ -836,7 +838,7 @@ namespace Forge
 		model_buffer_desc.StructureByteStride = 0u;
 		model_buffer_desc.Usage = D3D11_USAGE_DYNAMIC;
 
-		HRESULT result = pDevice->CreateBuffer(&model_buffer_desc, nullptr, &pModelConstantBuffer);
+		HRESULT result = _device->CreateBuffer(&model_buffer_desc, nullptr, &_modelConstantBuffer);
 
 		if (FAILED(result))
 		{
@@ -850,7 +852,7 @@ namespace Forge
 		lighting_buffer_desc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
 		lighting_buffer_desc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
 
-		result = pDevice->CreateBuffer(&lighting_buffer_desc, nullptr, &pLightingConstantBuffer);
+		result = _device->CreateBuffer(&lighting_buffer_desc, nullptr, &_lightingConstantBuffer);
 
 		if (FAILED(result))
 		{
@@ -864,7 +866,7 @@ namespace Forge
 		material_buffer_desc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
 		material_buffer_desc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
 
-		result = pDevice->CreateBuffer(&material_buffer_desc, nullptr, &pMaterialConstantBuffer);
+		result = _device->CreateBuffer(&material_buffer_desc, nullptr, &_materialConstantBuffer);
 
 		if (FAILED(result))
 		{

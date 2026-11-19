@@ -7,6 +7,11 @@
 #include "tiny_obj_loader.h"
 #include "Camera.h"
 
+namespace
+{
+	const double PI = std::acos(-1.0);
+}
+
 namespace Forge
 {
 	Mesh::Mesh(const FTransform transform, const std::string filename)
@@ -61,6 +66,29 @@ namespace Forge
 	const Material& Mesh::GetMaterial() const
 	{
 		return material;
+	}
+
+	FVector Mesh::GetForwardVector() const
+	{
+		float pitch = Transform.Rotation.Pitch * PI / 180.f;
+		float yaw = Transform.Rotation.Yaw * PI / 180.f;
+
+		return FVector(
+			-sinf(yaw) * cosf(pitch),
+			cosf(yaw) * cosf(pitch),
+			sinf(pitch)
+		).Normalized();
+	}
+
+	FVector Mesh::GetRightVector() const
+	{
+		FVector worldUp(0.f, 0.f, 1.f);
+		return FVector::Cross(GetForwardVector(), worldUp).Normalized();
+	}
+
+	FVector Mesh::GetUpVector() const
+	{
+		return FVector::Cross(GetRightVector(), GetForwardVector()).Normalized();
 	}
 
 	const std::vector<Vertex>& Mesh::GetVertices() const
