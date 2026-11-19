@@ -1,0 +1,102 @@
+\doxysection{Include/\+\+Input\+Manager.h File Reference}
+\hypertarget{_input_manager_8h}{}\label{_input_manager_8h}\index{Include/InputManager.h@{Include/InputManager.h}}
+
+
+Defines the input management system for keyboard and mouse events.  
+
+
+{\ttfamily \+\#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \+\#include $<$functional$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \+\#include $<$Windows.\+h$>$}\newline
+{\ttfamily \+\#include "{}Keys.\+h"{}}\newline
+{\ttfamily \+\#include "{}Mouse.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_forge_1_1_binding}{Forge::\+\+Binding$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Stores a callback and its associated binding identifier. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_forge_1_1_input_manager}{Forge::\+\+Input\+Manager}}
+\begin{DoxyCompactList}\small\item\em Manages keyboard and mouse input state and event callbacks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{_input_manager_8h_a84de02f2a240b35ed06a3a2c5adfc8cd}{Forge::\+\+Key\+Callback}} = std::\+function$<$void(Key\+Event event)$>$
+\begin{DoxyCompactList}\small\item\em Callback type for keyboard events. \end{DoxyCompactList}\item 
+using \doxymbox{\hyperlink{_input_manager_8h_ac48efee6df4422684e9de50fb6a2728c}{Forge::\+\+Mouse\+Move\+Callback}} = std::\+function$<$void(\doxymbox{\hyperlink{struct_forge_1_1_mouse_state}{Mouse\+State}} state)$>$
+\begin{DoxyCompactList}\small\item\em Callback type for mouse movement events. \end{DoxyCompactList}\item 
+using \doxymbox{\hyperlink{_input_manager_8h_adfa193e601acb42b9c258dce9d309ec2}{Forge::\+\+Mouse\+Button\+Callback}} = std::\+function$<$void(Mouse\+Event event)$>$
+\begin{DoxyCompactList}\small\item\em Callback type for mouse button events. \end{DoxyCompactList}\item 
+using \doxymbox{\hyperlink{_input_manager_8h_a42a19dce8ea9779ee64d34e50c12c15d}{Forge::\+\+Mouse\+Scroll\+Callback}} = std::\+function$<$void(int delta)$>$
+\begin{DoxyCompactList}\small\item\em Callback type for mouse scroll events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the input management system for keyboard and mouse events. 
+
+Provides input state tracking and event binding functionality. Callbacks can be registered for keyboard events, mouse button events, mouse movement, and mouse scrolling. 
+
+\label{_input_manager_8h_doc-typedef-members}
+\Hypertarget{_input_manager_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_input_manager_8h_a84de02f2a240b35ed06a3a2c5adfc8cd}\index{InputManager.h@{InputManager.h}!KeyCallback@{KeyCallback}}
+\index{KeyCallback@{KeyCallback}!InputManager.h@{InputManager.h}}
+\doxysubsubsection{\texorpdfstring{KeyCallback}{KeyCallback}}
+{\footnotesize\ttfamily \label{_input_manager_8h_a84de02f2a240b35ed06a3a2c5adfc8cd} 
+using \doxymbox{\hyperlink{_input_manager_8h_a84de02f2a240b35ed06a3a2c5adfc8cd}{Forge::\+\+Key\+Callback}} = std::\+function$<$void(Key\+Event event)$>$}
+
+
+
+Callback type for keyboard events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The keyboard event being broadcast. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_input_manager_8h_adfa193e601acb42b9c258dce9d309ec2}\index{InputManager.h@{InputManager.h}!MouseButtonCallback@{MouseButtonCallback}}
+\index{MouseButtonCallback@{MouseButtonCallback}!InputManager.h@{InputManager.h}}
+\doxysubsubsection{\texorpdfstring{MouseButtonCallback}{MouseButtonCallback}}
+{\footnotesize\ttfamily \label{_input_manager_8h_adfa193e601acb42b9c258dce9d309ec2} 
+using \doxymbox{\hyperlink{_input_manager_8h_adfa193e601acb42b9c258dce9d309ec2}{Forge::\+\+Mouse\+Button\+Callback}} = std::\+function$<$void(Mouse\+Event event)$>$}
+
+
+
+Callback type for mouse button events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The mouse button event being broadcast. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_input_manager_8h_ac48efee6df4422684e9de50fb6a2728c}\index{InputManager.h@{InputManager.h}!MouseMoveCallback@{MouseMoveCallback}}
+\index{MouseMoveCallback@{MouseMoveCallback}!InputManager.h@{InputManager.h}}
+\doxysubsubsection{\texorpdfstring{MouseMoveCallback}{MouseMoveCallback}}
+{\footnotesize\ttfamily \label{_input_manager_8h_ac48efee6df4422684e9de50fb6a2728c} 
+using \doxymbox{\hyperlink{_input_manager_8h_ac48efee6df4422684e9de50fb6a2728c}{Forge::\+\+Mouse\+Move\+Callback}} = std::\+function$<$void(Mouse\+State state)$>$}
+
+
+
+Callback type for mouse movement events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The current mouse state, including position and movement delta. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_input_manager_8h_a42a19dce8ea9779ee64d34e50c12c15d}\index{InputManager.h@{InputManager.h}!MouseScrollCallback@{MouseScrollCallback}}
+\index{MouseScrollCallback@{MouseScrollCallback}!InputManager.h@{InputManager.h}}
+\doxysubsubsection{\texorpdfstring{MouseScrollCallback}{MouseScrollCallback}}
+{\footnotesize\ttfamily \label{_input_manager_8h_a42a19dce8ea9779ee64d34e50c12c15d} 
+using \doxymbox{\hyperlink{_input_manager_8h_a42a19dce8ea9779ee64d34e50c12c15d}{Forge::\+\+Mouse\+Scroll\+Callback}} = std::\+function$<$void(int delta)$>$}
+
+
+
+Callback type for mouse scroll events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & The scroll delta reported by the input event. \\
+\hline
+\end{DoxyParams}

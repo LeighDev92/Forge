@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="struct_forge_1_1_mouse_state" kind="struct" language="C++" prot="public">
+    <compoundname>Forge::MouseState</compoundname>
+    <includes refid="_mouse_8h" local="no">Mouse.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_forge_1_1_mouse_state_1ae87f2078c717435c5459d200442e6486" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Forge::MouseState::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>Forge::MouseState::x</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The screen x position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mouse.h" line="42" column="13" bodyfile="Include/Mouse.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_forge_1_1_mouse_state_1a83c602e319dd55e142e8c9c0fc2e2af8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Forge::MouseState::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>Forge::MouseState::y</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The screen y position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mouse.h" line="47" column="13" bodyfile="Include/Mouse.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_forge_1_1_mouse_state_1a8ae9d48bed1690f3eb59b0956ed5ae04" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Forge::MouseState::deltaX</definition>
+        <argsstring></argsstring>
+        <name>deltaX</name>
+        <qualifiedname>Forge::MouseState::deltaX</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The last change in mouse screen x position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mouse.h" line="52" column="13" bodyfile="Include/Mouse.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_forge_1_1_mouse_state_1a115af61f7afbbb73cfcfa5170854219b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Forge::MouseState::deltaY</definition>
+        <argsstring></argsstring>
+        <name>deltaY</name>
+        <qualifiedname>Forge::MouseState::deltaY</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The last change in mouse screen y position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mouse.h" line="57" column="13" bodyfile="Include/Mouse.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Used to store the current state of the mouse. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Include/Mouse.h" line="37" column="5" bodyfile="Include/Mouse.h" bodystart="38" bodyend="58"/>
+    <listofallmembers>
+      <member refid="struct_forge_1_1_mouse_state_1a8ae9d48bed1690f3eb59b0956ed5ae04" prot="public" virt="non-virtual"><scope>Forge::MouseState</scope><name>deltaX</name></member>
+      <member refid="struct_forge_1_1_mouse_state_1a115af61f7afbbb73cfcfa5170854219b" prot="public" virt="non-virtual"><scope>Forge::MouseState</scope><name>deltaY</name></member>
+      <member refid="struct_forge_1_1_mouse_state_1ae87f2078c717435c5459d200442e6486" prot="public" virt="non-virtual"><scope>Forge::MouseState</scope><name>x</name></member>
+      <member refid="struct_forge_1_1_mouse_state_1a83c602e319dd55e142e8c9c0fc2e2af8" prot="public" virt="non-virtual"><scope>Forge::MouseState</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,65 @@
+\doxysection{Window.\+h}
+\hypertarget{_window_8h_source}{}\label{_window_8h_source}\index{Include/Window.h@{Include/Window.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}framework.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }Forge}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }FORGE\_API\ \doxymbox{\hyperlink{class_forge_1_1_window_acaa64471a92abff6dd26ed98ac84a5b9}{Window}}}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_forge_1_1_window_acaa64471a92abff6dd26ed98ac84a5b9}{Window}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_forge_1_1_window_a37c3a8dd79eef97182275b3f12c242c9}{\string~Window}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ ATOM\ \doxymbox{\hyperlink{class_forge_1_1_window_abd00f3b279b916f495f2d31fa7fffd12}{Register}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \doxymbox{\hyperlink{class_forge_1_1_window_a4cb85dbc4a27904c987e5ffd394ce790}{Create}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ BOOL\ \doxymbox{\hyperlink{class_forge_1_1_window_aa8470f6e110bc26b00d0306c89394db4}{Show}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ BOOL\ \doxymbox{\hyperlink{class_forge_1_1_window_a2de0485c45180dd88910500f0e596404}{Update}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ HWND\ \doxymbox{\hyperlink{class_forge_1_1_window_a6b2b66da88c62f04524eede800aaf991}{GetHWND}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ LRESULT\ \doxymbox{\hyperlink{class_forge_1_1_window_af08d697bf71aac82bca0d96f68402911}{HandleMessage}}(}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ HWND\ hWnd,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ message,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ WPARAM\ wParam,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ LPARAM\ lParam}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ LRESULT\ CALLBACK\ WndProc(}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ HWND\ hWnd,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ message,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ WPARAM\ wParam,}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ LPARAM\ lParam}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ LRESULT\ CALLBACK\ WndProcThunk(}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ HWND\ hWnd,}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ message,}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ WPARAM\ wParam,}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ LPARAM\ lParam}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ INT\_PTR\ CALLBACK\ \doxymbox{\hyperlink{class_forge_1_1_window_a3de07f68dab333fa97876bee2473fcdd}{About}}(}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ HWND\ hDlg,}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ message,}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ WPARAM\ wParam,}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ LPARAM\ lParam}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ HWND\ \_hWnd;}
+\DoxyCodeLine{00141\ \ \ \ \ \};}
+\DoxyCodeLine{00142\ \}}
+
+\end{DoxyCode}

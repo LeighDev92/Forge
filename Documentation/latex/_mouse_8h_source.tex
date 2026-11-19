@@ -1,0 +1,48 @@
+\doxysection{Mouse.\+h}
+\hypertarget{_mouse_8h_source}{}\label{_mouse_8h_source}\index{Include/Mouse.h@{Include/Mouse.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}framework.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }Forge}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{enum\ class}\ MouseEvent}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ Move,}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ ButtonDown,}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ ButtonUp,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ ScrollVertical,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ ScrollHorizontal}
+\DoxyCodeLine{00016\ \ \ \ \ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{enum\ class}\ MouseButton}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ Unkown\ =\ 0,}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ Left,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ Right,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ Middle,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ X1,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ X2,}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ Count}
+\DoxyCodeLine{00032\ \ \ \ \ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{struct\ }FORGE\_API\ \doxymbox{\hyperlink{struct_forge_1_1_mouse_state}{MouseState}}}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_forge_1_1_mouse_state_ae87f2078c717435c5459d200442e6486}{x}}\ =\ 0;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_forge_1_1_mouse_state_a83c602e319dd55e142e8c9c0fc2e2af8}{y}}\ =\ 0;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_forge_1_1_mouse_state_a8ae9d48bed1690f3eb59b0956ed5ae04}{deltaX}}\ =\ 0;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_forge_1_1_mouse_state_a115af61f7afbbb73cfcfa5170854219b}{deltaY}}\ =\ 0;}
+\DoxyCodeLine{00058\ \ \ \ \ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \ \ \ \ FORGE\_API\ MouseButton\ MouseMessageToMouseButton(WPARAM\ key);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ \ \ \ \ FORGE\_API\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}*\ MouseButtonToString(MouseButton\ button);}
+\DoxyCodeLine{00075\ \}}
+
+\end{DoxyCode}

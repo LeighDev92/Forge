@@ -1,0 +1,669 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="class_forge_1_1_application" kind="class" language="C++" prot="public">
+    <compoundname>Forge::Application</compoundname>
+    <includes refid="_application_8h" local="no">Application.h</includes>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_forge_1_1_application_1ab95c937348a41f9038353de62a4147e9" prot="protected" static="yes" mutable="no">
+        <type><ref refid="class_forge_1_1_application_1a684ec249d6911e87a57ab28900d388df" kindref="member">Application</ref> *</type>
+        <definition>Application* Forge::Application::_instance</definition>
+        <argsstring></argsstring>
+        <name>_instance</name>
+        <qualifiedname>Forge::Application::_instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="193" column="20" bodyfile="Include/Application.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_forge_1_1_application_1ae7f89b37245fcddc0aed14a5437ea6d2" prot="protected" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="class_forge_1_1_main_window" kindref="compound">MainWindow</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;MainWindow&gt; Forge::Application::_mainWindow</definition>
+        <argsstring></argsstring>
+        <name>_mainWindow</name>
+        <qualifiedname>Forge::Application::_mainWindow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="195" column="17" bodyfile="Include/Application.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_application_1a6057da23864f1004e68caacf87168e8b" prot="protected" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="class_forge_1_1_input_manager" kindref="compound">InputManager</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;InputManager&gt; Forge::Application::_inputManager</definition>
+        <argsstring></argsstring>
+        <name>_inputManager</name>
+        <qualifiedname>Forge::Application::_inputManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="196" column="17" bodyfile="Include/Application.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_application_1aae142ff47c6ab836aca488688848cdc1" prot="protected" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="class_forge_1_1_graphics_manager" kindref="compound">GraphicsManager</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;GraphicsManager&gt; Forge::Application::_graphicsManager</definition>
+        <argsstring></argsstring>
+        <name>_graphicsManager</name>
+        <qualifiedname>Forge::Application::_graphicsManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="197" column="17" bodyfile="Include/Application.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_application_1a8d973ddef072db9cb635bf1d183cdbf5" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_forge_1_1_mesh" kindref="compound">Mesh</ref> &gt;</type>
+        <definition>std::vector&lt;Mesh&gt; Forge::Application::_meshes</definition>
+        <argsstring></argsstring>
+        <name>_meshes</name>
+        <qualifiedname>Forge::Application::_meshes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="199" column="13" bodyfile="Include/Application.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_application_1ad069e4b3987d7a63c83598b856784b77" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_forge_1_1_camera" kindref="compound">Camera</ref></type>
+        <definition>Camera Forge::Application::_currentCamera</definition>
+        <argsstring></argsstring>
+        <name>_currentCamera</name>
+        <qualifiedname>Forge::Application::_currentCamera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="201" column="8" bodyfile="Include/Application.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_application_1af46494dd1f074235ba6f955a0ce6e445" prot="protected" static="no" mutable="no">
+        <type>HINSTANCE</type>
+        <definition>HINSTANCE Forge::Application::_hInstance</definition>
+        <argsstring></argsstring>
+        <name>_hInstance</name>
+        <qualifiedname>Forge::Application::_hInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="203" column="11" bodyfile="Include/Application.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_application_1aebc45c7ddc212103f7b4630b24207990" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Forge::Application::_nCMDShow</definition>
+        <argsstring></argsstring>
+        <name>_nCMDShow</name>
+        <qualifiedname>Forge::Application::_nCMDShow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="204" column="5" bodyfile="Include/Application.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_application_1a36d729db66cdbac26c3ae94c44a21bdf" prot="protected" static="no" mutable="no">
+        <type>WCHAR</type>
+        <definition>WCHAR Forge::Application::_szTitle[MAX_LOADSTRING]</definition>
+        <argsstring>[MAX_LOADSTRING]</argsstring>
+        <name>_szTitle</name>
+        <qualifiedname>Forge::Application::_szTitle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="206" column="7" bodyfile="Include/Application.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_application_1a08ddcfe3a14fe8086d73e3e15734ce67" prot="protected" static="no" mutable="no">
+        <type>WCHAR</type>
+        <definition>WCHAR Forge::Application::_szAuthor[MAX_LOADSTRING]</definition>
+        <argsstring>[MAX_LOADSTRING]</argsstring>
+        <name>_szAuthor</name>
+        <qualifiedname>Forge::Application::_szAuthor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="207" column="7" bodyfile="Include/Application.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_application_1a0c710e91ef8021780242d53b8a7e07ec" prot="protected" static="no" mutable="no">
+        <type>WCHAR</type>
+        <definition>WCHAR Forge::Application::_szWindowClass[MAX_LOADSTRING]</definition>
+        <argsstring>[MAX_LOADSTRING]</argsstring>
+        <name>_szWindowClass</name>
+        <qualifiedname>Forge::Application::_szWindowClass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="208" column="7" bodyfile="Include/Application.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_application_1a1432d95b6899d69230f69a90c66e6d54" prot="protected" static="no" mutable="no">
+        <type>HACCEL</type>
+        <definition>HACCEL Forge::Application::_hAccelTable</definition>
+        <argsstring></argsstring>
+        <name>_hAccelTable</name>
+        <qualifiedname>Forge::Application::_hAccelTable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="210" column="8" bodyfile="Include/Application.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_application_1ab6b2a283053a8a39923c763a078a3dba" prot="protected" static="no" mutable="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point Forge::Application::_applicationStartTime</definition>
+        <argsstring></argsstring>
+        <name>_applicationStartTime</name>
+        <qualifiedname>Forge::Application::_applicationStartTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="212" column="39" bodyfile="Include/Application.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_application_1ab65856d1ba35c4e6be6d2e789ea14b54" prot="protected" static="no" mutable="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point Forge::Application::_lastFrameTime</definition>
+        <argsstring></argsstring>
+        <name>_lastFrameTime</name>
+        <qualifiedname>Forge::Application::_lastFrameTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="213" column="39" bodyfile="Include/Application.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_forge_1_1_application_1a92e835b3e7cab3d48fd6bde0ced41c8d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_forge_1_1_application_1a684ec249d6911e87a57ab28900d388df" kindref="member">Application</ref> *</type>
+        <definition>static Application * Forge::Application::Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <qualifiedname>Forge::Application::Get</qualifiedname>
+        <briefdescription>
+<para>Retrieves the active <ref refid="class_forge_1_1_application" kindref="compound">Application</ref> instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the singleton <ref refid="class_forge_1_1_application" kindref="compound">Application</ref> instance, or nullptr if no instance exists. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="34" column="20"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_forge_1_1_application_1a684ec249d6911e87a57ab28900d388df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Forge::Application::Application</definition>
+        <argsstring>(HINSTANCE hInstance, int nCMDShow)</argsstring>
+        <name>Application</name>
+        <qualifiedname>Forge::Application::Application</qualifiedname>
+        <param>
+          <type>HINSTANCE</type>
+          <declname>hInstance</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nCMDShow</declname>
+        </param>
+        <briefdescription>
+<para>Constructs and initializes the Forge application. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes application instance data, loads application strings and accelerator resources, creates the main window and input manager, initializes the graphics manager, and configures the initial camera.</para>
+<para>Initializes the application start time and last frame timestamp.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hInstance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the current application instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nCMDShow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies how the main window should be displayed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1a6490d71378904253c4576f4db3cf5936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Forge::Application::~Application</definition>
+        <argsstring>()</argsstring>
+        <name>~Application</name>
+        <qualifiedname>Forge::Application::~Application</qualifiedname>
+        <briefdescription>
+<para>Releases application resources and resets the singleton instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Releases ownership of the input manager, graphics manager, and main window, then clears the singleton instance pointer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1a557048578ee7590df9af6fb6d296671e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int Forge::Application::Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <qualifiedname>Forge::Application::Run</qualifiedname>
+        <briefdescription>
+<para>Executes the main application loop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Processes pending Windows messages, handles accelerator keys, and executes the application&apos;s frame lifecycle while the application is running.</para>
+<para>Each frame calculates the elapsed time since the previous frame and calls <ref refid="class_forge_1_1_application_1a56405fedf64cdb1ceb66704344726aab" kindref="member">BeginFrame()</ref> followed by <ref refid="class_forge_1_1_application_1a9801fed5a657923b6951bc335ca05f4f" kindref="member">EndFrame()</ref>.</para>
+<para>The loop terminates when a WM_QUIT message is received.</para>
+<para><simplesect kind="return"><para>The exit code supplied by the WM_QUIT message. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="72" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1a56405fedf64cdb1ceb66704344726aab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Forge::Application::BeginFrame</definition>
+        <argsstring>(float deltaTime)</argsstring>
+        <name>BeginFrame</name>
+        <qualifiedname>Forge::Application::BeginFrame</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Begins a new rendering frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the screen to black and iterates through the application&apos;s registered meshes, submitting each mesh to the graphics manager for solid rendering without wireframe rendering.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Elapsed time in seconds since the previous frame. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="83" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1a9801fed5a657923b6951bc335ca05f4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Forge::Application::EndFrame</definition>
+        <argsstring>(float deltaTime)</argsstring>
+        <name>EndFrame</name>
+        <qualifiedname>Forge::Application::EndFrame</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Completes the current rendering frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Presents the rendered frame to the display through the graphics manager.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Elapsed time in seconds since the previous frame. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="92" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1a48605e8240f66a7b904a1d5d7222405d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_forge_1_1_input_manager" kindref="compound">InputManager</ref> *</type>
+        <definition>InputManager * Forge::Application::GetInputManager</definition>
+        <argsstring>() const</argsstring>
+        <name>GetInputManager</name>
+        <qualifiedname>Forge::Application::GetInputManager</qualifiedname>
+        <briefdescription>
+<para>Retrieves the application&apos;s input manager. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the application&apos;s <ref refid="class_forge_1_1_input_manager" kindref="compound">InputManager</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="99" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1a6fa810cade4718e1302b5803a04621e2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_forge_1_1_graphics_manager" kindref="compound">GraphicsManager</ref> *</type>
+        <definition>GraphicsManager * Forge::Application::GetGraphicsManager</definition>
+        <argsstring>() const</argsstring>
+        <name>GetGraphicsManager</name>
+        <qualifiedname>Forge::Application::GetGraphicsManager</qualifiedname>
+        <briefdescription>
+<para>Retrieves the application&apos;s graphics manager. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the application&apos;s <ref refid="class_forge_1_1_graphics_manager" kindref="compound">GraphicsManager</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="106" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1a67a7c6c70d0f1cbe74c6067a63f05f63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_forge_1_1_camera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera * Forge::Application::GetCamera</definition>
+        <argsstring>()</argsstring>
+        <name>GetCamera</name>
+        <qualifiedname>Forge::Application::GetCamera</qualifiedname>
+        <briefdescription>
+<para>Retrieves the application&apos;s active camera. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the application&apos;s current <ref refid="class_forge_1_1_camera" kindref="compound">Camera</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="113" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1ab8f6bdf902da36f9e8ff1061def3ecd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Forge::Application::AddMesh</definition>
+        <argsstring>(Mesh *mesh)</argsstring>
+        <name>AddMesh</name>
+        <qualifiedname>Forge::Application::AddMesh</qualifiedname>
+        <param>
+          <type><ref refid="class_forge_1_1_mesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <briefdescription>
+<para>Registers a mesh with the application. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Copies the supplied mesh into the application&apos;s internal mesh collection so that it can be rendered during subsequent frames.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mesh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the mesh to register.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of the newly registered mesh in the internal collection, or -1 if the supplied pointer is nullptr. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="126" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1abdf00a8624983b273c0b89f3ec02992c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::Application::RemoveMesh</definition>
+        <argsstring>(Mesh *mesh)</argsstring>
+        <name>RemoveMesh</name>
+        <qualifiedname>Forge::Application::RemoveMesh</qualifiedname>
+        <param>
+          <type><ref refid="class_forge_1_1_mesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <briefdescription>
+<para>Removes a mesh from the application&apos;s mesh collection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Searches for a mesh whose address matches the supplied pointer and erases the matching entry if found.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mesh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the mesh instance to remove. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="136" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1adf2caab5e086ae489108cf0bdf3f74b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>RECT</type>
+        <definition>RECT Forge::Application::GetMainWindowViewport</definition>
+        <argsstring>()</argsstring>
+        <name>GetMainWindowViewport</name>
+        <qualifiedname>Forge::Application::GetMainWindowViewport</qualifiedname>
+        <briefdescription>
+<para>Retrieves the client area dimensions of the main window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Queries the main window&apos;s client rectangle. If the main window is unavailable, returns the default rectangle initialized to 800 by 600.</para>
+<para><simplesect kind="return"><para>Rectangle describing the main window&apos;s client area. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="147" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1ad780ce951e3642bf294560a5407f2608" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>HINSTANCE</type>
+        <definition>HINSTANCE Forge::Application::GetHInstance</definition>
+        <argsstring>() const</argsstring>
+        <name>GetHInstance</name>
+        <qualifiedname>Forge::Application::GetHInstance</qualifiedname>
+        <briefdescription>
+<para>Retrieves the application instance handle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Handle to the current application instance. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="154" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1ad7da40b38a736497c2c9671e00004064" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Forge::Application::GetCMDShow</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCMDShow</name>
+        <qualifiedname>Forge::Application::GetCMDShow</qualifiedname>
+        <briefdescription>
+<para>Retrieves the requested main window display state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The display state supplied during application construction. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="161" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1a0483dc44cb7dfa1026107ea13702efc7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>HACCEL</type>
+        <definition>HACCEL Forge::Application::GetAcceleratorTable</definition>
+        <argsstring>() const</argsstring>
+        <name>GetAcceleratorTable</name>
+        <qualifiedname>Forge::Application::GetAcceleratorTable</qualifiedname>
+        <briefdescription>
+<para>Retrieves the application&apos;s accelerator table. s. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Handle to the loaded accelerator table. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="168" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1a32838236a208b2c048d011df74c226ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>LPCWSTR</type>
+        <definition>LPCWSTR Forge::Application::GetTitle</definition>
+        <argsstring>() const</argsstring>
+        <name>GetTitle</name>
+        <qualifiedname>Forge::Application::GetTitle</qualifiedname>
+        <briefdescription>
+<para>Retrieves the application&apos;s title. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the application title string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="175" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1ad8e79ad00e535644e312d4b2a53b6384" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>LPCWSTR</type>
+        <definition>LPCWSTR Forge::Application::GetAuthor</definition>
+        <argsstring>() const</argsstring>
+        <name>GetAuthor</name>
+        <qualifiedname>Forge::Application::GetAuthor</qualifiedname>
+        <briefdescription>
+<para>Retrieves the application&apos;s author information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the application author string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="182" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_application_1a1100d38e6a596046658be7dcdd66d720" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>LPCWSTR</type>
+        <definition>LPCWSTR Forge::Application::GetMainWindowClass</definition>
+        <argsstring>() const</argsstring>
+        <name>GetMainWindowClass</name>
+        <qualifiedname>Forge::Application::GetMainWindowClass</qualifiedname>
+        <briefdescription>
+<para>Retrieves the registered main window class name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the main window class name string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Application.h" line="189" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Serves as the primary entry point and central coordinator of a Forge application. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Responsible for managing the application lifecycle, initializing core engine systems, coordinating runtime operations, and maintaining references to essential engine components and resources. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Forge::Application</label>
+        <link refid="class_forge_1_1_application"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>_instance</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_currentCamera</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Forge::Camera</label>
+        <link refid="class_forge_1_1_camera"/>
+      </node>
+    </collaborationgraph>
+    <location file="Include/Application.h" line="24" column="1" bodyfile="Include/Application.h" bodystart="25" bodyend="214"/>
+    <listofallmembers>
+      <member refid="class_forge_1_1_application_1ab6b2a283053a8a39923c763a078a3dba" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_applicationStartTime</name></member>
+      <member refid="class_forge_1_1_application_1ad069e4b3987d7a63c83598b856784b77" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_currentCamera</name></member>
+      <member refid="class_forge_1_1_application_1aae142ff47c6ab836aca488688848cdc1" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_graphicsManager</name></member>
+      <member refid="class_forge_1_1_application_1a1432d95b6899d69230f69a90c66e6d54" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_hAccelTable</name></member>
+      <member refid="class_forge_1_1_application_1af46494dd1f074235ba6f955a0ce6e445" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_hInstance</name></member>
+      <member refid="class_forge_1_1_application_1a6057da23864f1004e68caacf87168e8b" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_inputManager</name></member>
+      <member refid="class_forge_1_1_application_1ab95c937348a41f9038353de62a4147e9" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_instance</name></member>
+      <member refid="class_forge_1_1_application_1ab65856d1ba35c4e6be6d2e789ea14b54" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_lastFrameTime</name></member>
+      <member refid="class_forge_1_1_application_1ae7f89b37245fcddc0aed14a5437ea6d2" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_mainWindow</name></member>
+      <member refid="class_forge_1_1_application_1a8d973ddef072db9cb635bf1d183cdbf5" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_meshes</name></member>
+      <member refid="class_forge_1_1_application_1aebc45c7ddc212103f7b4630b24207990" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_nCMDShow</name></member>
+      <member refid="class_forge_1_1_application_1a08ddcfe3a14fe8086d73e3e15734ce67" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_szAuthor</name></member>
+      <member refid="class_forge_1_1_application_1a36d729db66cdbac26c3ae94c44a21bdf" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_szTitle</name></member>
+      <member refid="class_forge_1_1_application_1a0c710e91ef8021780242d53b8a7e07ec" prot="protected" virt="non-virtual"><scope>Forge::Application</scope><name>_szWindowClass</name></member>
+      <member refid="class_forge_1_1_application_1ab8f6bdf902da36f9e8ff1061def3ecd1" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>AddMesh</name></member>
+      <member refid="class_forge_1_1_application_1a684ec249d6911e87a57ab28900d388df" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>Application</name></member>
+      <member refid="class_forge_1_1_application_1a56405fedf64cdb1ceb66704344726aab" prot="public" virt="virtual"><scope>Forge::Application</scope><name>BeginFrame</name></member>
+      <member refid="class_forge_1_1_application_1a9801fed5a657923b6951bc335ca05f4f" prot="public" virt="virtual"><scope>Forge::Application</scope><name>EndFrame</name></member>
+      <member refid="class_forge_1_1_application_1a92e835b3e7cab3d48fd6bde0ced41c8d" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>Get</name></member>
+      <member refid="class_forge_1_1_application_1a0483dc44cb7dfa1026107ea13702efc7" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>GetAcceleratorTable</name></member>
+      <member refid="class_forge_1_1_application_1ad8e79ad00e535644e312d4b2a53b6384" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>GetAuthor</name></member>
+      <member refid="class_forge_1_1_application_1a67a7c6c70d0f1cbe74c6067a63f05f63" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>GetCamera</name></member>
+      <member refid="class_forge_1_1_application_1ad7da40b38a736497c2c9671e00004064" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>GetCMDShow</name></member>
+      <member refid="class_forge_1_1_application_1a6fa810cade4718e1302b5803a04621e2" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>GetGraphicsManager</name></member>
+      <member refid="class_forge_1_1_application_1ad780ce951e3642bf294560a5407f2608" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>GetHInstance</name></member>
+      <member refid="class_forge_1_1_application_1a48605e8240f66a7b904a1d5d7222405d" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>GetInputManager</name></member>
+      <member refid="class_forge_1_1_application_1a1100d38e6a596046658be7dcdd66d720" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>GetMainWindowClass</name></member>
+      <member refid="class_forge_1_1_application_1adf2caab5e086ae489108cf0bdf3f74b6" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>GetMainWindowViewport</name></member>
+      <member refid="class_forge_1_1_application_1a32838236a208b2c048d011df74c226ca" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>GetTitle</name></member>
+      <member refid="class_forge_1_1_application_1abdf00a8624983b273c0b89f3ec02992c" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>RemoveMesh</name></member>
+      <member refid="class_forge_1_1_application_1a557048578ee7590df9af6fb6d296671e" prot="public" virt="virtual"><scope>Forge::Application</scope><name>Run</name></member>
+      <member refid="class_forge_1_1_application_1a6490d71378904253c4576f4db3cf5936" prot="public" virt="non-virtual"><scope>Forge::Application</scope><name>~Application</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

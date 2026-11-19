@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="struct_forge_1_1_f_vector" kind="struct" language="C++" prot="public">
+    <compoundname>Forge::FVector</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_forge_1_1_f_vector_1aeed4cfb55c4bcc0c0ac1be3d3850e663" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Forge::FVector::X</definition>
+        <argsstring></argsstring>
+        <name>X</name>
+        <qualifiedname>Forge::FVector::X</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="56" column="7" bodyfile="Include/framework.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_forge_1_1_f_vector_1a4cc1016983758cb1cddd0145a3e6f2e4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Forge::FVector::Y</definition>
+        <argsstring></argsstring>
+        <name>Y</name>
+        <qualifiedname>Forge::FVector::Y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="57" column="7" bodyfile="Include/framework.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_forge_1_1_f_vector_1ab091af7c4deef36d4fa305f68ccca23b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Forge::FVector::Z</definition>
+        <argsstring></argsstring>
+        <name>Z</name>
+        <qualifiedname>Forge::FVector::Z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="58" column="7" bodyfile="Include/framework.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_forge_1_1_f_vector_1a011f7ee6e118457a6390161240d24602" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Forge::FVector::FVector</definition>
+        <argsstring>()</argsstring>
+        <name>FVector</name>
+        <qualifiedname>Forge::FVector::FVector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="60" column="1" bodyfile="Include/framework.h" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_forge_1_1_f_vector_1aed0446f755208222a2eb9acdaeef35d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Forge::FVector::FVector</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>FVector</name>
+        <qualifiedname>Forge::FVector::FVector</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="65" column="1" bodyfile="Include/framework.h" bodystart="65" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_forge_1_1_f_vector_1a128d0a1c164398395fcce2de3242c514" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>FVector</type>
+        <definition>FVector Forge::FVector::operator+</definition>
+        <argsstring>(const FVector &amp;other) const</argsstring>
+        <name>operator+</name>
+        <qualifiedname>Forge::FVector::operator+</qualifiedname>
+        <param>
+          <type>const FVector &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="72" column="9" bodyfile="Include/framework.h" bodystart="72" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_forge_1_1_f_vector_1aa194ea3d19709c6e8d5017fce8be1632" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>FVector</type>
+        <definition>FVector Forge::FVector::operator-</definition>
+        <argsstring>(const FVector &amp;other) const</argsstring>
+        <name>operator-</name>
+        <qualifiedname>Forge::FVector::operator-</qualifiedname>
+        <param>
+          <type>const FVector &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="81" column="9" bodyfile="Include/framework.h" bodystart="81" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_forge_1_1_f_vector_1ad8634c39fc4aa00d5f9772a557ff41e0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>FVector</type>
+        <definition>FVector Forge::FVector::operator*</definition>
+        <argsstring>(float scalar) const</argsstring>
+        <name>operator*</name>
+        <qualifiedname>Forge::FVector::operator*</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="90" column="9" bodyfile="Include/framework.h" bodystart="90" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_forge_1_1_f_vector_1acef525da8f36fd249650cb31b0fbb14d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>FVector &amp;</type>
+        <definition>FVector &amp; Forge::FVector::operator*=</definition>
+        <argsstring>(float scalar)</argsstring>
+        <name>operator*=</name>
+        <qualifiedname>Forge::FVector::operator*=</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="99" column="9" bodyfile="Include/framework.h" bodystart="99" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_forge_1_1_f_vector_1ad1c83fff226bafb201270360a80bbf32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>FVector &amp;</type>
+        <definition>FVector &amp; Forge::FVector::operator=</definition>
+        <argsstring>(const FVector &amp;vector)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Forge::FVector::operator=</qualifiedname>
+        <param>
+          <type>const FVector &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="108" column="9" bodyfile="Include/framework.h" bodystart="108" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_forge_1_1_f_vector_1a9d0a96a8ef3a6b5e7d134df820a66cd7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Forge::FVector::Length</definition>
+        <argsstring>() const</argsstring>
+        <name>Length</name>
+        <qualifiedname>Forge::FVector::Length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="117" column="7" bodyfile="Include/framework.h" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_forge_1_1_f_vector_1a927b3c4059b4990a7e651d1baf1348fb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>FVector</type>
+        <definition>FVector Forge::FVector::Normalized</definition>
+        <argsstring>() const</argsstring>
+        <name>Normalized</name>
+        <qualifiedname>Forge::FVector::Normalized</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="123" column="9" bodyfile="Include/framework.h" bodystart="123" bodyend="131"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_forge_1_1_f_vector_1aca86d8322638f022a67d7c050055a19a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float Forge::FVector::Dot</definition>
+        <argsstring>(const FVector &amp;a, const FVector &amp;b)</argsstring>
+        <name>Dot</name>
+        <qualifiedname>Forge::FVector::Dot</qualifiedname>
+        <param>
+          <type>const FVector &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const FVector &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="133" column="14" bodyfile="Include/framework.h" bodystart="133" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_forge_1_1_f_vector_1a57835f102c80f74deae982f9b902a81a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>FVector</type>
+        <definition>static FVector Forge::FVector::Cross</definition>
+        <argsstring>(const FVector &amp;a, const FVector &amp;b)</argsstring>
+        <name>Cross</name>
+        <qualifiedname>Forge::FVector::Cross</qualifiedname>
+        <param>
+          <type>const FVector &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const FVector &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/framework.h" line="141" column="16" bodyfile="Include/framework.h" bodystart="141" bodyend="148"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Include/framework.h" line="54" column="1" bodyfile="Include/framework.h" bodystart="55" bodyend="149"/>
+    <listofallmembers>
+      <member refid="struct_forge_1_1_f_vector_1a57835f102c80f74deae982f9b902a81a" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>Cross</name></member>
+      <member refid="struct_forge_1_1_f_vector_1aca86d8322638f022a67d7c050055a19a" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>Dot</name></member>
+      <member refid="struct_forge_1_1_f_vector_1a011f7ee6e118457a6390161240d24602" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>FVector</name></member>
+      <member refid="struct_forge_1_1_f_vector_1aed0446f755208222a2eb9acdaeef35d4" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>FVector</name></member>
+      <member refid="struct_forge_1_1_f_vector_1a9d0a96a8ef3a6b5e7d134df820a66cd7" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>Length</name></member>
+      <member refid="struct_forge_1_1_f_vector_1a927b3c4059b4990a7e651d1baf1348fb" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>Normalized</name></member>
+      <member refid="struct_forge_1_1_f_vector_1ad8634c39fc4aa00d5f9772a557ff41e0" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>operator*</name></member>
+      <member refid="struct_forge_1_1_f_vector_1acef525da8f36fd249650cb31b0fbb14d" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>operator*=</name></member>
+      <member refid="struct_forge_1_1_f_vector_1a128d0a1c164398395fcce2de3242c514" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>operator+</name></member>
+      <member refid="struct_forge_1_1_f_vector_1aa194ea3d19709c6e8d5017fce8be1632" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>operator-</name></member>
+      <member refid="struct_forge_1_1_f_vector_1ad1c83fff226bafb201270360a80bbf32" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>operator=</name></member>
+      <member refid="struct_forge_1_1_f_vector_1aeed4cfb55c4bcc0c0ac1be3d3850e663" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>X</name></member>
+      <member refid="struct_forge_1_1_f_vector_1a4cc1016983758cb1cddd0145a3e6f2e4" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>Y</name></member>
+      <member refid="struct_forge_1_1_f_vector_1ab091af7c4deef36d4fa305f68ccca23b" prot="public" virt="non-virtual"><scope>Forge::FVector</scope><name>Z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

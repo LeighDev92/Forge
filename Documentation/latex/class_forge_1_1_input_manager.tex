@@ -1,0 +1,463 @@
+\doxysection{Forge::Input\+Manager Class Reference}
+\hypertarget{class_forge_1_1_input_manager}{}\label{class_forge_1_1_input_manager}\index{Forge::InputManager@{Forge::InputManager}}
+
+
+Manages keyboard and mouse input state and event callbacks.  
+
+
+
+
+{\ttfamily \+\#include $<$Input\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_forge_1_1_input_manager_a2251e8f46952bf59a61702c3c7ae035c}\label{class_forge_1_1_input_manager_a2251e8f46952bf59a61702c3c7ae035c} 
+{\bfseries Input\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Constructs the input manager. \end{DoxyCompactList}\item 
+\Hypertarget{class_forge_1_1_input_manager_a22f5b36d349d141c665f7742daa987c6}\label{class_forge_1_1_input_manager_a22f5b36d349d141c665f7742daa987c6} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Input\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Destroys the input manager. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_input_manager_a6f8c524ef924d1cae38ff4c1d43f5409}{Process\+Key\+Up}} (Key key)
+\begin{DoxyCompactList}\small\item\em Processes a keyboard key release. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_input_manager_a923444c14f7cc7c6b1e33b6df95e5e4d}{Process\+Key\+Down}} (Key key)
+\begin{DoxyCompactList}\small\item\em Processes a keyboard key press. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_input_manager_ade634781e9b9fad973c95d0a0c799be6}{Set\+Key\+State}} (Key key, Key\+Event state)
+\begin{DoxyCompactList}\small\item\em Updates the state of a keyboard key. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_input_manager_acab91bd8acb1ee9e8b7a69d81934f545}{Process\+Mouse\+Button\+Up}} (Mouse\+Button button)
+\begin{DoxyCompactList}\small\item\em Processes a mouse button release. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_input_manager_a99c1f94f4c7f0066e477b2dd5294b40d}{Process\+Mouse\+Button\+Down}} (Mouse\+Button button)
+\begin{DoxyCompactList}\small\item\em Processes a mouse button press. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_input_manager_a0de61436408af7511ad5bcd1461ab573}{Set\+Mouse\+Button\+State}} (Mouse\+Button button, Mouse\+Event state)
+\begin{DoxyCompactList}\small\item\em Updates the state of a mouse button. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_input_manager_ae2af8687e15435ef5cc8a1d7c3124a8f}{Process\+Mouse\+Move}} (int x\+Pos, int y\+Pos)
+\begin{DoxyCompactList}\small\item\em Processes mouse movement. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_input_manager_a02730b3bdb014d1649a283f6e4abccf1}{Process\+Mouse\+Scroll}} (Mouse\+Event direction, int delta)
+\begin{DoxyCompactList}\small\item\em Processes a mouse scroll event. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_forge_1_1_input_manager_a7cd74df7b6bb18d6a7759a0971a7d04d}{Is\+Key\+Up}} (Key key) const
+\begin{DoxyCompactList}\small\item\em Checks whether a keyboard key is released. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_forge_1_1_input_manager_a4f860f02d2246b404b1509bbd94fb716}{Is\+Key\+Down}} (Key key) const
+\begin{DoxyCompactList}\small\item\em Checks whether a keyboard key is pressed. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_forge_1_1_input_manager_ae9d7293231d82ba628412c750471947d}{Is\+Mouse\+Button\+Up}} (Mouse\+Button button) const
+\begin{DoxyCompactList}\small\item\em Checks whether a mouse button is released. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_forge_1_1_input_manager_ab063540d8b21c2dc2e0b4ed6a1c314bf}{Is\+Mouse\+Button\+Down}} (Mouse\+Button button) const
+\begin{DoxyCompactList}\small\item\em Checks whether a mouse button is pressed. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_forge_1_1_mouse_state}{Mouse\+State}} \doxymbox{\hyperlink{class_forge_1_1_input_manager_a3bc917f31d932ae93ac06ed975ffc6bc}{Get\+Mouse\+State}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current mouse state. \end{DoxyCompactList}\item 
+Binding\+ID \doxymbox{\hyperlink{class_forge_1_1_input_manager_a3ededbd81d43167e09f8d66d3c3e73ec}{Bind\+Key\+Event}} (Key key, Key\+Event event, \doxymbox{\hyperlink{_input_manager_8h_a84de02f2a240b35ed06a3a2c5adfc8cd}{Key\+Callback}} callback)
+\begin{DoxyCompactList}\small\item\em Registers a callback for a keyboard event. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_input_manager_a6a8689ebe5a21885b690b70cbe078d27}{Un\+Bind\+Key\+Event}} (Binding\+ID id)
+\begin{DoxyCompactList}\small\item\em Removes a previously registered keyboard event callback. \end{DoxyCompactList}\item 
+Binding\+ID \doxymbox{\hyperlink{class_forge_1_1_input_manager_a0eab4683a5c6441eea13a4bb3b32882b}{Bind\+Mouse\+Button\+Event}} (Mouse\+Button button, Mouse\+Event event, \doxymbox{\hyperlink{_input_manager_8h_adfa193e601acb42b9c258dce9d309ec2}{Mouse\+Button\+Callback}} callback)
+\begin{DoxyCompactList}\small\item\em Registers a callback for a mouse button event. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_input_manager_a3166e40c0b1c703f01435c609a984d98}{Un\+Bind\+Mouse\+Button\+Event}} (Binding\+ID id)
+\begin{DoxyCompactList}\small\item\em Removes a previously registered mouse button event callback. \end{DoxyCompactList}\item 
+Binding\+ID \doxymbox{\hyperlink{class_forge_1_1_input_manager_a3f15dbc3257bbc022c4a869c208f3d94}{Bind\+Mouse\+Move\+Event}} (\doxymbox{\hyperlink{_input_manager_8h_ac48efee6df4422684e9de50fb6a2728c}{Mouse\+Move\+Callback}} callback)
+\begin{DoxyCompactList}\small\item\em Registers a callback for mouse movement events. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_input_manager_a7938b196e103e1d9ea1721197bb2adde}{Un\+Bind\+Mouse\+Move\+Event}} (Binding\+ID id)
+\begin{DoxyCompactList}\small\item\em Removes a previously registered mouse movement callback. \end{DoxyCompactList}\item 
+Binding\+ID \doxymbox{\hyperlink{class_forge_1_1_input_manager_abe7171ca4d21b3051c363ae1911b5c78}{Bind\+Mouse\+Scroll\+Event}} (Mouse\+Event scroll\+\_\+event, \doxymbox{\hyperlink{_input_manager_8h_a42a19dce8ea9779ee64d34e50c12c15d}{Mouse\+Scroll\+Callback}} callback)
+\begin{DoxyCompactList}\small\item\em Registers a callback for mouse scroll events. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_input_manager_ae34c36cbe700edd01318917cff97a920}{Un\+Bind\+Mouse\+Scroll\+Event}} (Binding\+ID id)
+\begin{DoxyCompactList}\small\item\em Removes a previously registered mouse scroll callback. \end{DoxyCompactList}\item 
+\Hypertarget{class_forge_1_1_input_manager_adc9b9c932e1a17338544fef442c26924}\label{class_forge_1_1_input_manager_adc9b9c932e1a17338544fef442c26924} 
+void {\bfseries Clear\+State} ()
+\begin{DoxyCompactList}\small\item\em Clears the currently tracked input state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_forge_1_1_input_manager_a2251e8f46952bf59a61702c3c7ae035c}{Input\+Manager}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_forge_1_1_input_manager_a631afccfead0567e6c02f057677f90b7}{Get}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the \doxylink{class_forge_1_1_input_manager}{Input\+Manager} singleton instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages keyboard and mouse input state and event callbacks. 
+
+\doxylink{class_forge_1_1_input_manager}{Input\+Manager} tracks pressed keyboard keys and mouse buttons, maintains the current mouse state, and allows callbacks to be registered for specific input events.
+
+Registered callbacks can be removed using their associated Binding\+ID. 
+
+\label{class_forge_1_1_input_manager_doc-func-members}
+\Hypertarget{class_forge_1_1_input_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_forge_1_1_input_manager_a3ededbd81d43167e09f8d66d3c3e73ec}\index{Forge::InputManager@{Forge::InputManager}!BindKeyEvent@{BindKeyEvent}}
+\index{BindKeyEvent@{BindKeyEvent}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{BindKeyEvent()}{BindKeyEvent()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a3ededbd81d43167e09f8d66d3c3e73ec} 
+Binding\+ID Forge::\+\+Input\+Manager::\+\+Bind\+Key\+Event (\begin{DoxyParamCaption}\item[{Key}]{key}{, }\item[{Key\+Event}]{event}{, }\item[{\doxymbox{\hyperlink{_input_manager_8h_a84de02f2a240b35ed06a3a2c5adfc8cd}{Key\+Callback}}}]{callback}{}\end{DoxyParamCaption})}
+
+
+
+Registers a callback for a keyboard event. 
+
+The callback is associated with a specific key and event type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to associate with the callback. \\
+\hline
+{\em event} & The keyboard event that triggers the callback. \\
+\hline
+{\em callback} & The callback function to execute. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A unique identifier for the registered binding. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_input_manager_a0eab4683a5c6441eea13a4bb3b32882b}\index{Forge::InputManager@{Forge::InputManager}!BindMouseButtonEvent@{BindMouseButtonEvent}}
+\index{BindMouseButtonEvent@{BindMouseButtonEvent}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{BindMouseButtonEvent()}{BindMouseButtonEvent()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a0eab4683a5c6441eea13a4bb3b32882b} 
+Binding\+ID Forge::\+\+Input\+Manager::\+\+Bind\+Mouse\+Button\+Event (\begin{DoxyParamCaption}\item[{Mouse\+Button}]{button}{, }\item[{Mouse\+Event}]{event}{, }\item[{\doxymbox{\hyperlink{_input_manager_8h_adfa193e601acb42b9c258dce9d309ec2}{Mouse\+Button\+Callback}}}]{callback}{}\end{DoxyParamCaption})}
+
+
+
+Registers a callback for a mouse button event. 
+
+The callback is associated with a specific mouse button and event type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & The mouse button to associate with the callback. \\
+\hline
+{\em event} & The mouse event that triggers the callback. \\
+\hline
+{\em callback} & The callback function to execute. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A unique identifier for the registered binding. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_input_manager_a3f15dbc3257bbc022c4a869c208f3d94}\index{Forge::InputManager@{Forge::InputManager}!BindMouseMoveEvent@{BindMouseMoveEvent}}
+\index{BindMouseMoveEvent@{BindMouseMoveEvent}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{BindMouseMoveEvent()}{BindMouseMoveEvent()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a3f15dbc3257bbc022c4a869c208f3d94} 
+Binding\+ID Forge::\+\+Input\+Manager::\+\+Bind\+Mouse\+Move\+Event (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_input_manager_8h_ac48efee6df4422684e9de50fb6a2728c}{Mouse\+Move\+Callback}}}]{callback}{}\end{DoxyParamCaption})}
+
+
+
+Registers a callback for mouse movement events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback function to execute when the mouse moves. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A unique identifier for the registered binding. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_input_manager_abe7171ca4d21b3051c363ae1911b5c78}\index{Forge::InputManager@{Forge::InputManager}!BindMouseScrollEvent@{BindMouseScrollEvent}}
+\index{BindMouseScrollEvent@{BindMouseScrollEvent}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{BindMouseScrollEvent()}{BindMouseScrollEvent()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_abe7171ca4d21b3051c363ae1911b5c78} 
+Binding\+ID Forge::\+\+Input\+Manager::\+\+Bind\+Mouse\+Scroll\+Event (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{scroll\+\_\+event}{, }\item[{\doxymbox{\hyperlink{_input_manager_8h_a42a19dce8ea9779ee64d34e50c12c15d}{Mouse\+Scroll\+Callback}}}]{callback}{}\end{DoxyParamCaption})}
+
+
+
+Registers a callback for mouse scroll events. 
+
+The callback is associated with a specific scroll direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scroll\+\_\+event} & The scroll direction to associate with the callback. \\
+\hline
+{\em callback} & The callback function to execute. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A unique identifier for the registered binding. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_input_manager_a631afccfead0567e6c02f057677f90b7}\index{Forge::InputManager@{Forge::InputManager}!Get@{Get}}
+\index{Get@{Get}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a631afccfead0567e6c02f057677f90b7} 
+\doxymbox{\hyperlink{class_forge_1_1_input_manager_a2251e8f46952bf59a61702c3c7ae035c}{Input\+Manager}} \texorpdfstring{$\ast$}{*} Forge::\+\+Input\+Manager::\+\+Get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieves the \doxylink{class_forge_1_1_input_manager}{Input\+Manager} singleton instance. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \doxylink{class_forge_1_1_input_manager}{Input\+Manager} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_input_manager_a3bc917f31d932ae93ac06ed975ffc6bc}\index{Forge::InputManager@{Forge::InputManager}!GetMouseState@{GetMouseState}}
+\index{GetMouseState@{GetMouseState}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{GetMouseState()}{GetMouseState()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a3bc917f31d932ae93ac06ed975ffc6bc} 
+\doxymbox{\hyperlink{struct_forge_1_1_mouse_state}{Mouse\+State}} Forge::\+\+Input\+Manager::\+\+Get\+Mouse\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current mouse state. 
+
+\begin{DoxyReturn}{Returns}
+The current mouse position and movement delta. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_input_manager_a4f860f02d2246b404b1509bbd94fb716}\index{Forge::InputManager@{Forge::InputManager}!IsKeyDown@{IsKeyDown}}
+\index{IsKeyDown@{IsKeyDown}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{IsKeyDown()}{IsKeyDown()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a4f860f02d2246b404b1509bbd94fb716} 
+bool Forge::\+\+Input\+Manager::\+\+Is\+Key\+Down (\begin{DoxyParamCaption}\item[{Key}]{key}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether a keyboard key is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the key is pressed; otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_input_manager_a7cd74df7b6bb18d6a7759a0971a7d04d}\index{Forge::InputManager@{Forge::InputManager}!IsKeyUp@{IsKeyUp}}
+\index{IsKeyUp@{IsKeyUp}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{IsKeyUp()}{IsKeyUp()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a7cd74df7b6bb18d6a7759a0971a7d04d} 
+bool Forge::\+\+Input\+Manager::\+\+Is\+Key\+Up (\begin{DoxyParamCaption}\item[{Key}]{key}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether a keyboard key is released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the key is released; otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_input_manager_ab063540d8b21c2dc2e0b4ed6a1c314bf}\index{Forge::InputManager@{Forge::InputManager}!IsMouseButtonDown@{IsMouseButtonDown}}
+\index{IsMouseButtonDown@{IsMouseButtonDown}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{IsMouseButtonDown()}{IsMouseButtonDown()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_ab063540d8b21c2dc2e0b4ed6a1c314bf} 
+bool Forge::\+\+Input\+Manager::\+\+Is\+Mouse\+Button\+Down (\begin{DoxyParamCaption}\item[{Mouse\+Button}]{button}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether a mouse button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & The mouse button to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the button is pressed; otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_input_manager_ae9d7293231d82ba628412c750471947d}\index{Forge::InputManager@{Forge::InputManager}!IsMouseButtonUp@{IsMouseButtonUp}}
+\index{IsMouseButtonUp@{IsMouseButtonUp}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{IsMouseButtonUp()}{IsMouseButtonUp()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_ae9d7293231d82ba628412c750471947d} 
+bool Forge::\+\+Input\+Manager::\+\+Is\+Mouse\+Button\+Up (\begin{DoxyParamCaption}\item[{Mouse\+Button}]{button}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether a mouse button is released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & The mouse button to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the button is released; otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_input_manager_a923444c14f7cc7c6b1e33b6df95e5e4d}\index{Forge::InputManager@{Forge::InputManager}!ProcessKeyDown@{ProcessKeyDown}}
+\index{ProcessKeyDown@{ProcessKeyDown}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{ProcessKeyDown()}{ProcessKeyDown()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a923444c14f7cc7c6b1e33b6df95e5e4d} 
+void Forge::\+\+Input\+Manager::\+\+Process\+Key\+Down (\begin{DoxyParamCaption}\item[{Key}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Processes a keyboard key press. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & key that was pressed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_input_manager_a6f8c524ef924d1cae38ff4c1d43f5409}\index{Forge::InputManager@{Forge::InputManager}!ProcessKeyUp@{ProcessKeyUp}}
+\index{ProcessKeyUp@{ProcessKeyUp}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{ProcessKeyUp()}{ProcessKeyUp()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a6f8c524ef924d1cae38ff4c1d43f5409} 
+void Forge::\+\+Input\+Manager::\+\+Process\+Key\+Up (\begin{DoxyParamCaption}\item[{Key}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Processes a keyboard key release. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & key that was released. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_input_manager_a99c1f94f4c7f0066e477b2dd5294b40d}\index{Forge::InputManager@{Forge::InputManager}!ProcessMouseButtonDown@{ProcessMouseButtonDown}}
+\index{ProcessMouseButtonDown@{ProcessMouseButtonDown}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{ProcessMouseButtonDown()}{ProcessMouseButtonDown()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a99c1f94f4c7f0066e477b2dd5294b40d} 
+void Forge::\+\+Input\+Manager::\+\+Process\+Mouse\+Button\+Down (\begin{DoxyParamCaption}\item[{Mouse\+Button}]{button}{}\end{DoxyParamCaption})}
+
+
+
+Processes a mouse button press. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & The mouse button that was pressed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_input_manager_acab91bd8acb1ee9e8b7a69d81934f545}\index{Forge::InputManager@{Forge::InputManager}!ProcessMouseButtonUp@{ProcessMouseButtonUp}}
+\index{ProcessMouseButtonUp@{ProcessMouseButtonUp}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{ProcessMouseButtonUp()}{ProcessMouseButtonUp()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_acab91bd8acb1ee9e8b7a69d81934f545} 
+void Forge::\+\+Input\+Manager::\+\+Process\+Mouse\+Button\+Up (\begin{DoxyParamCaption}\item[{Mouse\+Button}]{button}{}\end{DoxyParamCaption})}
+
+
+
+Processes a mouse button release. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & The mouse button that was released. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_input_manager_ae2af8687e15435ef5cc8a1d7c3124a8f}\index{Forge::InputManager@{Forge::InputManager}!ProcessMouseMove@{ProcessMouseMove}}
+\index{ProcessMouseMove@{ProcessMouseMove}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{ProcessMouseMove()}{ProcessMouseMove()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_ae2af8687e15435ef5cc8a1d7c3124a8f} 
+void Forge::\+\+Input\+Manager::\+\+Process\+Mouse\+Move (\begin{DoxyParamCaption}\item[{int}]{x\+Pos}{, }\item[{int}]{y\+Pos}{}\end{DoxyParamCaption})}
+
+
+
+Processes mouse movement. 
+
+Updates the mouse position using the supplied coordinates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Pos} & The horizontal mouse position. \\
+\hline
+{\em y\+Pos} & The vertical mouse position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_input_manager_a02730b3bdb014d1649a283f6e4abccf1}\index{Forge::InputManager@{Forge::InputManager}!ProcessMouseScroll@{ProcessMouseScroll}}
+\index{ProcessMouseScroll@{ProcessMouseScroll}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{ProcessMouseScroll()}{ProcessMouseScroll()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a02730b3bdb014d1649a283f6e4abccf1} 
+void Forge::\+\+Input\+Manager::\+\+Process\+Mouse\+Scroll (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{direction}{, }\item[{int}]{delta}{}\end{DoxyParamCaption})}
+
+
+
+Processes a mouse scroll event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & The scroll direction or event type. \\
+\hline
+{\em delta} & The scroll amount. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_input_manager_ade634781e9b9fad973c95d0a0c799be6}\index{Forge::InputManager@{Forge::InputManager}!SetKeyState@{SetKeyState}}
+\index{SetKeyState@{SetKeyState}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{SetKeyState()}{SetKeyState()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_ade634781e9b9fad973c95d0a0c799be6} 
+void Forge::\+\+Input\+Manager::\+\+Set\+Key\+State (\begin{DoxyParamCaption}\item[{Key}]{key}{, }\item[{Key\+Event}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Updates the state of a keyboard key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key whose state is being updated. \\
+\hline
+{\em state} & The new keyboard event state. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_input_manager_a0de61436408af7511ad5bcd1461ab573}\index{Forge::InputManager@{Forge::InputManager}!SetMouseButtonState@{SetMouseButtonState}}
+\index{SetMouseButtonState@{SetMouseButtonState}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{SetMouseButtonState()}{SetMouseButtonState()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a0de61436408af7511ad5bcd1461ab573} 
+void Forge::\+\+Input\+Manager::\+\+Set\+Mouse\+Button\+State (\begin{DoxyParamCaption}\item[{Mouse\+Button}]{button}{, }\item[{Mouse\+Event}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Updates the state of a mouse button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & The mouse button whose state is being updated. \\
+\hline
+{\em state} & The new mouse button event state. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_input_manager_a6a8689ebe5a21885b690b70cbe078d27}\index{Forge::InputManager@{Forge::InputManager}!UnBindKeyEvent@{UnBindKeyEvent}}
+\index{UnBindKeyEvent@{UnBindKeyEvent}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{UnBindKeyEvent()}{UnBindKeyEvent()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a6a8689ebe5a21885b690b70cbe078d27} 
+void Forge::\+\+Input\+Manager::\+\+Un\+Bind\+Key\+Event (\begin{DoxyParamCaption}\item[{Binding\+ID}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Removes a previously registered keyboard event callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The identifier of the binding to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_input_manager_a3166e40c0b1c703f01435c609a984d98}\index{Forge::InputManager@{Forge::InputManager}!UnBindMouseButtonEvent@{UnBindMouseButtonEvent}}
+\index{UnBindMouseButtonEvent@{UnBindMouseButtonEvent}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{UnBindMouseButtonEvent()}{UnBindMouseButtonEvent()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a3166e40c0b1c703f01435c609a984d98} 
+void Forge::\+\+Input\+Manager::\+\+Un\+Bind\+Mouse\+Button\+Event (\begin{DoxyParamCaption}\item[{Binding\+ID}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Removes a previously registered mouse button event callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The identifier of the binding to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_input_manager_a7938b196e103e1d9ea1721197bb2adde}\index{Forge::InputManager@{Forge::InputManager}!UnBindMouseMoveEvent@{UnBindMouseMoveEvent}}
+\index{UnBindMouseMoveEvent@{UnBindMouseMoveEvent}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{UnBindMouseMoveEvent()}{UnBindMouseMoveEvent()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_a7938b196e103e1d9ea1721197bb2adde} 
+void Forge::\+\+Input\+Manager::\+\+Un\+Bind\+Mouse\+Move\+Event (\begin{DoxyParamCaption}\item[{Binding\+ID}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Removes a previously registered mouse movement callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The identifier of the binding to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_input_manager_ae34c36cbe700edd01318917cff97a920}\index{Forge::InputManager@{Forge::InputManager}!UnBindMouseScrollEvent@{UnBindMouseScrollEvent}}
+\index{UnBindMouseScrollEvent@{UnBindMouseScrollEvent}!Forge::InputManager@{Forge::InputManager}}
+\doxysubsubsection{\texorpdfstring{UnBindMouseScrollEvent()}{UnBindMouseScrollEvent()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_input_manager_ae34c36cbe700edd01318917cff97a920} 
+void Forge::\+\+Input\+Manager::\+\+Un\+Bind\+Mouse\+Scroll\+Event (\begin{DoxyParamCaption}\item[{Binding\+ID}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Removes a previously registered mouse scroll callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The identifier of the binding to remove. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Include/\doxymbox{\hyperlink{_input_manager_8h}{Input\+Manager.\+h}}\end{DoxyCompactItemize}

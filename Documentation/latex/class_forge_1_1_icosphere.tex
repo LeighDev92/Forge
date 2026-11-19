@@ -1,0 +1,351 @@
+\doxysection{Forge::Icosphere Class Reference}
+\hypertarget{class_forge_1_1_icosphere}{}\label{class_forge_1_1_icosphere}\index{Forge::Icosphere@{Forge::Icosphere}}
+
+
+Represents a procedurally generated icosphere mesh.  
+
+
+
+
+{\ttfamily \+\#include $<$Icosphere.\+h$>$}
+
+Inheritance diagram for Forge::Icosphere:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_forge_1_1_icosphere}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_forge_1_1_icosphere_ac833d5efa1a049ad67c56680c0b17143}{Icosphere}} (float radius, int subdivisions, bool inverted=false)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_forge_1_1_icosphere}{Icosphere} with the specified parameters. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_icosphere_a46d9be341f7228b1be5fc6be1b2ab30e}{Generate}} ()
+\begin{DoxyCompactList}\small\item\em Generates the icosphere geometry. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_icosphere_a18afbb948cfae242389d9d290090262d}{Set\+Radius}} (float radius)
+\begin{DoxyCompactList}\small\item\em Sets the radius of the icosphere. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_icosphere_a6369dd58e4a46c46b2a3d59cb21e5490}{Set\+Subdivisions}} (int subdivisions)
+\begin{DoxyCompactList}\small\item\em Sets the subdivision level of the icosphere. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_forge_1_1_icosphere_a30d420bb59232025d76eb05f58087d73}{Get\+Radius}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the radius of the icosphere. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_forge_1_1_icosphere_a051e31d8e361ea9d6b0d23a3dc65f320}{Get\+Subdivisions}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the subdivision level of the icosphere. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_forge_1_1_mesh}{Forge::\+\+Mesh}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_forge_1_1_mesh_a0f361fe2189c1f5aea2b7a7ab294ef3f}{Mesh}} (const \doxymbox{\hyperlink{struct_forge_1_1_f_transform}{FTransform}} transform=\doxymbox{\hyperlink{struct_forge_1_1_f_transform}{FTransform}}(), const std::\+string filename="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_forge_1_1_mesh}{Mesh} with the specified transform and optional file. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_forge_1_1_mesh_a0c1cd7f616ef020579164683915419ec}{Mesh}} (const std::\+string filename)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_forge_1_1_mesh}{Mesh} from an OBJ file. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_mesh_a55a13f16f2a0d831c6ad49a5454ccdf0}{Load\+From\+File}} (const std::\+string filename)
+\begin{DoxyCompactList}\small\item\em Loads mesh geometry from an OBJ file. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_forge_1_1_f_transform}{FTransform}} \doxymbox{\hyperlink{class_forge_1_1_mesh_ac79d1c1430b7cb560c30ba0c179cd44c}{Get\+Transform}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the mesh transformation. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \doxymbox{\hyperlink{class_forge_1_1_mesh_a438c1de397ccd4e9ab4894f2eb92d501}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the mesh position. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \doxymbox{\hyperlink{class_forge_1_1_mesh_a698a0f764a292a861f8e1e4e2df81c47}{Get\+Scale}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the mesh scale. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_forge_1_1_f_rotator}{FRotator}} \doxymbox{\hyperlink{class_forge_1_1_mesh_aa6769dc7ad2995d1008d9fc41c46fb8a}{Get\+Rotation}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the mesh rotation. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_forge_1_1_material}{Material}} \& \doxymbox{\hyperlink{class_forge_1_1_mesh_a2f61a6d890906307f24566e3effdd44b}{Get\+Material}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the mesh material. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \doxymbox{\hyperlink{class_forge_1_1_mesh_aeab24d5a6ccfd715f71a96d9d247b88f}{Get\+Forward\+Vector}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the mesh\textquotesingle{}s forward direction vector. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \doxymbox{\hyperlink{class_forge_1_1_mesh_a5cf5f025b10d5efc194808419eca8636}{Get\+Right\+Vector}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the mesh\textquotesingle{}s right direction vector. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \doxymbox{\hyperlink{class_forge_1_1_mesh_afbddf44f294ce02b145012f75c71bdfa}{Get\+Up\+Vector}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the mesh\textquotesingle{}s up direction vector. \end{DoxyCompactList}\item 
+const std::\+vector$<$ \doxymbox{\hyperlink{struct_forge_1_1_vertex}{Vertex}} $>$ \& \doxymbox{\hyperlink{class_forge_1_1_mesh_ac6112ae1f0f293f0b1d6caee4ecb6567}{Get\+Vertices}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the mesh vertex collection. \end{DoxyCompactList}\item 
+const std::\+vector$<$ unsigned int $>$ \& \doxymbox{\hyperlink{class_forge_1_1_mesh_a0542400ed35c494d2e3801e5443da3dd}{Get\+Indices}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the mesh index collection. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_mesh_a86b9fd3c080eb7f888356e4065ce66c1}{Set\+Transform}} (\doxymbox{\hyperlink{struct_forge_1_1_f_transform}{FTransform}} transform)
+\begin{DoxyCompactList}\small\item\em Sets the mesh transformation. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_mesh_a9927cd8a2f0fc71a60cc507e6852df75}{Set\+Position}} (\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} position)
+\begin{DoxyCompactList}\small\item\em Sets the mesh position. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_mesh_a236854b50e3ee7c307751804de9d36b7}{Set\+Scale}} (\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} scale)
+\begin{DoxyCompactList}\small\item\em Sets the mesh scale. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_mesh_a9ed97eea3696658906c3147e4183fc23}{Set\+Rotation}} (\doxymbox{\hyperlink{struct_forge_1_1_f_rotator}{FRotator}} rotation)
+\begin{DoxyCompactList}\small\item\em Sets the mesh rotation. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_mesh_aad2abdb46d4759680580b01bc48f32aa}{Set\+Material}} (const \doxymbox{\hyperlink{class_forge_1_1_material}{Material}} \&mat)
+\begin{DoxyCompactList}\small\item\em Assigns a material to the mesh. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_forge_1_1_mesh_a3de8f5d7a89503235faf3131e384848e}{Has\+Index\+Buffer}} () const
+\begin{DoxyCompactList}\small\item\em Determines whether the mesh contains index data. \end{DoxyCompactList}\item 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$ ID3\+D11\+Buffer $>$ \doxymbox{\hyperlink{class_forge_1_1_mesh_a71d24ea880361e7244d4ef8908fc54f5}{Get\+Vertex\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the Direct3D 11 vertex buffer of the mesh. \end{DoxyCompactList}\item 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$ ID3\+D11\+Buffer $>$ \doxymbox{\hyperlink{class_forge_1_1_mesh_a0c89dd63b21a56fff16956797c02b387}{Get\+Index\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the Direct3D 11 index buffer of the mesh. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_forge_1_1_icosphere_ac1cfe19d3566b8c135f500fc95a6483f}{Create\+Base\+Icosahedron}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} $>$ \&triangles)
+\begin{DoxyCompactList}\small\item\em Creates the initial icosahedron geometry. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_icosphere_a02a83a9b5d21c16620cb03593865527a}{Subdivide}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} $>$ \&triangles)
+\begin{DoxyCompactList}\small\item\em Subdivides the supplied triangle geometry. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \doxymbox{\hyperlink{class_forge_1_1_icosphere_a0e745d6a2b4d4ca12744a7672b40f16e}{Get\+Midpoint}} (const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&a, const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&b) const
+\begin{DoxyCompactList}\small\item\em Calculates the midpoint between two vertices. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_icosphere_ae6564906a9660092f99d0dd5375fa4d4}{Add\+Triangle}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} $>$ \&output, const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&a, const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&b, const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&c)
+\begin{DoxyCompactList}\small\item\em Adds a triangle to the output vertex collection. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_icosphere_a7fdc8db6f714c0628c26daa6a4962639}{Build\+Vertices}} (const std::\+vector$<$ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} $>$ \&triangles)
+\begin{DoxyCompactList}\small\item\em Builds the final mesh vertices from triangle geometry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_forge_1_1_mesh}{Forge::\+\+Mesh}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_forge_1_1_mesh_a94b181a7cb79f95d46f331d780626788}{Create\+Vertex\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Creates the Direct3D 11 vertex buffer. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_mesh_a099eb61cfc54a4c862015470c3657f56}{Create\+Index\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Creates the Direct3D 11 index buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{struct_forge_1_1_f_vector2_d}{FVector2D}} \doxymbox{\hyperlink{class_forge_1_1_icosphere_a1494591b9635f643fe46fccdd5cd1f07}{Calculate\+Sphere\+UV}} (const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&vertex)
+\begin{DoxyCompactList}\small\item\em Calculates spherical UV coordinates for a vertex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions inherited from \doxymbox{\hyperlink{class_forge_1_1_mesh}{Forge::\+\+Mesh}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool \doxymbox{\hyperlink{class_forge_1_1_mesh_a15d8f75c7cae479347a5194cfe33fc89}{load\+OBJ}} (const std::\+string \&filename, std::\+vector$<$ \doxymbox{\hyperlink{struct_forge_1_1_vertex}{Vertex}} $>$ \&out\+Vertices)
+\begin{DoxyCompactList}\small\item\em Loads vertex data from an OBJ file. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \doxymbox{\hyperlink{class_forge_1_1_mesh_ae2b8f91398a9c1d930806ced103ffe93}{Calculate\+Face\+Normal}} (const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&a, const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&b, const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&c)
+\begin{DoxyCompactList}\small\item\em Calculates the normal vector of a triangle face. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_forge_1_1_icosphere_a33165a1485c8e1cd3c35ecf7a34a68ee}\label{class_forge_1_1_icosphere_a33165a1485c8e1cd3c35ecf7a34a68ee} 
+float {\bfseries \+\_\+radius}
+\item 
+\Hypertarget{class_forge_1_1_icosphere_a67f491588161ffab56b2e074da3b5dd1}\label{class_forge_1_1_icosphere_a67f491588161ffab56b2e074da3b5dd1} 
+int {\bfseries \+\_\+subdivisions}
+\item 
+\Hypertarget{class_forge_1_1_icosphere_a8dcec688a4ba907bfb26e9916ddc4479}\label{class_forge_1_1_icosphere_a8dcec688a4ba907bfb26e9916ddc4479} 
+bool {\bfseries \+\_\+inverted}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_forge_1_1_mesh}{Forge::\+\+Mesh}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_forge_1_1_f_transform}{FTransform}} {\bfseries Transform}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_forge_1_1_vertex}{Vertex}} $>$ {\bfseries Vertices}
+\item 
+std::\+vector$<$ unsigned int $>$ {\bfseries Indices}
+\item 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$ ID3\+D11\+Buffer $>$ {\bfseries p\+Vertex\+Buffer}
+\item 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$ ID3\+D11\+Buffer $>$ {\bfseries p\+Index\+Buffer}
+\item 
+\doxymbox{\hyperlink{class_forge_1_1_material}{Material}} {\bfseries material}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a procedurally generated icosphere mesh. 
+
+Extends \doxylink{class_forge_1_1_mesh}{Mesh} to generate a spherical geometry using an icosahedron as its base geometry. Supports configurable radius, subdivision levels, inverted geometry, and spherical UV coordinate generation. 
+
+\label{class_forge_1_1_icosphere_doc-constructors}
+\Hypertarget{class_forge_1_1_icosphere_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_forge_1_1_icosphere_ac833d5efa1a049ad67c56680c0b17143}\index{Forge::Icosphere@{Forge::Icosphere}!Icosphere@{Icosphere}}
+\index{Icosphere@{Icosphere}!Forge::Icosphere@{Forge::Icosphere}}
+\doxysubsubsection{\texorpdfstring{Icosphere()}{Icosphere()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_icosphere_ac833d5efa1a049ad67c56680c0b17143} 
+Forge::\+\+Icosphere::\+\+Icosphere (\begin{DoxyParamCaption}\item[{float}]{radius}{, }\item[{int}]{subdivisions}{, }\item[{bool}]{inverted}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_forge_1_1_icosphere}{Icosphere} with the specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & Radius of the sphere. \\
+\hline
+{\em subdivisions} & Number of subdivision levels applied to the base icosahedron. \\
+\hline
+{\em inverted} & Determines whether the sphere geometry should be inverted. Defaults to false. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_forge_1_1_icosphere_doc-func-members}
+\Hypertarget{class_forge_1_1_icosphere_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_forge_1_1_icosphere_ae6564906a9660092f99d0dd5375fa4d4}\index{Forge::Icosphere@{Forge::Icosphere}!AddTriangle@{AddTriangle}}
+\index{AddTriangle@{AddTriangle}!Forge::Icosphere@{Forge::Icosphere}}
+\doxysubsubsection{\texorpdfstring{AddTriangle()}{AddTriangle()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_icosphere_ae6564906a9660092f99d0dd5375fa4d4} 
+void Forge::\+\+Icosphere::\+\+Add\+Triangle (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} $>$ \&}]{output}{, }\item[{const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&}]{a}{, }\item[{const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&}]{b}{, }\item[{const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Adds a triangle to the output vertex collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & Collection receiving the triangle vertices. \\
+\hline
+{\em a} & First triangle vertex. \\
+\hline
+{\em b} & Second triangle vertex. \\
+\hline
+{\em c} & Third triangle vertex. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_icosphere_a7fdc8db6f714c0628c26daa6a4962639}\index{Forge::Icosphere@{Forge::Icosphere}!BuildVertices@{BuildVertices}}
+\index{BuildVertices@{BuildVertices}!Forge::Icosphere@{Forge::Icosphere}}
+\doxysubsubsection{\texorpdfstring{BuildVertices()}{BuildVertices()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_icosphere_a7fdc8db6f714c0628c26daa6a4962639} 
+void Forge::\+\+Icosphere::\+\+Build\+Vertices (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} $>$ \&}]{triangles}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Builds the final mesh vertices from triangle geometry. 
+
+Converts the generated triangle collection into the vertex representation used by the \doxylink{class_forge_1_1_mesh}{Mesh} base class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em triangles} & Collection of generated triangle vertices. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_icosphere_a1494591b9635f643fe46fccdd5cd1f07}\index{Forge::Icosphere@{Forge::Icosphere}!CalculateSphereUV@{CalculateSphereUV}}
+\index{CalculateSphereUV@{CalculateSphereUV}!Forge::Icosphere@{Forge::Icosphere}}
+\doxysubsubsection{\texorpdfstring{CalculateSphereUV()}{CalculateSphereUV()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_icosphere_a1494591b9635f643fe46fccdd5cd1f07} 
+\doxymbox{\hyperlink{struct_forge_1_1_f_vector2_d}{FVector2D}} Forge::\+\+Icosphere::\+\+Calculate\+Sphere\+UV (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&}]{vertex}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Calculates spherical UV coordinates for a vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & \doxylink{struct_forge_1_1_vertex}{Vertex} position used to calculate UV coordinates.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_forge_1_1_f_vector2_d}{FVector2D} Calculated UV coordinates. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_icosphere_ac1cfe19d3566b8c135f500fc95a6483f}\index{Forge::Icosphere@{Forge::Icosphere}!CreateBaseIcosahedron@{CreateBaseIcosahedron}}
+\index{CreateBaseIcosahedron@{CreateBaseIcosahedron}!Forge::Icosphere@{Forge::Icosphere}}
+\doxysubsubsection{\texorpdfstring{CreateBaseIcosahedron()}{CreateBaseIcosahedron()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_icosphere_ac1cfe19d3566b8c135f500fc95a6483f} 
+void Forge::\+\+Icosphere::\+\+Create\+Base\+Icosahedron (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} $>$ \&}]{triangles}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Creates the initial icosahedron geometry. 
+
+Populates the supplied triangle collection with the faces of the base icosahedron.
+
+
+\begin{DoxyParams}{Parameters}
+{\em triangles} & Output collection of triangle vertices. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_icosphere_a46d9be341f7228b1be5fc6be1b2ab30e}\index{Forge::Icosphere@{Forge::Icosphere}!Generate@{Generate}}
+\index{Generate@{Generate}!Forge::Icosphere@{Forge::Icosphere}}
+\doxysubsubsection{\texorpdfstring{Generate()}{Generate()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_icosphere_a46d9be341f7228b1be5fc6be1b2ab30e} 
+void Forge::\+\+Icosphere::\+\+Generate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates the icosphere geometry. 
+
+Creates the base icosahedron, applies the configured subdivision levels, and builds the resulting mesh vertices. \Hypertarget{class_forge_1_1_icosphere_a0e745d6a2b4d4ca12744a7672b40f16e}\index{Forge::Icosphere@{Forge::Icosphere}!GetMidpoint@{GetMidpoint}}
+\index{GetMidpoint@{GetMidpoint}!Forge::Icosphere@{Forge::Icosphere}}
+\doxysubsubsection{\texorpdfstring{GetMidpoint()}{GetMidpoint()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_icosphere_a0e745d6a2b4d4ca12744a7672b40f16e} 
+\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} Forge::\+\+Icosphere::\+\+Get\+Midpoint (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&}]{a}{, }\item[{const \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} \&}]{b}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Calculates the midpoint between two vertices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First vertex. \\
+\hline
+{\em b} & Second vertex.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_forge_1_1_f_vector}{FVector} Midpoint between the supplied vertices. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_icosphere_a30d420bb59232025d76eb05f58087d73}\index{Forge::Icosphere@{Forge::Icosphere}!GetRadius@{GetRadius}}
+\index{GetRadius@{GetRadius}!Forge::Icosphere@{Forge::Icosphere}}
+\doxysubsubsection{\texorpdfstring{GetRadius()}{GetRadius()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_icosphere_a30d420bb59232025d76eb05f58087d73} 
+float Forge::\+\+Icosphere::\+\+Get\+Radius (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the radius of the icosphere. 
+
+\begin{DoxyReturn}{Returns}
+float Current sphere radius. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_icosphere_a051e31d8e361ea9d6b0d23a3dc65f320}\index{Forge::Icosphere@{Forge::Icosphere}!GetSubdivisions@{GetSubdivisions}}
+\index{GetSubdivisions@{GetSubdivisions}!Forge::Icosphere@{Forge::Icosphere}}
+\doxysubsubsection{\texorpdfstring{GetSubdivisions()}{GetSubdivisions()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_icosphere_a051e31d8e361ea9d6b0d23a3dc65f320} 
+int Forge::\+\+Icosphere::\+\+Get\+Subdivisions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the subdivision level of the icosphere. 
+
+\begin{DoxyReturn}{Returns}
+Number of subdivision levels. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_icosphere_a18afbb948cfae242389d9d290090262d}\index{Forge::Icosphere@{Forge::Icosphere}!SetRadius@{SetRadius}}
+\index{SetRadius@{SetRadius}!Forge::Icosphere@{Forge::Icosphere}}
+\doxysubsubsection{\texorpdfstring{SetRadius()}{SetRadius()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_icosphere_a18afbb948cfae242389d9d290090262d} 
+void Forge::\+\+Icosphere::\+\+Set\+Radius (\begin{DoxyParamCaption}\item[{float}]{radius}{}\end{DoxyParamCaption})}
+
+
+
+Sets the radius of the icosphere. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & New radius of the sphere. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_icosphere_a6369dd58e4a46c46b2a3d59cb21e5490}\index{Forge::Icosphere@{Forge::Icosphere}!SetSubdivisions@{SetSubdivisions}}
+\index{SetSubdivisions@{SetSubdivisions}!Forge::Icosphere@{Forge::Icosphere}}
+\doxysubsubsection{\texorpdfstring{SetSubdivisions()}{SetSubdivisions()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_icosphere_a6369dd58e4a46c46b2a3d59cb21e5490} 
+void Forge::\+\+Icosphere::\+\+Set\+Subdivisions (\begin{DoxyParamCaption}\item[{int}]{subdivisions}{}\end{DoxyParamCaption})}
+
+
+
+Sets the subdivision level of the icosphere. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subdivisions} & New number of subdivision levels. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_icosphere_a02a83a9b5d21c16620cb03593865527a}\index{Forge::Icosphere@{Forge::Icosphere}!Subdivide@{Subdivide}}
+\index{Subdivide@{Subdivide}!Forge::Icosphere@{Forge::Icosphere}}
+\doxysubsubsection{\texorpdfstring{Subdivide()}{Subdivide()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_icosphere_a02a83a9b5d21c16620cb03593865527a} 
+void Forge::\+\+Icosphere::\+\+Subdivide (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} $>$ \&}]{triangles}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Subdivides the supplied triangle geometry. 
+
+Splits existing triangles into smaller triangles using calculated edge midpoints.
+
+
+\begin{DoxyParams}{Parameters}
+{\em triangles} & Triangle vertices to subdivide. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Include/Icosphere.\+h\end{DoxyCompactItemize}

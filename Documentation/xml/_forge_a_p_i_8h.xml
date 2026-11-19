@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="_forge_a_p_i_8h" kind="file" language="C++">
+    <compoundname>ForgeAPI.h</compoundname>
+    <includedby refid="framework_8h" local="yes">Include/framework.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>Include/Application.h</label>
+        <link refid="_application_8h_source"/>
+      </node>
+      <node id="4">
+        <label>Include/Camera.h</label>
+        <link refid="_camera_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Include/Cube.h</label>
+        <link refid="_cube_8h_source"/>
+      </node>
+      <node id="1">
+        <label>Include/ForgeAPI.h</label>
+        <link refid="_forge_a_p_i_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Include/GraphicsManager.h</label>
+        <link refid="_graphics_manager_8h_source"/>
+      </node>
+      <node id="6">
+        <label>Include/Icosphere.h</label>
+        <link refid="_icosphere_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Include/InputManager.h</label>
+        <link refid="_input_manager_8h"/>
+      </node>
+      <node id="8">
+        <label>Include/Keys.h</label>
+        <link refid="_keys_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Include/MainWindow.h</label>
+        <link refid="_main_window_8h_source"/>
+      </node>
+      <node id="10">
+        <label>Include/Material.h</label>
+        <link refid="_material_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Include/Mesh.h</label>
+        <link refid="_mesh_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Include/Mouse.h</label>
+        <link refid="_mouse_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Include/SkySphere.h</label>
+        <link refid="_sky_sphere_8h_source"/>
+      </node>
+      <node id="14">
+        <label>Include/Texture.h</label>
+        <link refid="_texture_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Include/Window.h</label>
+        <link refid="_window_8h_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Include/framework.h</label>
+        <link refid="framework_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_forge_a_p_i_8h_1a6fb5896c62c6c487c3f61c08b18d06b6" prot="public" static="no">
+        <name>FORGE_API</name>
+        <initializer>__declspec(dllimport)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/ForgeAPI.h" line="6" column="10" bodyfile="Include/ForgeAPI.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>FORGE_EXPORTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FORGE_API<sp/>__declspec(dllexport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FORGE_API<sp/>__declspec(dllimport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/ForgeAPI.h"/>
+  </compounddef>
+</doxygen>

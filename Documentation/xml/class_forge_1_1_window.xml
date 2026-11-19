@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="class_forge_1_1_window" kind="class" language="C++" prot="public">
+    <compoundname>Forge::Window</compoundname>
+    <derivedcompoundref refid="class_forge_1_1_main_window" prot="public" virt="non-virtual">Forge::MainWindow</derivedcompoundref>
+    <includes refid="_window_8h" local="no">Window.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_forge_1_1_window_1a6303c63315cbe609bb463b2dec4fd976" prot="protected" static="no" mutable="no">
+        <type>HWND</type>
+        <definition>HWND Forge::Window::_hWnd</definition>
+        <argsstring></argsstring>
+        <name>_hWnd</name>
+        <qualifiedname>Forge::Window::_hWnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Window.h" line="140" column="6" bodyfile="Include/Window.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_forge_1_1_window_1acaa64471a92abff6dd26ed98ac84a5b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Forge::Window::Window</definition>
+        <argsstring>()</argsstring>
+        <name>Window</name>
+        <qualifiedname>Forge::Window::Window</qualifiedname>
+        <briefdescription>
+<para>Constructs a <ref refid="class_forge_1_1_window" kindref="compound">Window</ref> instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Window.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_window_1a37c3a8dd79eef97182275b3f12c242c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Forge::Window::~Window</definition>
+        <argsstring>()</argsstring>
+        <name>~Window</name>
+        <qualifiedname>Forge::Window::~Window</qualifiedname>
+        <briefdescription>
+<para>Destroys the <ref refid="class_forge_1_1_window" kindref="compound">Window</ref> instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Window.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_window_1abd00f3b279b916f495f2d31fa7fffd12" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>ATOM</type>
+        <definition>virtual ATOM Forge::Window::Register</definition>
+        <argsstring>()</argsstring>
+        <name>Register</name>
+        <qualifiedname>Forge::Window::Register</qualifiedname>
+        <briefdescription>
+<para>Registers the window class with the operating system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Identifier of the registered window class. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Window.h" line="35" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_window_1a4cb85dbc4a27904c987e5ffd394ce790" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>virtual BOOL Forge::Window::Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <qualifiedname>Forge::Window::Create</qualifiedname>
+        <briefdescription>
+<para>Creates the application window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>TRUE if the window was successfully created; otherwise, FALSE. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Window.h" line="43" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_window_1aa8470f6e110bc26b00d0306c89394db4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL Forge::Window::Show</definition>
+        <argsstring>() const</argsstring>
+        <name>Show</name>
+        <qualifiedname>Forge::Window::Show</qualifiedname>
+        <briefdescription>
+<para>Displays the window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>TRUE if the operation succeeds; otherwise, FALSE. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Window.h" line="50" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_window_1a2de0485c45180dd88910500f0e596404" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL Forge::Window::Update</definition>
+        <argsstring>() const</argsstring>
+        <name>Update</name>
+        <qualifiedname>Forge::Window::Update</qualifiedname>
+        <briefdescription>
+<para>Updates the window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>TRUE if the operation succeeds; otherwise, FALSE. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Window.h" line="57" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_window_1a6b2b66da88c62f04524eede800aaf991" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HWND</type>
+        <definition>HWND Forge::Window::GetHWND</definition>
+        <argsstring>()</argsstring>
+        <name>GetHWND</name>
+        <qualifiedname>Forge::Window::GetHWND</qualifiedname>
+        <briefdescription>
+<para>Retrieves the handle associated with this window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Handle to the window. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Window.h" line="64" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_window_1af08d697bf71aac82bca0d96f68402911" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>LRESULT</type>
+        <definition>virtual LRESULT Forge::Window::HandleMessage</definition>
+        <argsstring>(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)</argsstring>
+        <name>HandleMessage</name>
+        <qualifiedname>Forge::Window::HandleMessage</qualifiedname>
+        <reimplementedby refid="class_forge_1_1_main_window_1a6987f90a58579865320c5b8605430ec6">HandleMessage</reimplementedby>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>WPARAM</type>
+          <declname>wParam</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lParam</declname>
+        </param>
+        <briefdescription>
+<para>Processes a Windows message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hWnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the window receiving the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Windows message identifier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional message-specific information. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional message-specific information.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of processing the message. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Window.h" line="76" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_forge_1_1_window_1adf883715426d13e25a0362e1235aff38" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LRESULT CALLBACK</type>
+        <definition>static LRESULT CALLBACK Forge::Window::WndProc</definition>
+        <argsstring>(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)</argsstring>
+        <name>WndProc</name>
+        <qualifiedname>Forge::Window::WndProc</qualifiedname>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>WPARAM</type>
+          <declname>wParam</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lParam</declname>
+        </param>
+        <briefdescription>
+<para>Static window procedure responsible for dispatching Windows messages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hWnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the window receiving the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Windows message identifier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional message-specific information. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional message-specific information.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of message processing. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Window.h" line="96" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_window_1a856543cf8a47a46797d4993b9e76cc57" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LRESULT CALLBACK</type>
+        <definition>static LRESULT CALLBACK Forge::Window::WndProcThunk</definition>
+        <argsstring>(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)</argsstring>
+        <name>WndProcThunk</name>
+        <qualifiedname>Forge::Window::WndProcThunk</qualifiedname>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>WPARAM</type>
+          <declname>wParam</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lParam</declname>
+        </param>
+        <briefdescription>
+<para>Thunk procedure used to associate Windows messages with the corresponding <ref refid="class_forge_1_1_window" kindref="compound">Window</ref> instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hWnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the window receiving the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Windows message identifier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional message-specific information. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional message-specific information.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of message processing. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Window.h" line="114" column="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="class_forge_1_1_window_1a3de07f68dab333fa97876bee2473fcdd" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>INT_PTR CALLBACK</type>
+        <definition>static INT_PTR CALLBACK Forge::Window::About</definition>
+        <argsstring>(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)</argsstring>
+        <name>About</name>
+        <qualifiedname>Forge::Window::About</qualifiedname>
+        <param>
+          <type>HWND</type>
+          <declname>hDlg</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>WPARAM</type>
+          <declname>wParam</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lParam</declname>
+        </param>
+        <briefdescription>
+<para>Handles the About dialog&apos;s Windows messages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hDlg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the About dialog. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Windows message identifier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional message-specific information. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional message-specific information.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of dialog message processing. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Window.h" line="133" column="25"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a base Windows application window. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides functionality for registering a window class, creating and displaying a window, updating its state, and processing Windows messages.</para>
+<para>Designed to be extended by derived window classes. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Forge::MainWindow</label>
+        <link refid="class_forge_1_1_main_window"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Forge::Window</label>
+        <link refid="class_forge_1_1_window"/>
+      </node>
+    </inheritancegraph>
+    <location file="Include/Window.h" line="16" column="1" bodyfile="Include/Window.h" bodystart="17" bodyend="141"/>
+    <listofallmembers>
+      <member refid="class_forge_1_1_window_1a6303c63315cbe609bb463b2dec4fd976" prot="protected" virt="non-virtual"><scope>Forge::Window</scope><name>_hWnd</name></member>
+      <member refid="class_forge_1_1_window_1a3de07f68dab333fa97876bee2473fcdd" prot="protected" virt="non-virtual"><scope>Forge::Window</scope><name>About</name></member>
+      <member refid="class_forge_1_1_window_1a4cb85dbc4a27904c987e5ffd394ce790" prot="public" virt="virtual"><scope>Forge::Window</scope><name>Create</name></member>
+      <member refid="class_forge_1_1_window_1a6b2b66da88c62f04524eede800aaf991" prot="public" virt="non-virtual"><scope>Forge::Window</scope><name>GetHWND</name></member>
+      <member refid="class_forge_1_1_window_1af08d697bf71aac82bca0d96f68402911" prot="public" virt="virtual"><scope>Forge::Window</scope><name>HandleMessage</name></member>
+      <member refid="class_forge_1_1_window_1abd00f3b279b916f495f2d31fa7fffd12" prot="public" virt="virtual"><scope>Forge::Window</scope><name>Register</name></member>
+      <member refid="class_forge_1_1_window_1aa8470f6e110bc26b00d0306c89394db4" prot="public" virt="non-virtual"><scope>Forge::Window</scope><name>Show</name></member>
+      <member refid="class_forge_1_1_window_1a2de0485c45180dd88910500f0e596404" prot="public" virt="non-virtual"><scope>Forge::Window</scope><name>Update</name></member>
+      <member refid="class_forge_1_1_window_1acaa64471a92abff6dd26ed98ac84a5b9" prot="public" virt="non-virtual"><scope>Forge::Window</scope><name>Window</name></member>
+      <member refid="class_forge_1_1_window_1adf883715426d13e25a0362e1235aff38" prot="private" virt="non-virtual"><scope>Forge::Window</scope><name>WndProc</name></member>
+      <member refid="class_forge_1_1_window_1a856543cf8a47a46797d4993b9e76cc57" prot="private" virt="non-virtual"><scope>Forge::Window</scope><name>WndProcThunk</name></member>
+      <member refid="class_forge_1_1_window_1a37c3a8dd79eef97182275b3f12c242c9" prot="public" virt="non-virtual"><scope>Forge::Window</scope><name>~Window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

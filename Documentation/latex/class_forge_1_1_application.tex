@@ -1,0 +1,387 @@
+\doxysection{Forge::Application Class Reference}
+\hypertarget{class_forge_1_1_application}{}\label{class_forge_1_1_application}\index{Forge::Application@{Forge::Application}}
+
+
+Serves as the primary entry point and central coordinator of a Forge application.  
+
+
+
+
+{\ttfamily \+\#include $<$Application.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_forge_1_1_application_a684ec249d6911e87a57ab28900d388df}{Application}} (HINSTANCE h\+Instance, int n\+CMDShow)
+\begin{DoxyCompactList}\small\item\em Constructs and initializes the Forge application. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_forge_1_1_application_a6490d71378904253c4576f4db3cf5936}{\texorpdfstring{$\sim$}{\string~}\+Application}} ()
+\begin{DoxyCompactList}\small\item\em Releases application resources and resets the singleton instance. \end{DoxyCompactList}\item 
+virtual int \doxymbox{\hyperlink{class_forge_1_1_application_a557048578ee7590df9af6fb6d296671e}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Executes the main application loop. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_forge_1_1_application_a56405fedf64cdb1ceb66704344726aab}{Begin\+Frame}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Begins a new rendering frame. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_forge_1_1_application_a9801fed5a657923b6951bc335ca05f4f}{End\+Frame}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Completes the current rendering frame. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_forge_1_1_input_manager}{Input\+Manager}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_forge_1_1_application_a48605e8240f66a7b904a1d5d7222405d}{Get\+Input\+Manager}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the application\textquotesingle{}s input manager. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_forge_1_1_graphics_manager}{Graphics\+Manager}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_forge_1_1_application_a6fa810cade4718e1302b5803a04621e2}{Get\+Graphics\+Manager}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the application\textquotesingle{}s graphics manager. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_forge_1_1_camera}{Camera}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_forge_1_1_application_a67a7c6c70d0f1cbe74c6067a63f05f63}{Get\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the application\textquotesingle{}s active camera. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_forge_1_1_application_ab8f6bdf902da36f9e8ff1061def3ecd1}{Add\+Mesh}} (\doxymbox{\hyperlink{class_forge_1_1_mesh}{Mesh}} \texorpdfstring{$\ast$}{*}mesh)
+\begin{DoxyCompactList}\small\item\em Registers a mesh with the application. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_application_abdf00a8624983b273c0b89f3ec02992c}{Remove\+Mesh}} (\doxymbox{\hyperlink{class_forge_1_1_mesh}{Mesh}} \texorpdfstring{$\ast$}{*}mesh)
+\begin{DoxyCompactList}\small\item\em Removes a mesh from the application\textquotesingle{}s mesh collection. \end{DoxyCompactList}\item 
+RECT \doxymbox{\hyperlink{class_forge_1_1_application_adf2caab5e086ae489108cf0bdf3f74b6}{Get\+Main\+Window\+Viewport}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the client area dimensions of the main window. \end{DoxyCompactList}\item 
+HINSTANCE \doxymbox{\hyperlink{class_forge_1_1_application_ad780ce951e3642bf294560a5407f2608}{Get\+HInstance}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the application instance handle. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_forge_1_1_application_ad7da40b38a736497c2c9671e00004064}{Get\+CMDShow}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the requested main window display state. \end{DoxyCompactList}\item 
+HACCEL \doxymbox{\hyperlink{class_forge_1_1_application_a0483dc44cb7dfa1026107ea13702efc7}{Get\+Accelerator\+Table}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the application\textquotesingle{}s accelerator table. s. \end{DoxyCompactList}\item 
+LPCWSTR \doxymbox{\hyperlink{class_forge_1_1_application_a32838236a208b2c048d011df74c226ca}{Get\+Title}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the application\textquotesingle{}s title. \end{DoxyCompactList}\item 
+LPCWSTR \doxymbox{\hyperlink{class_forge_1_1_application_ad8e79ad00e535644e312d4b2a53b6384}{Get\+Author}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the application\textquotesingle{}s author information. \end{DoxyCompactList}\item 
+LPCWSTR \doxymbox{\hyperlink{class_forge_1_1_application_a1100d38e6a596046658be7dcdd66d720}{Get\+Main\+Window\+Class}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the registered main window class name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_forge_1_1_application_a684ec249d6911e87a57ab28900d388df}{Application}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_forge_1_1_application_a92e835b3e7cab3d48fd6bde0ced41c8d}{Get}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the active \doxylink{class_forge_1_1_application}{Application} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_forge_1_1_application_ae7f89b37245fcddc0aed14a5437ea6d2}\label{class_forge_1_1_application_ae7f89b37245fcddc0aed14a5437ea6d2} 
+std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_forge_1_1_main_window}{Main\+Window}} $>$ {\bfseries \+\_\+main\+Window}
+\item 
+\Hypertarget{class_forge_1_1_application_a6057da23864f1004e68caacf87168e8b}\label{class_forge_1_1_application_a6057da23864f1004e68caacf87168e8b} 
+std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_forge_1_1_input_manager}{Input\+Manager}} $>$ {\bfseries \+\_\+input\+Manager}
+\item 
+\Hypertarget{class_forge_1_1_application_aae142ff47c6ab836aca488688848cdc1}\label{class_forge_1_1_application_aae142ff47c6ab836aca488688848cdc1} 
+std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager}{Graphics\+Manager}} $>$ {\bfseries \+\_\+graphics\+Manager}
+\item 
+\Hypertarget{class_forge_1_1_application_a8d973ddef072db9cb635bf1d183cdbf5}\label{class_forge_1_1_application_a8d973ddef072db9cb635bf1d183cdbf5} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_forge_1_1_mesh}{Mesh}} $>$ {\bfseries \+\_\+meshes}
+\item 
+\Hypertarget{class_forge_1_1_application_ad069e4b3987d7a63c83598b856784b77}\label{class_forge_1_1_application_ad069e4b3987d7a63c83598b856784b77} 
+\doxymbox{\hyperlink{class_forge_1_1_camera}{Camera}} {\bfseries \+\_\+current\+Camera}
+\item 
+\Hypertarget{class_forge_1_1_application_af46494dd1f074235ba6f955a0ce6e445}\label{class_forge_1_1_application_af46494dd1f074235ba6f955a0ce6e445} 
+HINSTANCE {\bfseries \+\_\+h\+Instance}
+\item 
+\Hypertarget{class_forge_1_1_application_aebc45c7ddc212103f7b4630b24207990}\label{class_forge_1_1_application_aebc45c7ddc212103f7b4630b24207990} 
+int {\bfseries \+\_\+n\+CMDShow}
+\item 
+\Hypertarget{class_forge_1_1_application_a36d729db66cdbac26c3ae94c44a21bdf}\label{class_forge_1_1_application_a36d729db66cdbac26c3ae94c44a21bdf} 
+WCHAR {\bfseries \+\_\+sz\+Title} \+[MAX\+\_\+\+LOADSTRING]
+\item 
+\Hypertarget{class_forge_1_1_application_a08ddcfe3a14fe8086d73e3e15734ce67}\label{class_forge_1_1_application_a08ddcfe3a14fe8086d73e3e15734ce67} 
+WCHAR {\bfseries \+\_\+sz\+Author} \+[MAX\+\_\+\+LOADSTRING]
+\item 
+\Hypertarget{class_forge_1_1_application_a0c710e91ef8021780242d53b8a7e07ec}\label{class_forge_1_1_application_a0c710e91ef8021780242d53b8a7e07ec} 
+WCHAR {\bfseries \+\_\+sz\+Window\+Class} \+[MAX\+\_\+\+LOADSTRING]
+\item 
+\Hypertarget{class_forge_1_1_application_a1432d95b6899d69230f69a90c66e6d54}\label{class_forge_1_1_application_a1432d95b6899d69230f69a90c66e6d54} 
+HACCEL {\bfseries \+\_\+h\+Accel\+Table}
+\item 
+\Hypertarget{class_forge_1_1_application_ab6b2a283053a8a39923c763a078a3dba}\label{class_forge_1_1_application_ab6b2a283053a8a39923c763a078a3dba} 
+std::\+chrono::\+steady\+\_\+clock::\+time\+\_\+point {\bfseries \+\_\+application\+Start\+Time}
+\item 
+\Hypertarget{class_forge_1_1_application_ab65856d1ba35c4e6be6d2e789ea14b54}\label{class_forge_1_1_application_ab65856d1ba35c4e6be6d2e789ea14b54} 
+std::\+chrono::\+steady\+\_\+clock::\+time\+\_\+point {\bfseries \+\_\+last\+Frame\+Time}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_forge_1_1_application_ab95c937348a41f9038353de62a4147e9}\label{class_forge_1_1_application_ab95c937348a41f9038353de62a4147e9} 
+static \doxymbox{\hyperlink{class_forge_1_1_application_a684ec249d6911e87a57ab28900d388df}{Application}} \texorpdfstring{$\ast$}{*} {\bfseries \+\_\+instance}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Serves as the primary entry point and central coordinator of a Forge application. 
+
+Responsible for managing the application lifecycle, initializing core engine systems, coordinating runtime operations, and maintaining references to essential engine components and resources. 
+
+\label{class_forge_1_1_application_doc-constructors}
+\Hypertarget{class_forge_1_1_application_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_forge_1_1_application_a684ec249d6911e87a57ab28900d388df}\index{Forge::Application@{Forge::Application}!Application@{Application}}
+\index{Application@{Application}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{Application()}{Application()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_a684ec249d6911e87a57ab28900d388df} 
+Forge::\+\+Application::\+\+Application (\begin{DoxyParamCaption}\item[{HINSTANCE}]{h\+Instance}{, }\item[{int}]{n\+CMDShow}{}\end{DoxyParamCaption})}
+
+
+
+Constructs and initializes the Forge application. 
+
+Initializes application instance data, loads application strings and accelerator resources, creates the main window and input manager, initializes the graphics manager, and configures the initial camera.
+
+Initializes the application start time and last frame timestamp.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Instance} & Handle to the current application instance. \\
+\hline
+{\em n\+CMDShow} & Specifies how the main window should be displayed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_application_a6490d71378904253c4576f4db3cf5936}\index{Forge::Application@{Forge::Application}!````~Application@{\texorpdfstring{$\sim$}{\string~}Application}}
+\index{````~Application@{\texorpdfstring{$\sim$}{\string~}Application}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Application()}{\string~Application()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_a6490d71378904253c4576f4db3cf5936} 
+Forge::\+\+Application::\+\texorpdfstring{$\sim$}{\string~}\+Application (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Releases application resources and resets the singleton instance. 
+
+Releases ownership of the input manager, graphics manager, and main window, then clears the singleton instance pointer. 
+
+\label{class_forge_1_1_application_doc-func-members}
+\Hypertarget{class_forge_1_1_application_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_forge_1_1_application_ab8f6bdf902da36f9e8ff1061def3ecd1}\index{Forge::Application@{Forge::Application}!AddMesh@{AddMesh}}
+\index{AddMesh@{AddMesh}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{AddMesh()}{AddMesh()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_ab8f6bdf902da36f9e8ff1061def3ecd1} 
+int Forge::\+\+Application::\+\+Add\+Mesh (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_forge_1_1_mesh}{Mesh}} \texorpdfstring{$\ast$}{*}}]{mesh}{}\end{DoxyParamCaption})}
+
+
+
+Registers a mesh with the application. 
+
+Copies the supplied mesh into the application\textquotesingle{}s internal mesh collection so that it can be rendered during subsequent frames.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & Pointer to the mesh to register.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of the newly registered mesh in the internal collection, or -\/1 if the supplied pointer is nullptr. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_application_a56405fedf64cdb1ceb66704344726aab}\index{Forge::Application@{Forge::Application}!BeginFrame@{BeginFrame}}
+\index{BeginFrame@{BeginFrame}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{BeginFrame()}{BeginFrame()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_a56405fedf64cdb1ceb66704344726aab} 
+virtual void Forge::\+\+Application::\+\+Begin\+Frame (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Begins a new rendering frame. 
+
+Clears the screen to black and iterates through the application\textquotesingle{}s registered meshes, submitting each mesh to the graphics manager for solid rendering without wireframe rendering.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Elapsed time in seconds since the previous frame. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_application_a9801fed5a657923b6951bc335ca05f4f}\index{Forge::Application@{Forge::Application}!EndFrame@{EndFrame}}
+\index{EndFrame@{EndFrame}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{EndFrame()}{EndFrame()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_a9801fed5a657923b6951bc335ca05f4f} 
+virtual void Forge::\+\+Application::\+\+End\+Frame (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Completes the current rendering frame. 
+
+Presents the rendered frame to the display through the graphics manager.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Elapsed time in seconds since the previous frame. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_application_a92e835b3e7cab3d48fd6bde0ced41c8d}\index{Forge::Application@{Forge::Application}!Get@{Get}}
+\index{Get@{Get}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_a92e835b3e7cab3d48fd6bde0ced41c8d} 
+\doxymbox{\hyperlink{class_forge_1_1_application_a684ec249d6911e87a57ab28900d388df}{Application}} \texorpdfstring{$\ast$}{*} Forge::\+\+Application::\+\+Get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieves the active \doxylink{class_forge_1_1_application}{Application} instance. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the singleton \doxylink{class_forge_1_1_application}{Application} instance, or nullptr if no instance exists. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_application_a0483dc44cb7dfa1026107ea13702efc7}\index{Forge::Application@{Forge::Application}!GetAcceleratorTable@{GetAcceleratorTable}}
+\index{GetAcceleratorTable@{GetAcceleratorTable}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{GetAcceleratorTable()}{GetAcceleratorTable()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_a0483dc44cb7dfa1026107ea13702efc7} 
+HACCEL Forge::\+\+Application::\+\+Get\+Accelerator\+Table (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the application\textquotesingle{}s accelerator table. s. 
+
+\begin{DoxyReturn}{Returns}
+Handle to the loaded accelerator table. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_application_ad8e79ad00e535644e312d4b2a53b6384}\index{Forge::Application@{Forge::Application}!GetAuthor@{GetAuthor}}
+\index{GetAuthor@{GetAuthor}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{GetAuthor()}{GetAuthor()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_ad8e79ad00e535644e312d4b2a53b6384} 
+LPCWSTR Forge::\+\+Application::\+\+Get\+Author (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the application\textquotesingle{}s author information. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the application author string. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_application_a67a7c6c70d0f1cbe74c6067a63f05f63}\index{Forge::Application@{Forge::Application}!GetCamera@{GetCamera}}
+\index{GetCamera@{GetCamera}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{GetCamera()}{GetCamera()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_a67a7c6c70d0f1cbe74c6067a63f05f63} 
+\doxymbox{\hyperlink{class_forge_1_1_camera}{Camera}} \texorpdfstring{$\ast$}{*} Forge::\+\+Application::\+\+Get\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the application\textquotesingle{}s active camera. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the application\textquotesingle{}s current \doxylink{class_forge_1_1_camera}{Camera}. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_application_ad7da40b38a736497c2c9671e00004064}\index{Forge::Application@{Forge::Application}!GetCMDShow@{GetCMDShow}}
+\index{GetCMDShow@{GetCMDShow}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{GetCMDShow()}{GetCMDShow()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_ad7da40b38a736497c2c9671e00004064} 
+int Forge::\+\+Application::\+\+Get\+CMDShow (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the requested main window display state. 
+
+\begin{DoxyReturn}{Returns}
+The display state supplied during application construction. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_application_a6fa810cade4718e1302b5803a04621e2}\index{Forge::Application@{Forge::Application}!GetGraphicsManager@{GetGraphicsManager}}
+\index{GetGraphicsManager@{GetGraphicsManager}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{GetGraphicsManager()}{GetGraphicsManager()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_a6fa810cade4718e1302b5803a04621e2} 
+\doxymbox{\hyperlink{class_forge_1_1_graphics_manager}{Graphics\+Manager}} \texorpdfstring{$\ast$}{*} Forge::\+\+Application::\+\+Get\+Graphics\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the application\textquotesingle{}s graphics manager. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the application\textquotesingle{}s \doxylink{class_forge_1_1_graphics_manager}{Graphics\+Manager}. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_application_ad780ce951e3642bf294560a5407f2608}\index{Forge::Application@{Forge::Application}!GetHInstance@{GetHInstance}}
+\index{GetHInstance@{GetHInstance}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{GetHInstance()}{GetHInstance()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_ad780ce951e3642bf294560a5407f2608} 
+HINSTANCE Forge::\+\+Application::\+\+Get\+HInstance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the application instance handle. 
+
+\begin{DoxyReturn}{Returns}
+Handle to the current application instance. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_application_a48605e8240f66a7b904a1d5d7222405d}\index{Forge::Application@{Forge::Application}!GetInputManager@{GetInputManager}}
+\index{GetInputManager@{GetInputManager}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{GetInputManager()}{GetInputManager()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_a48605e8240f66a7b904a1d5d7222405d} 
+\doxymbox{\hyperlink{class_forge_1_1_input_manager}{Input\+Manager}} \texorpdfstring{$\ast$}{*} Forge::\+\+Application::\+\+Get\+Input\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the application\textquotesingle{}s input manager. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the application\textquotesingle{}s \doxylink{class_forge_1_1_input_manager}{Input\+Manager}. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_application_a1100d38e6a596046658be7dcdd66d720}\index{Forge::Application@{Forge::Application}!GetMainWindowClass@{GetMainWindowClass}}
+\index{GetMainWindowClass@{GetMainWindowClass}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{GetMainWindowClass()}{GetMainWindowClass()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_a1100d38e6a596046658be7dcdd66d720} 
+LPCWSTR Forge::\+\+Application::\+\+Get\+Main\+Window\+Class (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the registered main window class name. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the main window class name string. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_application_adf2caab5e086ae489108cf0bdf3f74b6}\index{Forge::Application@{Forge::Application}!GetMainWindowViewport@{GetMainWindowViewport}}
+\index{GetMainWindowViewport@{GetMainWindowViewport}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{GetMainWindowViewport()}{GetMainWindowViewport()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_adf2caab5e086ae489108cf0bdf3f74b6} 
+RECT Forge::\+\+Application::\+\+Get\+Main\+Window\+Viewport (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the client area dimensions of the main window. 
+
+Queries the main window\textquotesingle{}s client rectangle. If the main window is unavailable, returns the default rectangle initialized to 800 by 600.
+
+\begin{DoxyReturn}{Returns}
+Rectangle describing the main window\textquotesingle{}s client area. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_application_a32838236a208b2c048d011df74c226ca}\index{Forge::Application@{Forge::Application}!GetTitle@{GetTitle}}
+\index{GetTitle@{GetTitle}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{GetTitle()}{GetTitle()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_a32838236a208b2c048d011df74c226ca} 
+LPCWSTR Forge::\+\+Application::\+\+Get\+Title (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the application\textquotesingle{}s title. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the application title string. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_application_abdf00a8624983b273c0b89f3ec02992c}\index{Forge::Application@{Forge::Application}!RemoveMesh@{RemoveMesh}}
+\index{RemoveMesh@{RemoveMesh}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{RemoveMesh()}{RemoveMesh()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_abdf00a8624983b273c0b89f3ec02992c} 
+void Forge::\+\+Application::\+\+Remove\+Mesh (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_forge_1_1_mesh}{Mesh}} \texorpdfstring{$\ast$}{*}}]{mesh}{}\end{DoxyParamCaption})}
+
+
+
+Removes a mesh from the application\textquotesingle{}s mesh collection. 
+
+Searches for a mesh whose address matches the supplied pointer and erases the matching entry if found.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & Pointer to the mesh instance to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_application_a557048578ee7590df9af6fb6d296671e}\index{Forge::Application@{Forge::Application}!Run@{Run}}
+\index{Run@{Run}!Forge::Application@{Forge::Application}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_application_a557048578ee7590df9af6fb6d296671e} 
+virtual int Forge::\+\+Application::\+\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes the main application loop. 
+
+Processes pending Windows messages, handles accelerator keys, and executes the application\textquotesingle{}s frame lifecycle while the application is running.
+
+Each frame calculates the elapsed time since the previous frame and calls \doxylink{class_forge_1_1_application_a56405fedf64cdb1ceb66704344726aab}{Begin\+Frame()} followed by \doxylink{class_forge_1_1_application_a9801fed5a657923b6951bc335ca05f4f}{End\+Frame()}.
+
+The loop terminates when a WM\+\_\+\+QUIT message is received.
+
+\begin{DoxyReturn}{Returns}
+The exit code supplied by the WM\+\_\+\+QUIT message. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Include/Application.\+h\end{DoxyCompactItemize}

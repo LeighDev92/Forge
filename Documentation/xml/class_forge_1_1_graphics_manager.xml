@@ -1,0 +1,943 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="class_forge_1_1_graphics_manager" kind="class" language="C++" prot="public">
+    <compoundname>Forge::GraphicsManager</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a00abb5e5acaecc433253aa65973b9942" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11Device &gt;</type>
+        <definition>ComPtr&lt;ID3D11Device&gt; Forge::GraphicsManager::_device</definition>
+        <argsstring></argsstring>
+        <name>_device</name>
+        <qualifiedname>Forge::GraphicsManager::_device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="202" column="8" bodyfile="Include/GraphicsManager.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a2db3cda60628672464169f7cbe026edb" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; IDXGISwapChain &gt;</type>
+        <definition>ComPtr&lt;IDXGISwapChain&gt; Forge::GraphicsManager::_swapChain</definition>
+        <argsstring></argsstring>
+        <name>_swapChain</name>
+        <qualifiedname>Forge::GraphicsManager::_swapChain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="203" column="8" bodyfile="Include/GraphicsManager.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a4703066f0723c7e68be7791cabd23784" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11DeviceContext &gt;</type>
+        <definition>ComPtr&lt;ID3D11DeviceContext&gt; Forge::GraphicsManager::_deviceContext</definition>
+        <argsstring></argsstring>
+        <name>_deviceContext</name>
+        <qualifiedname>Forge::GraphicsManager::_deviceContext</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="204" column="8" bodyfile="Include/GraphicsManager.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a2a02f2518600fa19a7441831130fa026" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11RenderTargetView &gt;</type>
+        <definition>ComPtr&lt;ID3D11RenderTargetView&gt; Forge::GraphicsManager::_renderTargetView</definition>
+        <argsstring></argsstring>
+        <name>_renderTargetView</name>
+        <qualifiedname>Forge::GraphicsManager::_renderTargetView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="205" column="8" bodyfile="Include/GraphicsManager.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a1cba1a04b70f13413673190b2d0f7952" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11DepthStencilView &gt;</type>
+        <definition>ComPtr&lt;ID3D11DepthStencilView&gt; Forge::GraphicsManager::_depthStencilView</definition>
+        <argsstring></argsstring>
+        <name>_depthStencilView</name>
+        <qualifiedname>Forge::GraphicsManager::_depthStencilView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="206" column="8" bodyfile="Include/GraphicsManager.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a506e813cf0f997f81ae9cd4ce845f04c" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11DepthStencilState &gt;</type>
+        <definition>ComPtr&lt;ID3D11DepthStencilState&gt; Forge::GraphicsManager::_depthStencilState</definition>
+        <argsstring></argsstring>
+        <name>_depthStencilState</name>
+        <qualifiedname>Forge::GraphicsManager::_depthStencilState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="207" column="8" bodyfile="Include/GraphicsManager.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1af3955a043b006df2e75f136101d12cfe" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11VertexShader &gt;</type>
+        <definition>ComPtr&lt;ID3D11VertexShader&gt; Forge::GraphicsManager::_vertexShader</definition>
+        <argsstring></argsstring>
+        <name>_vertexShader</name>
+        <qualifiedname>Forge::GraphicsManager::_vertexShader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="208" column="8" bodyfile="Include/GraphicsManager.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1adff27317d05b67fa95349dcdbe330a3a" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11PixelShader &gt;</type>
+        <definition>ComPtr&lt;ID3D11PixelShader&gt; Forge::GraphicsManager::_pixelShader</definition>
+        <argsstring></argsstring>
+        <name>_pixelShader</name>
+        <qualifiedname>Forge::GraphicsManager::_pixelShader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="209" column="8" bodyfile="Include/GraphicsManager.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a18eb48a99b498280dd4f8377cf5d2d33" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11PixelShader &gt;</type>
+        <definition>ComPtr&lt;ID3D11PixelShader&gt; Forge::GraphicsManager::_wireframePixelShader</definition>
+        <argsstring></argsstring>
+        <name>_wireframePixelShader</name>
+        <qualifiedname>Forge::GraphicsManager::_wireframePixelShader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="210" column="8" bodyfile="Include/GraphicsManager.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1aa3009b4a98920258954fe4f3840cec6f" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11InputLayout &gt;</type>
+        <definition>ComPtr&lt;ID3D11InputLayout&gt; Forge::GraphicsManager::_inputLayout</definition>
+        <argsstring></argsstring>
+        <name>_inputLayout</name>
+        <qualifiedname>Forge::GraphicsManager::_inputLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="211" column="8" bodyfile="Include/GraphicsManager.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a6d881f2abd9fd2215e854ca9a4b1d7dc" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11RasterizerState &gt;</type>
+        <definition>ComPtr&lt;ID3D11RasterizerState&gt; Forge::GraphicsManager::_solidRasterizerState</definition>
+        <argsstring></argsstring>
+        <name>_solidRasterizerState</name>
+        <qualifiedname>Forge::GraphicsManager::_solidRasterizerState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="212" column="8" bodyfile="Include/GraphicsManager.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a2f5c72a23a4785e720285d45d620f3ad" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11RasterizerState &gt;</type>
+        <definition>ComPtr&lt;ID3D11RasterizerState&gt; Forge::GraphicsManager::_wireframeRasterizerState</definition>
+        <argsstring></argsstring>
+        <name>_wireframeRasterizerState</name>
+        <qualifiedname>Forge::GraphicsManager::_wireframeRasterizerState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="213" column="8" bodyfile="Include/GraphicsManager.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a8546c3886cfad7582e002e24a040a18b" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11SamplerState &gt;</type>
+        <definition>ComPtr&lt;ID3D11SamplerState&gt; Forge::GraphicsManager::_textureSamplerState</definition>
+        <argsstring></argsstring>
+        <name>_textureSamplerState</name>
+        <qualifiedname>Forge::GraphicsManager::_textureSamplerState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="214" column="8" bodyfile="Include/GraphicsManager.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a10fc4af984fbe8e51ab9a5f08b460f58" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11Buffer &gt;</type>
+        <definition>ComPtr&lt;ID3D11Buffer&gt; Forge::GraphicsManager::_modelConstantBuffer</definition>
+        <argsstring></argsstring>
+        <name>_modelConstantBuffer</name>
+        <qualifiedname>Forge::GraphicsManager::_modelConstantBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="215" column="8" bodyfile="Include/GraphicsManager.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a2e99adfdbc53f54a63d78b4b4840f5c3" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11Buffer &gt;</type>
+        <definition>ComPtr&lt;ID3D11Buffer&gt; Forge::GraphicsManager::_materialConstantBuffer</definition>
+        <argsstring></argsstring>
+        <name>_materialConstantBuffer</name>
+        <qualifiedname>Forge::GraphicsManager::_materialConstantBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="216" column="8" bodyfile="Include/GraphicsManager.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a0a3b45e14a2710f03e122b9e5bf9bfe1" prot="private" static="no" mutable="no">
+        <type>ComPtr&lt; ID3D11Buffer &gt;</type>
+        <definition>ComPtr&lt;ID3D11Buffer&gt; Forge::GraphicsManager::_lightingConstantBuffer</definition>
+        <argsstring></argsstring>
+        <name>_lightingConstantBuffer</name>
+        <qualifiedname>Forge::GraphicsManager::_lightingConstantBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="217" column="8" bodyfile="Include/GraphicsManager.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_graphics_manager_1a5f134e2075f87c6250e49d080ee7d15a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_forge_1_1_camera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera* Forge::GraphicsManager::_camera</definition>
+        <argsstring></argsstring>
+        <name>_camera</name>
+        <qualifiedname>Forge::GraphicsManager::_camera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="219" column="8" bodyfile="Include/GraphicsManager.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a3bcc6659ca13ea0b09a0ff33865691bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Forge::GraphicsManager::GraphicsManager</definition>
+        <argsstring>(HWND hWnd)</argsstring>
+        <name>GraphicsManager</name>
+        <qualifiedname>Forge::GraphicsManager::GraphicsManager</qualifiedname>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the DirectX 11 graphics manager. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates the Direct3D device, device context, swap chain, render targets, shaders, input layouts, rasterizer states, depth-stencil states, samplers, and constant buffers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hWnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the window associated with the graphics device. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1aae87999a5551fa6f9df8df5d706e58bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Forge::GraphicsManager::GraphicsManager</definition>
+        <argsstring>(const GraphicsManager &amp;)=delete</argsstring>
+        <name>GraphicsManager</name>
+        <qualifiedname>Forge::GraphicsManager::GraphicsManager</qualifiedname>
+        <param>
+          <type>const GraphicsManager &amp;</type>
+        </param>
+        <briefdescription>
+<para>Copy construction is disabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a9f6dd02010cecf2c3ad40900b24a90c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_forge_1_1_graphics_manager_1a3bcc6659ca13ea0b09a0ff33865691bf" kindref="member">GraphicsManager</ref> &amp;</type>
+        <definition>GraphicsManager &amp; Forge::GraphicsManager::operator=</definition>
+        <argsstring>(const GraphicsManager &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Forge::GraphicsManager::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_forge_1_1_graphics_manager_1a3bcc6659ca13ea0b09a0ff33865691bf" kindref="member">GraphicsManager</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Copy assignment is disabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="34" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a88ce8e55b82734b1a3215f4151cb0c4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Forge::GraphicsManager::~GraphicsManager</definition>
+        <argsstring>()</argsstring>
+        <name>~GraphicsManager</name>
+        <qualifiedname>Forge::GraphicsManager::~GraphicsManager</qualifiedname>
+        <briefdescription>
+<para>Releases graphics resources and associated Direct3D objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a14c8592a2c3710b7eb63f670bae9db2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::Resize</definition>
+        <argsstring>(UINT width, UINT height)</argsstring>
+        <name>Resize</name>
+        <qualifiedname>Forge::GraphicsManager::Resize</qualifiedname>
+        <param>
+          <type>UINT</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Resizes the graphics viewport and associated render targets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New viewport width in pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New viewport height in pixels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="47" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a5e42e0840e8b82b8a6a9bea96d180731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::DrawMesh</definition>
+        <argsstring>(Mesh *mesh, bool draw_solid=true, bool draw_wireframe=false)</argsstring>
+        <name>DrawMesh</name>
+        <qualifiedname>Forge::GraphicsManager::DrawMesh</qualifiedname>
+        <param>
+          <type><ref refid="class_forge_1_1_mesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>draw_solid</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>draw_wireframe</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Renders a mesh using the configured graphics pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Supports solid rendering, wireframe rendering, or both.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mesh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the mesh to render. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>draw_solid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Determines whether solid rendering is enabled. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>draw_wireframe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Determines whether wireframe rendering is enabled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="58" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1acd72b80938cfc38deb576db3b9e5cc54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::SetCamera</definition>
+        <argsstring>(Camera *camera)</argsstring>
+        <name>SetCamera</name>
+        <qualifiedname>Forge::GraphicsManager::SetCamera</qualifiedname>
+        <param>
+          <type><ref refid="class_forge_1_1_camera" kindref="compound">Camera</ref> *</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+<para>Sets the active camera used by the graphics manager. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>camera</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the camera used for rendering and world-to-screen coordinate calculations. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="66" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a8bceb464a4cd7be9291694c27c8d7587" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_forge_1_1_f_vector2_d" kindref="compound">FVector2D</ref></type>
+        <definition>FVector2D Forge::GraphicsManager::ConvertToClipPosition</definition>
+        <argsstring>(FVector world, FTransform transform)</argsstring>
+        <name>ConvertToClipPosition</name>
+        <qualifiedname>Forge::GraphicsManager::ConvertToClipPosition</qualifiedname>
+        <param>
+          <type><ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref></type>
+          <declname>world</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_forge_1_1_f_transform" kindref="compound">FTransform</ref></type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+<para>Converts a world-space position into normalized clip-space coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies the supplied transform and camera matrices to determine the position&apos;s corresponding screen-space location.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>world</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>World-space position to convert. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transform applied to the world-space position.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Normalized clip-space X and Y coordinates. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="80" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a86b3c6d2727b5b91082064fe1e49f10e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Forge::GraphicsManager::IsPositionOnSphereVisibleToCamera</definition>
+        <argsstring>(FVector position, FTransform transform) const</argsstring>
+        <name>IsPositionOnSphereVisibleToCamera</name>
+        <qualifiedname>Forge::GraphicsManager::IsPositionOnSphereVisibleToCamera</qualifiedname>
+        <param>
+          <type><ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref></type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_forge_1_1_f_transform" kindref="compound">FTransform</ref></type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+<para>Determines whether a position on a transformed sphere is visible to the active camera. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on the sphere&apos;s surface. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transform applied to the sphere.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the position is facing the camera; otherwise, false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="92" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a0b603d1dbc88794418813a4491ac63be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::PresentFrame</definition>
+        <argsstring>()</argsstring>
+        <name>PresentFrame</name>
+        <qualifiedname>Forge::GraphicsManager::PresentFrame</qualifiedname>
+        <briefdescription>
+<para>Presents the rendered frame to the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Swaps the back buffer with the front buffer through the swap chain. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="99" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a8ed2ee80aa2704094bb4086f761f99c3" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::ClearScreen</definition>
+        <argsstring>(float red, float green, float blue) noexcept</argsstring>
+        <name>ClearScreen</name>
+        <qualifiedname>Forge::GraphicsManager::ClearScreen</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>red</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>green</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>blue</declname>
+        </param>
+        <briefdescription>
+<para>Clears the screen using the specified RGB color. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>red</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Red color component. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>green</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Green color component. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blue color component. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="108" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a40fdb46d46c3aedf1df26869c868d718" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::ClearRenderTargetView</definition>
+        <argsstring>(float red, float green, float blue) noexcept</argsstring>
+        <name>ClearRenderTargetView</name>
+        <qualifiedname>Forge::GraphicsManager::ClearRenderTargetView</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>red</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>green</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>blue</declname>
+        </param>
+        <briefdescription>
+<para>Clears the active render target view. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>red</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Red color component. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>green</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Green color component. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blue color component. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="117" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1abebbe800e4f5179aa9d9aaa2a4008b7b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::ClearDepthStencilView</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>ClearDepthStencilView</name>
+        <qualifiedname>Forge::GraphicsManager::ClearDepthStencilView</qualifiedname>
+        <briefdescription>
+<para>Clears the depth-stencil buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Resets the depth and stencil information associated with the active depth-stencil view. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="125" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a0c8b4caeb26a078c83aeee6207d27cee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const ComPtr&lt; ID3D11Device &gt;</type>
+        <definition>const ComPtr&lt; ID3D11Device &gt; Forge::GraphicsManager::GetDevice</definition>
+        <argsstring>() const</argsstring>
+        <name>GetDevice</name>
+        <qualifiedname>Forge::GraphicsManager::GetDevice</qualifiedname>
+        <briefdescription>
+<para>Retrieves the Direct3D 11 device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Smart pointer to the Direct3D device. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="132" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a67ea390dab337d2c1f3dac9a31be6f91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const ComPtr&lt; ID3D11DeviceContext &gt;</type>
+        <definition>const ComPtr&lt; ID3D11DeviceContext &gt; Forge::GraphicsManager::GetDeviceContext</definition>
+        <argsstring>() const</argsstring>
+        <name>GetDeviceContext</name>
+        <qualifiedname>Forge::GraphicsManager::GetDeviceContext</qualifiedname>
+        <briefdescription>
+<para>Retrieves the Direct3D 11 device context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Smart pointer to the Direct3D device context. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="139" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a248b2287108eab028387e1ae7215ec9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Forge::GraphicsManager::CreateTextureFromFile</definition>
+        <argsstring>(ComPtr&lt; ID3D11ShaderResourceView &gt; &amp;texture, const char *filename)</argsstring>
+        <name>CreateTextureFromFile</name>
+        <qualifiedname>Forge::GraphicsManager::CreateTextureFromFile</qualifiedname>
+        <param>
+          <type>ComPtr&lt; ID3D11ShaderResourceView &gt; &amp;</type>
+          <declname>texture</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Creates a shader resource view from an image file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>texture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the shader resource view that will receive the created texture. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the image file to load.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the texture was successfully created; otherwise, false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="151" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a2be30be0acdb8877304cccc85228c79c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::CreateDeviceAndSwapChain</definition>
+        <argsstring>(HWND hWnd)</argsstring>
+        <name>CreateDeviceAndSwapChain</name>
+        <qualifiedname>Forge::GraphicsManager::CreateDeviceAndSwapChain</qualifiedname>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <briefdescription>
+<para>Creates the Direct3D device, device context, and swap chain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hWnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the window associated with the graphics device. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="160" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1ad41d3ed341cd030d23f4f7e25b695e85" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::CreateRenderTargets</definition>
+        <argsstring>()</argsstring>
+        <name>CreateRenderTargets</name>
+        <qualifiedname>Forge::GraphicsManager::CreateRenderTargets</qualifiedname>
+        <briefdescription>
+<para>Creates the render target and depth-stencil resources. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="165" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a6714a23cb61da99786af13880b645ffe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::CreateShaders</definition>
+        <argsstring>()</argsstring>
+        <name>CreateShaders</name>
+        <qualifiedname>Forge::GraphicsManager::CreateShaders</qualifiedname>
+        <briefdescription>
+<para>Creates and initializes the graphics shaders. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="170" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a038395c13eb0af4faccb0dd18cfc1310" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::CreateInputLayouts</definition>
+        <argsstring>()</argsstring>
+        <name>CreateInputLayouts</name>
+        <qualifiedname>Forge::GraphicsManager::CreateInputLayouts</qualifiedname>
+        <briefdescription>
+<para>Creates the input layouts used by the graphics pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="175" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a0960d8a21ce86efaab2b9158cb67730e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::CreateRasterizerStates</definition>
+        <argsstring>()</argsstring>
+        <name>CreateRasterizerStates</name>
+        <qualifiedname>Forge::GraphicsManager::CreateRasterizerStates</qualifiedname>
+        <briefdescription>
+<para>Creates the rasterizer states used for solid and wireframe rendering. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="180" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a0cf9e17fc79fad5ed3b1964e4909b6c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::CreateDepthStencilStates</definition>
+        <argsstring>()</argsstring>
+        <name>CreateDepthStencilStates</name>
+        <qualifiedname>Forge::GraphicsManager::CreateDepthStencilStates</qualifiedname>
+        <briefdescription>
+<para>Creates the depth-stencil states used during rendering. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="185" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a93bacd1d871e8b0af9d5373785b2fbf0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::CreateSamplers</definition>
+        <argsstring>()</argsstring>
+        <name>CreateSamplers</name>
+        <qualifiedname>Forge::GraphicsManager::CreateSamplers</qualifiedname>
+        <briefdescription>
+<para>Creates the sampler states used for texture sampling. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="190" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_graphics_manager_1a0ff69d196d8a7587435d44fc65185823" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::GraphicsManager::CreateConstantBuffers</definition>
+        <argsstring>()</argsstring>
+        <name>CreateConstantBuffers</name>
+        <qualifiedname>Forge::GraphicsManager::CreateConstantBuffers</qualifiedname>
+        <briefdescription>
+<para>Creates the constant buffers used to pass rendering data to the shaders. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/GraphicsManager.h" line="196" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Include/GraphicsManager.h" line="11" column="1" bodyfile="Include/GraphicsManager.h" bodystart="12" bodyend="220"/>
+    <listofallmembers>
+      <member refid="class_forge_1_1_graphics_manager_1a5f134e2075f87c6250e49d080ee7d15a" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_camera</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a506e813cf0f997f81ae9cd4ce845f04c" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_depthStencilState</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a1cba1a04b70f13413673190b2d0f7952" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_depthStencilView</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a00abb5e5acaecc433253aa65973b9942" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_device</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a4703066f0723c7e68be7791cabd23784" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_deviceContext</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1aa3009b4a98920258954fe4f3840cec6f" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_inputLayout</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a0a3b45e14a2710f03e122b9e5bf9bfe1" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_lightingConstantBuffer</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a2e99adfdbc53f54a63d78b4b4840f5c3" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_materialConstantBuffer</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a10fc4af984fbe8e51ab9a5f08b460f58" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_modelConstantBuffer</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1adff27317d05b67fa95349dcdbe330a3a" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_pixelShader</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a2a02f2518600fa19a7441831130fa026" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_renderTargetView</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a6d881f2abd9fd2215e854ca9a4b1d7dc" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_solidRasterizerState</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a2db3cda60628672464169f7cbe026edb" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_swapChain</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a8546c3886cfad7582e002e24a040a18b" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_textureSamplerState</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1af3955a043b006df2e75f136101d12cfe" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_vertexShader</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a18eb48a99b498280dd4f8377cf5d2d33" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_wireframePixelShader</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a2f5c72a23a4785e720285d45d620f3ad" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>_wireframeRasterizerState</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1abebbe800e4f5179aa9d9aaa2a4008b7b" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>ClearDepthStencilView</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a40fdb46d46c3aedf1df26869c868d718" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>ClearRenderTargetView</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a8ed2ee80aa2704094bb4086f761f99c3" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>ClearScreen</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a8bceb464a4cd7be9291694c27c8d7587" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>ConvertToClipPosition</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a0ff69d196d8a7587435d44fc65185823" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>CreateConstantBuffers</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a0cf9e17fc79fad5ed3b1964e4909b6c7" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>CreateDepthStencilStates</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a2be30be0acdb8877304cccc85228c79c" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>CreateDeviceAndSwapChain</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a038395c13eb0af4faccb0dd18cfc1310" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>CreateInputLayouts</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a0960d8a21ce86efaab2b9158cb67730e" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>CreateRasterizerStates</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1ad41d3ed341cd030d23f4f7e25b695e85" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>CreateRenderTargets</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a93bacd1d871e8b0af9d5373785b2fbf0" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>CreateSamplers</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a6714a23cb61da99786af13880b645ffe" prot="private" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>CreateShaders</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a248b2287108eab028387e1ae7215ec9f" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>CreateTextureFromFile</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a5e42e0840e8b82b8a6a9bea96d180731" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>DrawMesh</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a0c8b4caeb26a078c83aeee6207d27cee" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>GetDevice</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a67ea390dab337d2c1f3dac9a31be6f91" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>GetDeviceContext</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a3bcc6659ca13ea0b09a0ff33865691bf" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>GraphicsManager</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1aae87999a5551fa6f9df8df5d706e58bd" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>GraphicsManager</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a86b3c6d2727b5b91082064fe1e49f10e" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>IsPositionOnSphereVisibleToCamera</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a9f6dd02010cecf2c3ad40900b24a90c8" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>operator=</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a0b603d1dbc88794418813a4491ac63be" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>PresentFrame</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a14c8592a2c3710b7eb63f670bae9db2a" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>Resize</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1acd72b80938cfc38deb576db3b9e5cc54" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>SetCamera</name></member>
+      <member refid="class_forge_1_1_graphics_manager_1a88ce8e55b82734b1a3215f4151cb0c4a" prot="public" virt="non-virtual"><scope>Forge::GraphicsManager</scope><name>~GraphicsManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

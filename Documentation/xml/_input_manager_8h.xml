@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="_input_manager_8h" kind="file" language="C++">
+    <compoundname>InputManager.h</compoundname>
+    <includes local="no">unordered_set</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">Windows.h</includes>
+    <includes refid="_keys_8h" local="yes">Keys.h</includes>
+    <includes refid="_mouse_8h" local="yes">Mouse.h</includes>
+    <incdepgraph>
+      <node id="32">
+        <label>ForgeAPI.h</label>
+        <link refid="_forge_a_p_i_8h_source"/>
+      </node>
+      <node id="1">
+        <label>Include/InputManager.h</label>
+        <link refid="_input_manager_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Keys.h</label>
+        <link refid="_keys_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Mouse.h</label>
+        <link refid="_mouse_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>framework.h</label>
+        <link refid="framework_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>D3d11.h</label>
+      </node>
+      <node id="13">
+        <label>DirectXMath.h</label>
+      </node>
+      <node id="6">
+        <label>Windows.h</label>
+      </node>
+      <node id="27">
+        <label>algorithm</label>
+      </node>
+      <node id="20">
+        <label>chrono</label>
+      </node>
+      <node id="31">
+        <label>cmath</label>
+      </node>
+      <node id="15">
+        <label>filesystem</label>
+      </node>
+      <node id="25">
+        <label>fstream</label>
+      </node>
+      <node id="3">
+        <label>functional</label>
+      </node>
+      <node id="28">
+        <label>imgui.h</label>
+      </node>
+      <node id="30">
+        <label>imgui_impl_dx11.h</label>
+      </node>
+      <node id="29">
+        <label>imgui_impl_win32.h</label>
+      </node>
+      <node id="23">
+        <label>iostream</label>
+      </node>
+      <node id="17">
+        <label>malloc.h</label>
+      </node>
+      <node id="21">
+        <label>memory</label>
+      </node>
+      <node id="18">
+        <label>memory.h</label>
+      </node>
+      <node id="24">
+        <label>sstream</label>
+      </node>
+      <node id="22">
+        <label>stdexcept</label>
+      </node>
+      <node id="16">
+        <label>stdlib.h</label>
+      </node>
+      <node id="26">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>targetver.h</label>
+      </node>
+      <node id="19">
+        <label>tchar.h</label>
+      </node>
+      <node id="5">
+        <label>unordered_map</label>
+      </node>
+      <node id="2">
+        <label>unordered_set</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="10">
+        <label>windows.h</label>
+      </node>
+      <node id="11">
+        <label>windowsx.h</label>
+      </node>
+      <node id="14">
+        <label>wrl/client.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_forge_1_1_binding" prot="public">Forge::Binding</innerclass>
+    <innerclass refid="class_forge_1_1_input_manager" prot="public">Forge::InputManager</innerclass>
+    <innernamespace refid="namespace_forge">Forge</innernamespace>
+    <briefdescription>
+<para>Defines the input management system for keyboard and mouse events. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides input state tracking and event binding functionality. Callbacks can be registered for keyboard events, mouse button events, mouse movement, and mouse scrolling. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Keys.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Mouse.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Forge</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">BindingID<sp/>=<sp/>uint64_t;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_input_manager_8h_1a84de02f2a240b35ed06a3a2c5adfc8cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="_input_manager_8h_1a84de02f2a240b35ed06a3a2c5adfc8cd" kindref="member">KeyCallback</ref><sp/>=<sp/>std::function&lt;void(KeyEvent<sp/>event)&gt;;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="_input_manager_8h_1ac48efee6df4422684e9de50fb6a2728c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="_input_manager_8h_1ac48efee6df4422684e9de50fb6a2728c" kindref="member">MouseMoveCallback</ref><sp/>=<sp/>std::function&lt;void(<ref refid="struct_forge_1_1_mouse_state" kindref="compound">MouseState</ref><sp/>state)&gt;;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="_input_manager_8h_1adfa193e601acb42b9c258dce9d309ec2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="_input_manager_8h_1adfa193e601acb42b9c258dce9d309ec2" kindref="member">MouseButtonCallback</ref><sp/>=<sp/>std::function&lt;void(MouseEvent<sp/>event)&gt;;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="_input_manager_8h_1a42a19dce8ea9779ee64d34e50c12c15d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="_input_manager_8h_1a42a19dce8ea9779ee64d34e50c12c15d" kindref="member">MouseScrollCallback</ref><sp/>=<sp/>std::function&lt;void(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>delta)&gt;;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="60" refid="struct_forge_1_1_binding" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">FORGE_API<sp/><ref refid="struct_forge_1_1_binding_1a0c5514d49854f54794b5194003057dee" kindref="member">Binding</ref></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63" refid="struct_forge_1_1_binding_1a7557f6cd34fcf5fe4df08f7eb902b37a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BindingID<sp/><ref refid="struct_forge_1_1_binding_1a7557f6cd34fcf5fe4df08f7eb902b37a" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="struct_forge_1_1_binding_1a9281b9d8c3f1f63e47aa4803f3c61f98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/><ref refid="struct_forge_1_1_binding_1a9281b9d8c3f1f63e47aa4803f3c61f98" kindref="member">callback</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="struct_forge_1_1_binding_1a0c5514d49854f54794b5194003057dee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_forge_1_1_binding_1a0c5514d49854f54794b5194003057dee" kindref="member">Binding</ref>(BindingID<sp/>_id,<sp/>T<sp/>_callback)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>_id;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_forge_1_1_binding_1a9281b9d8c3f1f63e47aa4803f3c61f98" kindref="member">callback</ref><sp/>=<sp/>std::move(_callback);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_forge_1_1_input_manager" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">FORGE_API<sp/><ref refid="class_forge_1_1_input_manager_1a2251e8f46952bf59a61702c3c7ae035c" kindref="member">InputManager</ref></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="class_forge_1_1_input_manager_1a2251e8f46952bf59a61702c3c7ae035c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_forge_1_1_input_manager_1a2251e8f46952bf59a61702c3c7ae035c" kindref="member">InputManager</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_forge_1_1_input_manager_1a22f5b36d349d141c665f7742daa987c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_forge_1_1_input_manager_1a22f5b36d349d141c665f7742daa987c6" kindref="member">~InputManager</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="class_forge_1_1_input_manager_1a631afccfead0567e6c02f057677f90b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1a2251e8f46952bf59a61702c3c7ae035c" kindref="member">InputManager</ref>*<sp/><ref refid="class_forge_1_1_input_manager_1a631afccfead0567e6c02f057677f90b7" kindref="member">Get</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="class_forge_1_1_input_manager_1a6f8c524ef924d1cae38ff4c1d43f5409" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1a6f8c524ef924d1cae38ff4c1d43f5409" kindref="member">ProcessKeyUp</ref>(Key<sp/>key);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="class_forge_1_1_input_manager_1a923444c14f7cc7c6b1e33b6df95e5e4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1a923444c14f7cc7c6b1e33b6df95e5e4d" kindref="member">ProcessKeyDown</ref>(Key<sp/>key);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="class_forge_1_1_input_manager_1ade634781e9b9fad973c95d0a0c799be6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1ade634781e9b9fad973c95d0a0c799be6" kindref="member">SetKeyState</ref>(Key<sp/>key,<sp/>KeyEvent<sp/>state);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="class_forge_1_1_input_manager_1acab91bd8acb1ee9e8b7a69d81934f545" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1acab91bd8acb1ee9e8b7a69d81934f545" kindref="member">ProcessMouseButtonUp</ref>(MouseButton<sp/>button);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="class_forge_1_1_input_manager_1a99c1f94f4c7f0066e477b2dd5294b40d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1a99c1f94f4c7f0066e477b2dd5294b40d" kindref="member">ProcessMouseButtonDown</ref>(MouseButton<sp/>button);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="class_forge_1_1_input_manager_1a0de61436408af7511ad5bcd1461ab573" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1a0de61436408af7511ad5bcd1461ab573" kindref="member">SetMouseButtonState</ref>(MouseButton<sp/>button,<sp/>MouseEvent<sp/>state);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="class_forge_1_1_input_manager_1ae2af8687e15435ef5cc8a1d7c3124a8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1ae2af8687e15435ef5cc8a1d7c3124a8f" kindref="member">ProcessMouseMove</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xPos,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>yPos);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="class_forge_1_1_input_manager_1a02730b3bdb014d1649a283f6e4abccf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1a02730b3bdb014d1649a283f6e4abccf1" kindref="member">ProcessMouseScroll</ref>(MouseEvent<sp/>direction,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>delta);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="class_forge_1_1_input_manager_1a7cd74df7b6bb18d6a7759a0971a7d04d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1a7cd74df7b6bb18d6a7759a0971a7d04d" kindref="member">IsKeyUp</ref>(Key<sp/>key)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="class_forge_1_1_input_manager_1a4f860f02d2246b404b1509bbd94fb716" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1a4f860f02d2246b404b1509bbd94fb716" kindref="member">IsKeyDown</ref>(Key<sp/>key)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="class_forge_1_1_input_manager_1ae9d7293231d82ba628412c750471947d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1ae9d7293231d82ba628412c750471947d" kindref="member">IsMouseButtonUp</ref>(MouseButton<sp/>button)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="class_forge_1_1_input_manager_1ab063540d8b21c2dc2e0b4ed6a1c314bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1ab063540d8b21c2dc2e0b4ed6a1c314bf" kindref="member">IsMouseButtonDown</ref>(MouseButton<sp/>button)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="class_forge_1_1_input_manager_1a3bc917f31d932ae93ac06ed975ffc6bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_forge_1_1_mouse_state" kindref="compound">MouseState</ref><sp/><ref refid="class_forge_1_1_input_manager_1a3bc917f31d932ae93ac06ed975ffc6bc" kindref="member">GetMouseState</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="class_forge_1_1_input_manager_1a3ededbd81d43167e09f8d66d3c3e73ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BindingID<sp/><ref refid="class_forge_1_1_input_manager_1a3ededbd81d43167e09f8d66d3c3e73ec" kindref="member">BindKeyEvent</ref>(Key<sp/>key,<sp/>KeyEvent<sp/>event,<sp/><ref refid="_input_manager_8h_1a84de02f2a240b35ed06a3a2c5adfc8cd" kindref="member">KeyCallback</ref><sp/>callback);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="class_forge_1_1_input_manager_1a6a8689ebe5a21885b690b70cbe078d27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1a6a8689ebe5a21885b690b70cbe078d27" kindref="member">UnBindKeyEvent</ref>(BindingID<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="class_forge_1_1_input_manager_1a0eab4683a5c6441eea13a4bb3b32882b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BindingID<sp/><ref refid="class_forge_1_1_input_manager_1a0eab4683a5c6441eea13a4bb3b32882b" kindref="member">BindMouseButtonEvent</ref>(MouseButton<sp/>button,<sp/>MouseEvent<sp/>event,<sp/><ref refid="_input_manager_8h_1adfa193e601acb42b9c258dce9d309ec2" kindref="member">MouseButtonCallback</ref><sp/>callback);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="class_forge_1_1_input_manager_1a3166e40c0b1c703f01435c609a984d98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1a3166e40c0b1c703f01435c609a984d98" kindref="member">UnBindMouseButtonEvent</ref>(BindingID<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240" refid="class_forge_1_1_input_manager_1a3f15dbc3257bbc022c4a869c208f3d94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BindingID<sp/><ref refid="class_forge_1_1_input_manager_1a3f15dbc3257bbc022c4a869c208f3d94" kindref="member">BindMouseMoveEvent</ref>(<ref refid="_input_manager_8h_1ac48efee6df4422684e9de50fb6a2728c" kindref="member">MouseMoveCallback</ref><sp/>callback);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="class_forge_1_1_input_manager_1a7938b196e103e1d9ea1721197bb2adde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1a7938b196e103e1d9ea1721197bb2adde" kindref="member">UnBindMouseMoveEvent</ref>(BindingID<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="class_forge_1_1_input_manager_1abe7171ca4d21b3051c363ae1911b5c78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BindingID<sp/><ref refid="class_forge_1_1_input_manager_1abe7171ca4d21b3051c363ae1911b5c78" kindref="member">BindMouseScrollEvent</ref>(MouseEvent<sp/>scroll_event,<sp/><ref refid="_input_manager_8h_1a42a19dce8ea9779ee64d34e50c12c15d" kindref="member">MouseScrollCallback</ref><sp/>callback);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="class_forge_1_1_input_manager_1ae34c36cbe700edd01318917cff97a920" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1ae34c36cbe700edd01318917cff97a920" kindref="member">UnBindMouseScrollEvent</ref>(BindingID<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="class_forge_1_1_input_manager_1adc9b9c932e1a17338544fef442c26924" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_forge_1_1_input_manager_1adc9b9c932e1a17338544fef442c26924" kindref="member">ClearState</ref>();</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BroadcastKeyEvent(Key<sp/>key,<sp/>KeyEvent<sp/>event)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BroadcastMouseButtonEvent(MouseButton<sp/>button,<sp/>MouseEvent<sp/>event)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BroadcastMouseMoveEvent(<ref refid="struct_forge_1_1_mouse_state" kindref="compound">MouseState</ref><sp/>state)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BroadcastMouseScrollEvent(MouseEvent<sp/>direction,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>delta)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unordered_set&lt;Key&gt;<sp/>pressed_keys;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unordered_map&lt;Key,<sp/>std::vector&lt;Binding&lt;KeyCallback&gt;&gt;&gt;<sp/>_boundKeyEventsPressed;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unordered_map&lt;Key,<sp/>std::vector&lt;Binding&lt;KeyCallback&gt;&gt;&gt;<sp/>_boundKeyEventsReleased;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_forge_1_1_mouse_state" kindref="compound">MouseState</ref><sp/>_mouseState;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unordered_set&lt;MouseButton&gt;<sp/>_pressedMouseButtons;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unordered_map&lt;MouseButton,<sp/>std::vector&lt;Binding&lt;MouseButtonCallback&gt;&gt;&gt;<sp/>_boundMouseButtonEventsPressed;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unordered_map&lt;MouseButton,<sp/>std::vector&lt;Binding&lt;MouseButtonCallback&gt;&gt;&gt;<sp/>_boundMouseButtonEventsReleased;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Binding&lt;MouseMoveCallback&gt;&gt;<sp/>_boundMouseMoveEvents;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Binding&lt;MouseScrollCallback&gt;&gt;<sp/>_boundMouseScrollHorizontalEvents;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Binding&lt;MouseScrollCallback&gt;&gt;<sp/>_boundMouseScrollVerticalEvents;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BindingID<sp/>_nextBindingID<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="311"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Include/InputManager.h"/>
+  </compounddef>
+</doxygen>

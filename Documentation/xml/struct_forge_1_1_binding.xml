@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="struct_forge_1_1_binding" kind="struct" language="C++" prot="public">
+    <compoundname>Forge::Binding</compoundname>
+    <includes refid="_input_manager_8h" local="no">InputManager.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_forge_1_1_binding_1a7557f6cd34fcf5fe4df08f7eb902b37a" prot="public" static="no" mutable="no">
+        <type>BindingID</type>
+        <definition>BindingID Forge::Binding&lt; T &gt;::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>Forge::Binding::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique identifier assigned to this binding. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/InputManager.h" line="63" column="19" bodyfile="Include/InputManager.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_forge_1_1_binding_1a9281b9d8c3f1f63e47aa4803f3c61f98" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T Forge::Binding&lt; T &gt;::callback</definition>
+        <argsstring></argsstring>
+        <name>callback</name>
+        <qualifiedname>Forge::Binding::callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback function associated with this binding. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/InputManager.h" line="66" column="11" bodyfile="Include/InputManager.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_forge_1_1_binding_1a0c5514d49854f54794b5194003057dee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Forge::Binding&lt; T &gt;::Binding</definition>
+        <argsstring>(BindingID _id, T _callback)</argsstring>
+        <name>Binding</name>
+        <qualifiedname>Forge::Binding::Binding</qualifiedname>
+        <param>
+          <type>BindingID</type>
+          <declname>_id</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>_callback</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a callback binding. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique identifier assigned to the binding. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback function to associate with the binding. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/InputManager.h" line="74" column="9" bodyfile="Include/InputManager.h" bodystart="74" bodyend="78"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Stores a callback and its associated binding identifier. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback type stored by the binding. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="Include/InputManager.h" line="60" column="5" bodyfile="Include/InputManager.h" bodystart="61" bodyend="79"/>
+    <listofallmembers>
+      <member refid="struct_forge_1_1_binding_1a0c5514d49854f54794b5194003057dee" prot="public" virt="non-virtual"><scope>Forge::Binding</scope><name>Binding</name></member>
+      <member refid="struct_forge_1_1_binding_1a9281b9d8c3f1f63e47aa4803f3c61f98" prot="public" virt="non-virtual"><scope>Forge::Binding</scope><name>callback</name></member>
+      <member refid="struct_forge_1_1_binding_1a7557f6cd34fcf5fe4df08f7eb902b37a" prot="public" virt="non-virtual"><scope>Forge::Binding</scope><name>id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

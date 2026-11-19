@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="class_forge_1_1_texture" kind="class" language="C++" prot="public">
+    <compoundname>Forge::Texture</compoundname>
+    <includes refid="_texture_8h" local="no">Texture.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_forge_1_1_texture_1a96bd46a349b4c095d4200d72456055e4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Forge::Texture::loaded</definition>
+        <argsstring></argsstring>
+        <name>loaded</name>
+        <qualifiedname>Forge::Texture::loaded</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Texture.h" line="67" column="6" bodyfile="Include/Texture.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_texture_1a8b0c5752839ceedce8a4003164def844" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; ID3D11ShaderResourceView &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;ID3D11ShaderResourceView&gt; Forge::Texture::_textureView</definition>
+        <argsstring></argsstring>
+        <name>_textureView</name>
+        <qualifiedname>Forge::Texture::_textureView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Texture.h" line="68" column="24" bodyfile="Include/Texture.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_forge_1_1_texture_1a944de5a411d1e00e63545e80ec5270e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Forge::Texture::Texture</definition>
+        <argsstring>(std::string filename=&quot;&quot;)</argsstring>
+        <name>Texture</name>
+        <qualifiedname>Forge::Texture::Texture</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="class_forge_1_1_texture" kindref="compound">Texture</ref> instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Optionally loads a texture from the specified image file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the image file to load. Defaults to an empty string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Texture.h" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_texture_1ac9f2d81ef748523f293a13d46acd8134" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Forge::Texture::LoadTextureFromFile</definition>
+        <argsstring>(std::string filename)</argsstring>
+        <name>LoadTextureFromFile</name>
+        <qualifiedname>Forge::Texture::LoadTextureFromFile</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Loads a texture from a local image file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the image file to load.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the texture was successfully loaded; otherwise, false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Texture.h" line="36" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_texture_1a799c09521d439c30484f8b3259f275b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Forge::Texture::LoadImageFromURL</definition>
+        <argsstring>(std::string url)</argsstring>
+        <name>LoadImageFromURL</name>
+        <qualifiedname>Forge::Texture::LoadImageFromURL</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+<para>Loads a texture from a remote URL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>URL identifying the image resource to load.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the texture was successfully loaded; otherwise, false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Texture.h" line="46" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_texture_1a0902a817ad00457f6f4e97a9c6bff818" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Forge::Texture::IsValidTexture</definition>
+        <argsstring>() const</argsstring>
+        <name>IsValidTexture</name>
+        <qualifiedname>Forge::Texture::IsValidTexture</qualifiedname>
+        <briefdescription>
+<para>Determines whether the texture has been successfully loaded. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the texture is valid; otherwise, false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Texture.h" line="53" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_texture_1af1568d8e922650577ef6f80cdf1ded62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const Microsoft::WRL::ComPtr&lt; ID3D11ShaderResourceView &gt; &amp;</type>
+        <definition>const Microsoft::WRL::ComPtr&lt; ID3D11ShaderResourceView &gt; &amp; Forge::Texture::GetShaderResource</definition>
+        <argsstring>() const</argsstring>
+        <name>GetShaderResource</name>
+        <qualifiedname>Forge::Texture::GetShaderResource</qualifiedname>
+        <briefdescription>
+<para>Retrieves the Direct3D 11 shader resource view. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides access to the texture resource for binding to the graphics pipeline.</para>
+<para><simplesect kind="return"><para>Constant reference to the texture&apos;s shader resource view. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Texture.h" line="64" column="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Manages a texture resource used by the graphics renderer. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides functionality for loading image textures from local files or remote URLs and accessing the resulting Direct3D 11 shader resource view. </para>
+    </detaileddescription>
+    <location file="Include/Texture.h" line="14" column="1" bodyfile="Include/Texture.h" bodystart="15" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_forge_1_1_texture_1a8b0c5752839ceedce8a4003164def844" prot="private" virt="non-virtual"><scope>Forge::Texture</scope><name>_textureView</name></member>
+      <member refid="class_forge_1_1_texture_1af1568d8e922650577ef6f80cdf1ded62" prot="public" virt="non-virtual"><scope>Forge::Texture</scope><name>GetShaderResource</name></member>
+      <member refid="class_forge_1_1_texture_1a0902a817ad00457f6f4e97a9c6bff818" prot="public" virt="non-virtual"><scope>Forge::Texture</scope><name>IsValidTexture</name></member>
+      <member refid="class_forge_1_1_texture_1a96bd46a349b4c095d4200d72456055e4" prot="private" virt="non-virtual"><scope>Forge::Texture</scope><name>loaded</name></member>
+      <member refid="class_forge_1_1_texture_1a799c09521d439c30484f8b3259f275b4" prot="public" virt="non-virtual"><scope>Forge::Texture</scope><name>LoadImageFromURL</name></member>
+      <member refid="class_forge_1_1_texture_1ac9f2d81ef748523f293a13d46acd8134" prot="public" virt="non-virtual"><scope>Forge::Texture</scope><name>LoadTextureFromFile</name></member>
+      <member refid="class_forge_1_1_texture_1a944de5a411d1e00e63545e80ec5270e7" prot="public" virt="non-virtual"><scope>Forge::Texture</scope><name>Texture</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

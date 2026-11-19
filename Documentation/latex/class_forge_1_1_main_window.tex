@@ -1,0 +1,91 @@
+\doxysection{Forge::Main\+Window Class Reference}
+\hypertarget{class_forge_1_1_main_window}{}\label{class_forge_1_1_main_window}\index{Forge::MainWindow@{Forge::MainWindow}}
+
+
+The primary application window, derived from the base \doxylink{class_forge_1_1_window}{Window} class.  
+
+
+
+
+{\ttfamily \+\#include $<$Main\+Window.\+h$>$}
+
+Inheritance diagram for Forge::Main\+Window:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_forge_1_1_main_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual LRESULT \doxymbox{\hyperlink{class_forge_1_1_main_window_a6987f90a58579865320c5b8605430ec6}{Handle\+Message}} (HWND h\+Wnd, UINT message, WPARAM w\+Param, LPARAM l\+Param) override
+\begin{DoxyCompactList}\small\item\em Processes a Windows message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_forge_1_1_window}{Forge::\+\+Window}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Window} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_forge_1_1_window}{Window} instance. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Window} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_forge_1_1_window}{Window} instance. \end{DoxyCompactList}\item 
+virtual ATOM \doxymbox{\hyperlink{class_forge_1_1_window_abd00f3b279b916f495f2d31fa7fffd12}{Register}} ()
+\begin{DoxyCompactList}\small\item\em Registers the window class with the operating system. \end{DoxyCompactList}\item 
+virtual BOOL \doxymbox{\hyperlink{class_forge_1_1_window_a4cb85dbc4a27904c987e5ffd394ce790}{Create}} ()
+\begin{DoxyCompactList}\small\item\em Creates the application window. \end{DoxyCompactList}\item 
+BOOL \doxymbox{\hyperlink{class_forge_1_1_window_aa8470f6e110bc26b00d0306c89394db4}{Show}} () const
+\begin{DoxyCompactList}\small\item\em Displays the window. \end{DoxyCompactList}\item 
+BOOL \doxymbox{\hyperlink{class_forge_1_1_window_a2de0485c45180dd88910500f0e596404}{Update}} () const
+\begin{DoxyCompactList}\small\item\em Updates the window. \end{DoxyCompactList}\item 
+HWND \doxymbox{\hyperlink{class_forge_1_1_window_a6b2b66da88c62f04524eede800aaf991}{Get\+HWND}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the handle associated with this window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Protected Member Functions inherited from \doxymbox{\hyperlink{class_forge_1_1_window}{Forge::\+\+Window}}}
+\begin{DoxyCompactItemize}
+\item 
+static INT\+\_\+\+PTR CALLBACK \doxymbox{\hyperlink{class_forge_1_1_window_a3de07f68dab333fa97876bee2473fcdd}{About}} (HWND h\+Dlg, UINT message, WPARAM w\+Param, LPARAM l\+Param)
+\begin{DoxyCompactList}\small\item\em Handles the About dialog\textquotesingle{}s Windows messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_forge_1_1_window}{Forge::\+\+Window}}}
+\begin{DoxyCompactItemize}
+\item 
+HWND {\bfseries \+\_\+h\+Wnd}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The primary application window, derived from the base \doxylink{class_forge_1_1_window}{Window} class. 
+
+\label{class_forge_1_1_main_window_doc-func-members}
+\Hypertarget{class_forge_1_1_main_window_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_forge_1_1_main_window_a6987f90a58579865320c5b8605430ec6}\index{Forge::MainWindow@{Forge::MainWindow}!HandleMessage@{HandleMessage}}
+\index{HandleMessage@{HandleMessage}!Forge::MainWindow@{Forge::MainWindow}}
+\doxysubsubsection{\texorpdfstring{HandleMessage()}{HandleMessage()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_main_window_a6987f90a58579865320c5b8605430ec6} 
+virtual LRESULT Forge::\+\+Main\+Window::\+\+Handle\+Message (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd}{, }\item[{UINT}]{message}{, }\item[{WPARAM}]{w\+Param}{, }\item[{LPARAM}]{l\+Param}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Processes a Windows message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Wnd} & Handle to the window receiving the message. \\
+\hline
+{\em message} & Windows message identifier. \\
+\hline
+{\em w\+Param} & Additional message-\/specific information. \\
+\hline
+{\em l\+Param} & Additional message-\/specific information.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of processing the message. 
+\end{DoxyReturn}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_forge_1_1_window_af08d697bf71aac82bca0d96f68402911}{Forge::\+\+Window}}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Include/Main\+Window.\+h\end{DoxyCompactItemize}

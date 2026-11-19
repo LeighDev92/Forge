@@ -1,0 +1,52 @@
+\doxysection{Icosphere.\+h}
+\hypertarget{_icosphere_8h_source}{}\label{_icosphere_8h_source}\index{Include/Icosphere.h@{Include/Icosphere.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Mesh.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}framework.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }Forge}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }FORGE\_API\ \doxymbox{\hyperlink{class_forge_1_1_icosphere_ac833d5efa1a049ad67c56680c0b17143}{Icosphere}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_forge_1_1_mesh_a0f361fe2189c1f5aea2b7a7ab294ef3f}{Mesh}}}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_forge_1_1_icosphere_ac833d5efa1a049ad67c56680c0b17143}{Icosphere}}(\textcolor{keywordtype}{float}\ radius,\ \textcolor{keywordtype}{int}\ subdivisions,\ \textcolor{keywordtype}{bool}\ inverted\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_icosphere_a46d9be341f7228b1be5fc6be1b2ab30e}{Generate}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_icosphere_a18afbb948cfae242389d9d290090262d}{SetRadius}}(\textcolor{keywordtype}{float}\ radius);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_icosphere_a6369dd58e4a46c46b2a3d59cb21e5490}{SetSubdivisions}}(\textcolor{keywordtype}{int}\ subdivisions);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_forge_1_1_icosphere_a30d420bb59232025d76eb05f58087d73}{GetRadius}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_forge_1_1_icosphere_a051e31d8e361ea9d6b0d23a3dc65f320}{GetSubdivisions}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \_radius;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_subdivisions;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_inverted;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_icosphere_ac1cfe19d3566b8c135f500fc95a6483f}{CreateBaseIcosahedron}}(std::vector<FVector>\&\ triangles);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_icosphere_a02a83a9b5d21c16620cb03593865527a}{Subdivide}}(std::vector<FVector>\&\ triangles);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}}\ \doxymbox{\hyperlink{class_forge_1_1_icosphere_a0e745d6a2b4d4ca12744a7672b40f16e}{GetMidpoint}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}}\&\ a,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}}\&\ b)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_icosphere_ae6564906a9660092f99d0dd5375fa4d4}{AddTriangle}}(}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<FVector>\&\ output,}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}}\&\ a,}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}}\&\ b,}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}}\&\ c}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_icosphere_a7fdc8db6f714c0628c26daa6a4962639}{BuildVertices}}(\textcolor{keyword}{const}\ std::vector<FVector>\&\ triangles);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{struct_forge_1_1_f_vector2_d}{FVector2D}}\ \doxymbox{\hyperlink{class_forge_1_1_icosphere_a1494591b9635f643fe46fccdd5cd1f07}{CalculateSphereUV}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}}\&\ vertex);}
+\DoxyCodeLine{00135\ \ \ \ \ \};}
+\DoxyCodeLine{00136\ \}}
+
+\end{DoxyCode}

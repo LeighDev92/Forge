@@ -1,0 +1,271 @@
+\doxysection{Forge::Graphics\+Manager Class Reference}
+\hypertarget{class_forge_1_1_graphics_manager}{}\label{class_forge_1_1_graphics_manager}\index{Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a3bcc6659ca13ea0b09a0ff33865691bf}{Graphics\+Manager}} (HWND h\+Wnd)
+\begin{DoxyCompactList}\small\item\em Initializes the DirectX 11 graphics manager. \end{DoxyCompactList}\item 
+\Hypertarget{class_forge_1_1_graphics_manager_aae87999a5551fa6f9df8df5d706e58bd}\label{class_forge_1_1_graphics_manager_aae87999a5551fa6f9df8df5d706e58bd} 
+{\bfseries Graphics\+Manager} (const Graphics\+Manager \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy construction is disabled. \end{DoxyCompactList}\item 
+\Hypertarget{class_forge_1_1_graphics_manager_a9f6dd02010cecf2c3ad40900b24a90c8}\label{class_forge_1_1_graphics_manager_a9f6dd02010cecf2c3ad40900b24a90c8} 
+\doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a3bcc6659ca13ea0b09a0ff33865691bf}{Graphics\+Manager}} \& {\bfseries operator=} (const \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a3bcc6659ca13ea0b09a0ff33865691bf}{Graphics\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment is disabled. \end{DoxyCompactList}\item 
+\Hypertarget{class_forge_1_1_graphics_manager_a88ce8e55b82734b1a3215f4151cb0c4a}\label{class_forge_1_1_graphics_manager_a88ce8e55b82734b1a3215f4151cb0c4a} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Graphics\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Releases graphics resources and associated Direct3D objects. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a14c8592a2c3710b7eb63f670bae9db2a}{Resize}} (UINT width, UINT height)
+\begin{DoxyCompactList}\small\item\em Resizes the graphics viewport and associated render targets. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a5e42e0840e8b82b8a6a9bea96d180731}{Draw\+Mesh}} (\doxymbox{\hyperlink{class_forge_1_1_mesh}{Mesh}} \texorpdfstring{$\ast$}{*}mesh, bool draw\+\_\+solid=true, bool draw\+\_\+wireframe=false)
+\begin{DoxyCompactList}\small\item\em Renders a mesh using the configured graphics pipeline. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_acd72b80938cfc38deb576db3b9e5cc54}{Set\+Camera}} (\doxymbox{\hyperlink{class_forge_1_1_camera}{Camera}} \texorpdfstring{$\ast$}{*}camera)
+\begin{DoxyCompactList}\small\item\em Sets the active camera used by the graphics manager. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_forge_1_1_f_vector2_d}{FVector2D}} \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a8bceb464a4cd7be9291694c27c8d7587}{Convert\+To\+Clip\+Position}} (\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} world, \doxymbox{\hyperlink{struct_forge_1_1_f_transform}{FTransform}} transform)
+\begin{DoxyCompactList}\small\item\em Converts a world-\/space position into normalized clip-\/space coordinates. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a86b3c6d2727b5b91082064fe1e49f10e}{Is\+Position\+On\+Sphere\+Visible\+To\+Camera}} (\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}} position, \doxymbox{\hyperlink{struct_forge_1_1_f_transform}{FTransform}} transform) const
+\begin{DoxyCompactList}\small\item\em Determines whether a position on a transformed sphere is visible to the active camera. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a0b603d1dbc88794418813a4491ac63be}{Present\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Presents the rendered frame to the display. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a8ed2ee80aa2704094bb4086f761f99c3}{Clear\+Screen}} (float red, float green, float blue) noexcept
+\begin{DoxyCompactList}\small\item\em Clears the screen using the specified RGB color. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a40fdb46d46c3aedf1df26869c868d718}{Clear\+Render\+Target\+View}} (float red, float green, float blue) noexcept
+\begin{DoxyCompactList}\small\item\em Clears the active render target view. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_abebbe800e4f5179aa9d9aaa2a4008b7b}{Clear\+Depth\+Stencil\+View}} () noexcept
+\begin{DoxyCompactList}\small\item\em Clears the depth-\/stencil buffer. \end{DoxyCompactList}\item 
+const Com\+Ptr$<$ ID3\+D11\+Device $>$ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a0c8b4caeb26a078c83aeee6207d27cee}{Get\+Device}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the Direct3D 11 device. \end{DoxyCompactList}\item 
+const Com\+Ptr$<$ ID3\+D11\+Device\+Context $>$ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a67ea390dab337d2c1f3dac9a31be6f91}{Get\+Device\+Context}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the Direct3D 11 device context. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a248b2287108eab028387e1ae7215ec9f}{Create\+Texture\+From\+File}} (Com\+Ptr$<$ ID3\+D11\+Shader\+Resource\+View $>$ \&texture, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Creates a shader resource view from an image file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{class_forge_1_1_graphics_manager_doc-constructors}
+\Hypertarget{class_forge_1_1_graphics_manager_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_forge_1_1_graphics_manager_a3bcc6659ca13ea0b09a0ff33865691bf}\index{Forge::GraphicsManager@{Forge::GraphicsManager}!GraphicsManager@{GraphicsManager}}
+\index{GraphicsManager@{GraphicsManager}!Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection{\texorpdfstring{GraphicsManager()}{GraphicsManager()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_graphics_manager_a3bcc6659ca13ea0b09a0ff33865691bf} 
+Forge::\+\+Graphics\+Manager::\+\+Graphics\+Manager (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the DirectX 11 graphics manager. 
+
+Creates the Direct3D device, device context, swap chain, render targets, shaders, input layouts, rasterizer states, depth-\/stencil states, samplers, and constant buffers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Wnd} & Handle to the window associated with the graphics device. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_forge_1_1_graphics_manager_doc-func-members}
+\Hypertarget{class_forge_1_1_graphics_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_forge_1_1_graphics_manager_abebbe800e4f5179aa9d9aaa2a4008b7b}\index{Forge::GraphicsManager@{Forge::GraphicsManager}!ClearDepthStencilView@{ClearDepthStencilView}}
+\index{ClearDepthStencilView@{ClearDepthStencilView}!Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection{\texorpdfstring{ClearDepthStencilView()}{ClearDepthStencilView()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_graphics_manager_abebbe800e4f5179aa9d9aaa2a4008b7b} 
+void Forge::\+\+Graphics\+Manager::\+\+Clear\+Depth\+Stencil\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Clears the depth-\/stencil buffer. 
+
+Resets the depth and stencil information associated with the active depth-\/stencil view. \Hypertarget{class_forge_1_1_graphics_manager_a40fdb46d46c3aedf1df26869c868d718}\index{Forge::GraphicsManager@{Forge::GraphicsManager}!ClearRenderTargetView@{ClearRenderTargetView}}
+\index{ClearRenderTargetView@{ClearRenderTargetView}!Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection{\texorpdfstring{ClearRenderTargetView()}{ClearRenderTargetView()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_graphics_manager_a40fdb46d46c3aedf1df26869c868d718} 
+void Forge::\+\+Graphics\+Manager::\+\+Clear\+Render\+Target\+View (\begin{DoxyParamCaption}\item[{float}]{red}{, }\item[{float}]{green}{, }\item[{float}]{blue}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Clears the active render target view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em red} & Red color component. \\
+\hline
+{\em green} & Green color component. \\
+\hline
+{\em blue} & Blue color component. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_graphics_manager_a8ed2ee80aa2704094bb4086f761f99c3}\index{Forge::GraphicsManager@{Forge::GraphicsManager}!ClearScreen@{ClearScreen}}
+\index{ClearScreen@{ClearScreen}!Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection{\texorpdfstring{ClearScreen()}{ClearScreen()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_graphics_manager_a8ed2ee80aa2704094bb4086f761f99c3} 
+void Forge::\+\+Graphics\+Manager::\+\+Clear\+Screen (\begin{DoxyParamCaption}\item[{float}]{red}{, }\item[{float}]{green}{, }\item[{float}]{blue}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Clears the screen using the specified RGB color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em red} & Red color component. \\
+\hline
+{\em green} & Green color component. \\
+\hline
+{\em blue} & Blue color component. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_graphics_manager_a8bceb464a4cd7be9291694c27c8d7587}\index{Forge::GraphicsManager@{Forge::GraphicsManager}!ConvertToClipPosition@{ConvertToClipPosition}}
+\index{ConvertToClipPosition@{ConvertToClipPosition}!Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection{\texorpdfstring{ConvertToClipPosition()}{ConvertToClipPosition()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_graphics_manager_a8bceb464a4cd7be9291694c27c8d7587} 
+\doxymbox{\hyperlink{struct_forge_1_1_f_vector2_d}{FVector2D}} Forge::\+\+Graphics\+Manager::\+\+Convert\+To\+Clip\+Position (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}}}]{world}{, }\item[{\doxymbox{\hyperlink{struct_forge_1_1_f_transform}{FTransform}}}]{transform}{}\end{DoxyParamCaption})}
+
+
+
+Converts a world-\/space position into normalized clip-\/space coordinates. 
+
+Applies the supplied transform and camera matrices to determine the position\textquotesingle{}s corresponding screen-\/space location.
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & World-\/space position to convert. \\
+\hline
+{\em transform} & Transform applied to the world-\/space position.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Normalized clip-\/space X and Y coordinates. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_graphics_manager_a248b2287108eab028387e1ae7215ec9f}\index{Forge::GraphicsManager@{Forge::GraphicsManager}!CreateTextureFromFile@{CreateTextureFromFile}}
+\index{CreateTextureFromFile@{CreateTextureFromFile}!Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection{\texorpdfstring{CreateTextureFromFile()}{CreateTextureFromFile()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_graphics_manager_a248b2287108eab028387e1ae7215ec9f} 
+bool Forge::\+\+Graphics\+Manager::\+\+Create\+Texture\+From\+File (\begin{DoxyParamCaption}\item[{Com\+Ptr$<$ ID3\+D11\+Shader\+Resource\+View $>$ \&}]{texture}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Creates a shader resource view from an image file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & Reference to the shader resource view that will receive the created texture. \\
+\hline
+{\em filename} & Path to the image file to load.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the texture was successfully created; otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_graphics_manager_a5e42e0840e8b82b8a6a9bea96d180731}\index{Forge::GraphicsManager@{Forge::GraphicsManager}!DrawMesh@{DrawMesh}}
+\index{DrawMesh@{DrawMesh}!Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection{\texorpdfstring{DrawMesh()}{DrawMesh()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_graphics_manager_a5e42e0840e8b82b8a6a9bea96d180731} 
+void Forge::\+\+Graphics\+Manager::\+\+Draw\+Mesh (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_forge_1_1_mesh}{Mesh}} \texorpdfstring{$\ast$}{*}}]{mesh}{, }\item[{bool}]{draw\+\_\+solid}{ = {\ttfamily true}, }\item[{bool}]{draw\+\_\+wireframe}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Renders a mesh using the configured graphics pipeline. 
+
+Supports solid rendering, wireframe rendering, or both.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & Pointer to the mesh to render. \\
+\hline
+{\em draw\+\_\+solid} & Determines whether solid rendering is enabled. \\
+\hline
+{\em draw\+\_\+wireframe} & Determines whether wireframe rendering is enabled. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_graphics_manager_a0c8b4caeb26a078c83aeee6207d27cee}\index{Forge::GraphicsManager@{Forge::GraphicsManager}!GetDevice@{GetDevice}}
+\index{GetDevice@{GetDevice}!Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection{\texorpdfstring{GetDevice()}{GetDevice()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_graphics_manager_a0c8b4caeb26a078c83aeee6207d27cee} 
+const Com\+Ptr$<$ ID3\+D11\+Device $>$ Forge::\+\+Graphics\+Manager::\+\+Get\+Device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the Direct3D 11 device. 
+
+\begin{DoxyReturn}{Returns}
+Smart pointer to the Direct3D device. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_graphics_manager_a67ea390dab337d2c1f3dac9a31be6f91}\index{Forge::GraphicsManager@{Forge::GraphicsManager}!GetDeviceContext@{GetDeviceContext}}
+\index{GetDeviceContext@{GetDeviceContext}!Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection{\texorpdfstring{GetDeviceContext()}{GetDeviceContext()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_graphics_manager_a67ea390dab337d2c1f3dac9a31be6f91} 
+const Com\+Ptr$<$ ID3\+D11\+Device\+Context $>$ Forge::\+\+Graphics\+Manager::\+\+Get\+Device\+Context (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the Direct3D 11 device context. 
+
+\begin{DoxyReturn}{Returns}
+Smart pointer to the Direct3D device context. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_graphics_manager_a86b3c6d2727b5b91082064fe1e49f10e}\index{Forge::GraphicsManager@{Forge::GraphicsManager}!IsPositionOnSphereVisibleToCamera@{IsPositionOnSphereVisibleToCamera}}
+\index{IsPositionOnSphereVisibleToCamera@{IsPositionOnSphereVisibleToCamera}!Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection{\texorpdfstring{IsPositionOnSphereVisibleToCamera()}{IsPositionOnSphereVisibleToCamera()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_graphics_manager_a86b3c6d2727b5b91082064fe1e49f10e} 
+bool Forge::\+\+Graphics\+Manager::\+\+Is\+Position\+On\+Sphere\+Visible\+To\+Camera (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}}}]{position}{, }\item[{\doxymbox{\hyperlink{struct_forge_1_1_f_transform}{FTransform}}}]{transform}{}\end{DoxyParamCaption}) const}
+
+
+
+Determines whether a position on a transformed sphere is visible to the active camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position on the sphere\textquotesingle{}s surface. \\
+\hline
+{\em transform} & Transform applied to the sphere.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the position is facing the camera; otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{class_forge_1_1_graphics_manager_a0b603d1dbc88794418813a4491ac63be}\index{Forge::GraphicsManager@{Forge::GraphicsManager}!PresentFrame@{PresentFrame}}
+\index{PresentFrame@{PresentFrame}!Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection{\texorpdfstring{PresentFrame()}{PresentFrame()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_graphics_manager_a0b603d1dbc88794418813a4491ac63be} 
+void Forge::\+\+Graphics\+Manager::\+\+Present\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Presents the rendered frame to the display. 
+
+Swaps the back buffer with the front buffer through the swap chain. \Hypertarget{class_forge_1_1_graphics_manager_a14c8592a2c3710b7eb63f670bae9db2a}\index{Forge::GraphicsManager@{Forge::GraphicsManager}!Resize@{Resize}}
+\index{Resize@{Resize}!Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_graphics_manager_a14c8592a2c3710b7eb63f670bae9db2a} 
+void Forge::\+\+Graphics\+Manager::\+\+Resize (\begin{DoxyParamCaption}\item[{UINT}]{width}{, }\item[{UINT}]{height}{}\end{DoxyParamCaption})}
+
+
+
+Resizes the graphics viewport and associated render targets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & New viewport width in pixels. \\
+\hline
+{\em height} & New viewport height in pixels. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_forge_1_1_graphics_manager_acd72b80938cfc38deb576db3b9e5cc54}\index{Forge::GraphicsManager@{Forge::GraphicsManager}!SetCamera@{SetCamera}}
+\index{SetCamera@{SetCamera}!Forge::GraphicsManager@{Forge::GraphicsManager}}
+\doxysubsubsection{\texorpdfstring{SetCamera()}{SetCamera()}}
+{\footnotesize\ttfamily \label{class_forge_1_1_graphics_manager_acd72b80938cfc38deb576db3b9e5cc54} 
+void Forge::\+\+Graphics\+Manager::\+\+Set\+Camera (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_forge_1_1_camera}{Camera}} \texorpdfstring{$\ast$}{*}}]{camera}{}\end{DoxyParamCaption})}
+
+
+
+Sets the active camera used by the graphics manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & Pointer to the camera used for rendering and world-\/to-\/screen coordinate calculations. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Include/Graphics\+Manager.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,813 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="class_forge_1_1_mesh" kind="class" language="C++" prot="public">
+    <compoundname>Forge::Mesh</compoundname>
+    <derivedcompoundref refid="class_forge_1_1_cube" prot="public" virt="non-virtual">Forge::Cube</derivedcompoundref>
+    <derivedcompoundref refid="class_forge_1_1_icosphere" prot="public" virt="non-virtual">Forge::Icosphere</derivedcompoundref>
+    <includes refid="_mesh_8h" local="no">Mesh.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_forge_1_1_mesh_1a43dc7a7440f380281cc2cbfa85d47c15" prot="protected" static="no" mutable="no">
+        <type><ref refid="struct_forge_1_1_f_transform" kindref="compound">FTransform</ref></type>
+        <definition>FTransform Forge::Mesh::Transform</definition>
+        <argsstring></argsstring>
+        <name>Transform</name>
+        <qualifiedname>Forge::Mesh::Transform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="178" column="12" bodyfile="Include/Mesh.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_mesh_1af49ca031b5ad2a2c7ed5a6035ac23719" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_forge_1_1_vertex" kindref="compound">Vertex</ref> &gt;</type>
+        <definition>std::vector&lt;Vertex&gt; Forge::Mesh::Vertices</definition>
+        <argsstring></argsstring>
+        <name>Vertices</name>
+        <qualifiedname>Forge::Mesh::Vertices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="179" column="13" bodyfile="Include/Mesh.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_mesh_1ac8815e7bd940ce7aece5a18d98af1ef3" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; unsigned int &gt;</type>
+        <definition>std::vector&lt;unsigned int&gt; Forge::Mesh::Indices</definition>
+        <argsstring></argsstring>
+        <name>Indices</name>
+        <qualifiedname>Forge::Mesh::Indices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="180" column="13" bodyfile="Include/Mesh.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_mesh_1a51c4913593683c0e16607061396ea72a" prot="protected" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; ID3D11Buffer &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;ID3D11Buffer&gt; Forge::Mesh::pVertexBuffer</definition>
+        <argsstring></argsstring>
+        <name>pVertexBuffer</name>
+        <qualifiedname>Forge::Mesh::pVertexBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="181" column="24" bodyfile="Include/Mesh.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_mesh_1a2893e71093184ad107dc401c2ea37c9f" prot="protected" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; ID3D11Buffer &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;ID3D11Buffer&gt; Forge::Mesh::pIndexBuffer</definition>
+        <argsstring></argsstring>
+        <name>pIndexBuffer</name>
+        <qualifiedname>Forge::Mesh::pIndexBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="182" column="24" bodyfile="Include/Mesh.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_forge_1_1_mesh_1a4d06e55f2768cf468688b121ee43d910" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_forge_1_1_material" kindref="compound">Material</ref></type>
+        <definition>Material Forge::Mesh::material</definition>
+        <argsstring></argsstring>
+        <name>material</name>
+        <qualifiedname>Forge::Mesh::material</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="183" column="10" bodyfile="Include/Mesh.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a0f361fe2189c1f5aea2b7a7ab294ef3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Forge::Mesh::Mesh</definition>
+        <argsstring>(const FTransform transform=FTransform(), const std::string filename=&quot;&quot;)</argsstring>
+        <name>Mesh</name>
+        <qualifiedname>Forge::Mesh::Mesh</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_forge_1_1_f_transform" kindref="compound">FTransform</ref></type>
+          <declname>transform</declname>
+          <defval><ref refid="struct_forge_1_1_f_transform" kindref="compound">FTransform</ref>()</defval>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>filename</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="class_forge_1_1_mesh" kindref="compound">Mesh</ref> with the specified transform and optional file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial transformation applied to the mesh. Defaults to an identity transform. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional path to an OBJ file used to load mesh geometry. Defaults to an empty string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a0c1cd7f616ef020579164683915419ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Forge::Mesh::Mesh</definition>
+        <argsstring>(const std::string filename)</argsstring>
+        <name>Mesh</name>
+        <qualifiedname>Forge::Mesh::Mesh</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="class_forge_1_1_mesh" kindref="compound">Mesh</ref> from an OBJ file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the OBJ file containing mesh geometry. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a55a13f16f2a0d831c6ad49a5454ccdf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::Mesh::LoadFromFile</definition>
+        <argsstring>(const std::string filename)</argsstring>
+        <name>LoadFromFile</name>
+        <qualifiedname>Forge::Mesh::LoadFromFile</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Loads mesh geometry from an OBJ file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Populates the mesh&apos;s vertex data using the specified file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the OBJ file to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="47" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1ac79d1c1430b7cb560c30ba0c179cd44c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_forge_1_1_f_transform" kindref="compound">FTransform</ref></type>
+        <definition>FTransform Forge::Mesh::GetTransform</definition>
+        <argsstring>() const</argsstring>
+        <name>GetTransform</name>
+        <qualifiedname>Forge::Mesh::GetTransform</qualifiedname>
+        <briefdescription>
+<para>Retrieves the mesh transformation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current mesh transformation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="54" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a438c1de397ccd4e9ab4894f2eb92d501" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref></type>
+        <definition>FVector Forge::Mesh::GetPosition</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPosition</name>
+        <qualifiedname>Forge::Mesh::GetPosition</qualifiedname>
+        <briefdescription>
+<para>Retrieves the mesh position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current world position of the mesh. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="61" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a698a0f764a292a861f8e1e4e2df81c47" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref></type>
+        <definition>FVector Forge::Mesh::GetScale</definition>
+        <argsstring>() const</argsstring>
+        <name>GetScale</name>
+        <qualifiedname>Forge::Mesh::GetScale</qualifiedname>
+        <briefdescription>
+<para>Retrieves the mesh scale. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current scale of the mesh. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="68" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1aa6769dc7ad2995d1008d9fc41c46fb8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_forge_1_1_f_rotator" kindref="compound">FRotator</ref></type>
+        <definition>FRotator Forge::Mesh::GetRotation</definition>
+        <argsstring>() const</argsstring>
+        <name>GetRotation</name>
+        <qualifiedname>Forge::Mesh::GetRotation</qualifiedname>
+        <briefdescription>
+<para>Retrieves the mesh rotation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current rotation of the mesh. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="75" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a2f61a6d890906307f24566e3effdd44b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_forge_1_1_material" kindref="compound">Material</ref> &amp;</type>
+        <definition>const Material &amp; Forge::Mesh::GetMaterial</definition>
+        <argsstring>() const</argsstring>
+        <name>GetMaterial</name>
+        <qualifiedname>Forge::Mesh::GetMaterial</qualifiedname>
+        <briefdescription>
+<para>Retrieves the mesh material. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Constant reference to the mesh material. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="82" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1aeab24d5a6ccfd715f71a96d9d247b88f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref></type>
+        <definition>FVector Forge::Mesh::GetForwardVector</definition>
+        <argsstring>() const</argsstring>
+        <name>GetForwardVector</name>
+        <qualifiedname>Forge::Mesh::GetForwardVector</qualifiedname>
+        <briefdescription>
+<para>Retrieves the mesh&apos;s forward direction vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Normalized forward direction derived from the mesh rotation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="89" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a5cf5f025b10d5efc194808419eca8636" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref></type>
+        <definition>FVector Forge::Mesh::GetRightVector</definition>
+        <argsstring>() const</argsstring>
+        <name>GetRightVector</name>
+        <qualifiedname>Forge::Mesh::GetRightVector</qualifiedname>
+        <briefdescription>
+<para>Retrieves the mesh&apos;s right direction vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Normalized right direction derived from the mesh rotation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="96" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1afbddf44f294ce02b145012f75c71bdfa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref></type>
+        <definition>FVector Forge::Mesh::GetUpVector</definition>
+        <argsstring>() const</argsstring>
+        <name>GetUpVector</name>
+        <qualifiedname>Forge::Mesh::GetUpVector</qualifiedname>
+        <briefdescription>
+<para>Retrieves the mesh&apos;s up direction vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Normalized up direction derived from the mesh rotation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="104" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1ac6112ae1f0f293f0b1d6caee4ecb6567" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="struct_forge_1_1_vertex" kindref="compound">Vertex</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; Vertex &gt; &amp; Forge::Mesh::GetVertices</definition>
+        <argsstring>() const</argsstring>
+        <name>GetVertices</name>
+        <qualifiedname>Forge::Mesh::GetVertices</qualifiedname>
+        <briefdescription>
+<para>Retrieves the mesh vertex collection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Constant reference to the mesh vertex data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="111" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a0542400ed35c494d2e3801e5443da3dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; unsigned int &gt; &amp;</type>
+        <definition>const std::vector&lt; unsigned int &gt; &amp; Forge::Mesh::GetIndices</definition>
+        <argsstring>() const</argsstring>
+        <name>GetIndices</name>
+        <qualifiedname>Forge::Mesh::GetIndices</qualifiedname>
+        <briefdescription>
+<para>Retrieves the mesh index collection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const std::vector&lt;unsigned int&gt;&amp; Constant reference to the mesh index data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="118" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a86b9fd3c080eb7f888356e4065ce66c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::Mesh::SetTransform</definition>
+        <argsstring>(FTransform transform)</argsstring>
+        <name>SetTransform</name>
+        <qualifiedname>Forge::Mesh::SetTransform</qualifiedname>
+        <param>
+          <type><ref refid="struct_forge_1_1_f_transform" kindref="compound">FTransform</ref></type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+<para>Sets the mesh transformation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New transformation to apply to the mesh. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="125" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a9927cd8a2f0fc71a60cc507e6852df75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::Mesh::SetPosition</definition>
+        <argsstring>(FVector position)</argsstring>
+        <name>SetPosition</name>
+        <qualifiedname>Forge::Mesh::SetPosition</qualifiedname>
+        <param>
+          <type><ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Sets the mesh position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New position of the mesh. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="132" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a236854b50e3ee7c307751804de9d36b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::Mesh::SetScale</definition>
+        <argsstring>(FVector scale)</argsstring>
+        <name>SetScale</name>
+        <qualifiedname>Forge::Mesh::SetScale</qualifiedname>
+        <param>
+          <type><ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref></type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>Sets the mesh scale. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New scale of the mesh. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="139" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a9ed97eea3696658906c3147e4183fc23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::Mesh::SetRotation</definition>
+        <argsstring>(FRotator rotation)</argsstring>
+        <name>SetRotation</name>
+        <qualifiedname>Forge::Mesh::SetRotation</qualifiedname>
+        <param>
+          <type><ref refid="struct_forge_1_1_f_rotator" kindref="compound">FRotator</ref></type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription>
+<para>Sets the mesh rotation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New rotation of the mesh. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="146" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1aad2abdb46d4759680580b01bc48f32aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::Mesh::SetMaterial</definition>
+        <argsstring>(const Material &amp;mat)</argsstring>
+        <name>SetMaterial</name>
+        <qualifiedname>Forge::Mesh::SetMaterial</qualifiedname>
+        <param>
+          <type>const <ref refid="class_forge_1_1_material" kindref="compound">Material</ref> &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <briefdescription>
+<para>Assigns a material to the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_forge_1_1_material" kindref="compound">Material</ref> to assign to the mesh. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="153" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a3de8f5d7a89503235faf3131e384848e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Forge::Mesh::HasIndexBuffer</definition>
+        <argsstring>() const</argsstring>
+        <name>HasIndexBuffer</name>
+        <qualifiedname>Forge::Mesh::HasIndexBuffer</qualifiedname>
+        <briefdescription>
+<para>Determines whether the mesh contains index data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool True if the mesh has an index buffer; otherwise, false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="161" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a71d24ea880361e7244d4ef8908fc54f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Microsoft::WRL::ComPtr&lt; ID3D11Buffer &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt; ID3D11Buffer &gt; Forge::Mesh::GetVertexBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>GetVertexBuffer</name>
+        <qualifiedname>Forge::Mesh::GetVertexBuffer</qualifiedname>
+        <briefdescription>
+<para>Retrieves the Direct3D 11 vertex buffer of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Smart pointer to the mesh&apos;s vertex buffer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="168" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a0c89dd63b21a56fff16956797c02b387" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Microsoft::WRL::ComPtr&lt; ID3D11Buffer &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt; ID3D11Buffer &gt; Forge::Mesh::GetIndexBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>GetIndexBuffer</name>
+        <qualifiedname>Forge::Mesh::GetIndexBuffer</qualifiedname>
+        <briefdescription>
+<para>Retrieves the Direct3D 11 index buffer of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Smart pointer to the mesh&apos;s index buffer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="175" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a94b181a7cb79f95d46f331d780626788" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::Mesh::CreateVertexBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>CreateVertexBuffer</name>
+        <qualifiedname>Forge::Mesh::CreateVertexBuffer</qualifiedname>
+        <briefdescription>
+<para>Creates the Direct3D 11 vertex buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the GPU vertex buffer using the mesh&apos;s current vertex collection. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="191" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a099eb61cfc54a4c862015470c3657f56" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Forge::Mesh::CreateIndexBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>CreateIndexBuffer</name>
+        <qualifiedname>Forge::Mesh::CreateIndexBuffer</qualifiedname>
+        <briefdescription>
+<para>Creates the Direct3D 11 index buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the GPU index buffer using the mesh&apos;s current index collection. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="199" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="class_forge_1_1_mesh_1a15d8f75c7cae479347a5194cfe33fc89" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Forge::Mesh::loadOBJ</definition>
+        <argsstring>(const std::string &amp;filename, std::vector&lt; Vertex &gt; &amp;outVertices)</argsstring>
+        <name>loadOBJ</name>
+        <qualifiedname>Forge::Mesh::loadOBJ</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_forge_1_1_vertex" kindref="compound">Vertex</ref> &gt; &amp;</type>
+          <declname>outVertices</declname>
+        </param>
+        <briefdescription>
+<para>Loads vertex data from an OBJ file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Parses the specified OBJ file and populates the supplied vertex collection.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the OBJ file to load. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outVertices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output collection receiving the loaded vertex data.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool True if the OBJ file was successfully loaded; otherwise, false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="214" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_forge_1_1_mesh_1ae2b8f91398a9c1d930806ced103ffe93" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref></type>
+        <definition>static FVector Forge::Mesh::CalculateFaceNormal</definition>
+        <argsstring>(const FVector &amp;a, const FVector &amp;b, const FVector &amp;c)</argsstring>
+        <name>CalculateFaceNormal</name>
+        <qualifiedname>Forge::Mesh::CalculateFaceNormal</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the normal vector of a triangle face. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First vertex of the triangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second vertex of the triangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third vertex of the triangle.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_forge_1_1_f_vector" kindref="compound">FVector</ref> Calculated face normal vector. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/Mesh.h" line="225" column="16"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a renderable 3D mesh. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Stores mesh geometry, transformation data, material properties, and Direct3D 11 vertex and index buffers.</para>
+<para>Supports loading mesh geometry from OBJ files, modifying transformations, configuring materials, and providing geometry and buffer data to the graphics renderer. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Forge::Cube</label>
+        <link refid="class_forge_1_1_cube"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Forge::Icosphere</label>
+        <link refid="class_forge_1_1_icosphere"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Forge::Mesh</label>
+        <link refid="class_forge_1_1_mesh"/>
+      </node>
+      <node id="4">
+        <label>Forge::SkySphere</label>
+        <link refid="class_forge_1_1_sky_sphere"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Forge::FRotator</label>
+        <link refid="struct_forge_1_1_f_rotator"/>
+      </node>
+      <node id="2">
+        <label>Forge::FTransform</label>
+        <link refid="struct_forge_1_1_f_transform"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Position</edgelabel>
+          <edgelabel>Scale</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>Rotation</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Forge::FVector</label>
+        <link refid="struct_forge_1_1_f_vector"/>
+      </node>
+      <node id="5">
+        <label>Forge::Material</label>
+        <link refid="class_forge_1_1_material"/>
+      </node>
+      <node id="1">
+        <label>Forge::Mesh</label>
+        <link refid="class_forge_1_1_mesh"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Transform</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>material</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Include/Mesh.h" line="19" column="1" bodyfile="Include/Mesh.h" bodystart="20" bodyend="226"/>
+    <listofallmembers>
+      <member refid="class_forge_1_1_mesh_1ae2b8f91398a9c1d930806ced103ffe93" prot="protected" virt="non-virtual"><scope>Forge::Mesh</scope><name>CalculateFaceNormal</name></member>
+      <member refid="class_forge_1_1_mesh_1a099eb61cfc54a4c862015470c3657f56" prot="protected" virt="non-virtual"><scope>Forge::Mesh</scope><name>CreateIndexBuffer</name></member>
+      <member refid="class_forge_1_1_mesh_1a94b181a7cb79f95d46f331d780626788" prot="protected" virt="non-virtual"><scope>Forge::Mesh</scope><name>CreateVertexBuffer</name></member>
+      <member refid="class_forge_1_1_mesh_1aeab24d5a6ccfd715f71a96d9d247b88f" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>GetForwardVector</name></member>
+      <member refid="class_forge_1_1_mesh_1a0c89dd63b21a56fff16956797c02b387" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>GetIndexBuffer</name></member>
+      <member refid="class_forge_1_1_mesh_1a0542400ed35c494d2e3801e5443da3dd" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>GetIndices</name></member>
+      <member refid="class_forge_1_1_mesh_1a2f61a6d890906307f24566e3effdd44b" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>GetMaterial</name></member>
+      <member refid="class_forge_1_1_mesh_1a438c1de397ccd4e9ab4894f2eb92d501" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>GetPosition</name></member>
+      <member refid="class_forge_1_1_mesh_1a5cf5f025b10d5efc194808419eca8636" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>GetRightVector</name></member>
+      <member refid="class_forge_1_1_mesh_1aa6769dc7ad2995d1008d9fc41c46fb8a" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>GetRotation</name></member>
+      <member refid="class_forge_1_1_mesh_1a698a0f764a292a861f8e1e4e2df81c47" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>GetScale</name></member>
+      <member refid="class_forge_1_1_mesh_1ac79d1c1430b7cb560c30ba0c179cd44c" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>GetTransform</name></member>
+      <member refid="class_forge_1_1_mesh_1afbddf44f294ce02b145012f75c71bdfa" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>GetUpVector</name></member>
+      <member refid="class_forge_1_1_mesh_1a71d24ea880361e7244d4ef8908fc54f5" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>GetVertexBuffer</name></member>
+      <member refid="class_forge_1_1_mesh_1ac6112ae1f0f293f0b1d6caee4ecb6567" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>GetVertices</name></member>
+      <member refid="class_forge_1_1_mesh_1a3de8f5d7a89503235faf3131e384848e" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>HasIndexBuffer</name></member>
+      <member refid="class_forge_1_1_mesh_1ac8815e7bd940ce7aece5a18d98af1ef3" prot="protected" virt="non-virtual"><scope>Forge::Mesh</scope><name>Indices</name></member>
+      <member refid="class_forge_1_1_mesh_1a55a13f16f2a0d831c6ad49a5454ccdf0" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>LoadFromFile</name></member>
+      <member refid="class_forge_1_1_mesh_1a15d8f75c7cae479347a5194cfe33fc89" prot="protected" virt="non-virtual"><scope>Forge::Mesh</scope><name>loadOBJ</name></member>
+      <member refid="class_forge_1_1_mesh_1a4d06e55f2768cf468688b121ee43d910" prot="protected" virt="non-virtual"><scope>Forge::Mesh</scope><name>material</name></member>
+      <member refid="class_forge_1_1_mesh_1a0f361fe2189c1f5aea2b7a7ab294ef3f" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>Mesh</name></member>
+      <member refid="class_forge_1_1_mesh_1a0c1cd7f616ef020579164683915419ec" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>Mesh</name></member>
+      <member refid="class_forge_1_1_mesh_1a2893e71093184ad107dc401c2ea37c9f" prot="protected" virt="non-virtual"><scope>Forge::Mesh</scope><name>pIndexBuffer</name></member>
+      <member refid="class_forge_1_1_mesh_1a51c4913593683c0e16607061396ea72a" prot="protected" virt="non-virtual"><scope>Forge::Mesh</scope><name>pVertexBuffer</name></member>
+      <member refid="class_forge_1_1_mesh_1aad2abdb46d4759680580b01bc48f32aa" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>SetMaterial</name></member>
+      <member refid="class_forge_1_1_mesh_1a9927cd8a2f0fc71a60cc507e6852df75" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>SetPosition</name></member>
+      <member refid="class_forge_1_1_mesh_1a9ed97eea3696658906c3147e4183fc23" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>SetRotation</name></member>
+      <member refid="class_forge_1_1_mesh_1a236854b50e3ee7c307751804de9d36b7" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>SetScale</name></member>
+      <member refid="class_forge_1_1_mesh_1a86b9fd3c080eb7f888356e4065ce66c1" prot="public" virt="non-virtual"><scope>Forge::Mesh</scope><name>SetTransform</name></member>
+      <member refid="class_forge_1_1_mesh_1a43dc7a7440f380281cc2cbfa85d47c15" prot="protected" virt="non-virtual"><scope>Forge::Mesh</scope><name>Transform</name></member>
+      <member refid="class_forge_1_1_mesh_1af49ca031b5ad2a2c7ed5a6035ac23719" prot="protected" virt="non-virtual"><scope>Forge::Mesh</scope><name>Vertices</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

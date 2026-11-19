@@ -1,0 +1,94 @@
+\doxysection{Graphics\+Manager.\+h}
+\hypertarget{_graphics_manager_8h_source}{}\label{_graphics_manager_8h_source}\index{Include/GraphicsManager.h@{Include/GraphicsManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}framework.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }Microsoft::WRL::ComPtr;}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }Forge}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_forge_1_1_mesh}{Mesh}};}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_forge_1_1_camera}{Camera}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }FORGE\_API\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a3bcc6659ca13ea0b09a0ff33865691bf}{GraphicsManager}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a3bcc6659ca13ea0b09a0ff33865691bf}{GraphicsManager}}(HWND\ hWnd);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_aae87999a5551fa6f9df8df5d706e58bd}{GraphicsManager}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a3bcc6659ca13ea0b09a0ff33865691bf}{GraphicsManager}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a3bcc6659ca13ea0b09a0ff33865691bf}{GraphicsManager}}\&\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a9f6dd02010cecf2c3ad40900b24a90c8}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a3bcc6659ca13ea0b09a0ff33865691bf}{GraphicsManager}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a88ce8e55b82734b1a3215f4151cb0c4a}{\string~GraphicsManager}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a14c8592a2c3710b7eb63f670bae9db2a}{Resize}}(UINT\ width,\ UINT\ height);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a5e42e0840e8b82b8a6a9bea96d180731}{DrawMesh}}(\doxymbox{\hyperlink{class_forge_1_1_mesh}{Mesh}}*\ mesh,\ \textcolor{keywordtype}{bool}\ draw\_solid\ =\ \textcolor{keyword}{true},\ \textcolor{keywordtype}{bool}\ draw\_wireframe\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_acd72b80938cfc38deb576db3b9e5cc54}{SetCamera}}(\doxymbox{\hyperlink{class_forge_1_1_camera}{Camera}}*\ camera);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_forge_1_1_f_vector2_d}{FVector2D}}\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a8bceb464a4cd7be9291694c27c8d7587}{ConvertToClipPosition}}(\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}}\ world,\ \doxymbox{\hyperlink{struct_forge_1_1_f_transform}{FTransform}}\ transform);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a86b3c6d2727b5b91082064fe1e49f10e}{IsPositionOnSphereVisibleToCamera}}(\doxymbox{\hyperlink{struct_forge_1_1_f_vector}{FVector}}\ position,\ \doxymbox{\hyperlink{struct_forge_1_1_f_transform}{FTransform}}\ transform)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a0b603d1dbc88794418813a4491ac63be}{PresentFrame}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a8ed2ee80aa2704094bb4086f761f99c3}{ClearScreen}}(\textcolor{keywordtype}{float}\ red,\ \textcolor{keywordtype}{float}\ green,\ \textcolor{keywordtype}{float}\ blue)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a40fdb46d46c3aedf1df26869c868d718}{ClearRenderTargetView}}(\textcolor{keywordtype}{float}\ red,\ \textcolor{keywordtype}{float}\ green,\ \textcolor{keywordtype}{float}\ blue)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_abebbe800e4f5179aa9d9aaa2a4008b7b}{ClearDepthStencilView}}()\ noexcept;}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ const\ ComPtr<ID3D11Device>\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a0c8b4caeb26a078c83aeee6207d27cee}{GetDevice}}()\ const;}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ const\ ComPtr<ID3D11DeviceContext>\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a67ea390dab337d2c1f3dac9a31be6f91}{GetDeviceContext}}()\ const;}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_forge_1_1_graphics_manager_a248b2287108eab028387e1ae7215ec9f}{CreateTextureFromFile}}(ComPtr<ID3D11ShaderResourceView>\&\ texture,\ const\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ private:}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateDeviceAndSwapChain(HWND\ hWnd);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateRenderTargets();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateShaders();}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateInputLayouts();}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateRasterizerStates();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateDepthStencilStates();}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateSamplers();}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateConstantBuffers();}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#ifdef\ \_DEBUG}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ ComPtr<ID3D11Debug>\ \_debug;}
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ ComPtr<ID3D11Device>\ \_device;}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ ComPtr<IDXGISwapChain>\ \_swapChain;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ ComPtr<ID3D11DeviceContext>\ \_deviceContext;}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ ComPtr<ID3D11RenderTargetView>\ \_renderTargetView;}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ ComPtr<ID3D11DepthStencilView>\ \_depthStencilView;}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ ComPtr<ID3D11DepthStencilState>\ \_depthStencilState;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ ComPtr<ID3D11VertexShader>\ \_vertexShader;}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ ComPtr<ID3D11PixelShader>\ \_pixelShader;}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ ComPtr<ID3D11PixelShader>\ \_wireframePixelShader;}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ ComPtr<ID3D11InputLayout>\ \_inputLayout;}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ ComPtr<ID3D11RasterizerState>\ \_solidRasterizerState;}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ ComPtr<ID3D11RasterizerState>\ \_wireframeRasterizerState;}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ ComPtr<ID3D11SamplerState>\ \_textureSamplerState;}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ ComPtr<ID3D11Buffer>\ \_modelConstantBuffer;}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ ComPtr<ID3D11Buffer>\ \_materialConstantBuffer;}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ ComPtr<ID3D11Buffer>\ \_lightingConstantBuffer;}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_forge_1_1_camera}{Camera}}*\ \_camera;}
+\DoxyCodeLine{00220\ \ \ \ \ \};}
+\DoxyCodeLine{00221\ \}}
+
+\end{DoxyCode}
