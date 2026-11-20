@@ -71,3 +71,9 @@ Desktop.ini
 # NuGet
 packages/
 *.nupkg
+
+# Keep ForgeTests/TestAssets
+
+!ForgeTests
+!ForgeTests/TestAssets
+!ForgeTests/TestAssets/**

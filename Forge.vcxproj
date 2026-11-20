@@ -104,6 +104,9 @@
       <ObjectFileOutput>$(ProjectDir)%(Filename).cso</ObjectFileOutput>
       <ShaderModel>5.0</ShaderModel>
     </FxCompile>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)*.cso" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -129,6 +132,9 @@
       <ObjectFileOutput>$(ProjectDir)%(Filename).cso</ObjectFileOutput>
       <ShaderModel>5.0</ShaderModel>
     </FxCompile>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)*.cso" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -152,6 +158,9 @@
       <ObjectFileOutput>$(ProjectDir)%(Filename).cso</ObjectFileOutput>
       <ShaderModel>5.0</ShaderModel>
     </FxCompile>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)*.cso" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -177,6 +186,9 @@
       <ObjectFileOutput>$(ProjectDir)%(Filename).cso</ObjectFileOutput>
       <ShaderModel>5.0</ShaderModel>
     </FxCompile>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)*.cso" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ResourceCompile Include="Forge.rc" />

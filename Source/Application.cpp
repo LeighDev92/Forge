@@ -26,8 +26,9 @@ namespace Forge
 
 		_hAccelTable = LoadAccelerators(_hInstance, MAKEINTRESOURCE(IDC_FORGE));
 
+		_inputManager = std::make_unique<InputManager>();
 		_mainWindow = std::make_unique<MainWindow>();
-		_inputManager =  std::make_unique<InputManager>();
+
 
 		if (_mainWindow)
 		{
