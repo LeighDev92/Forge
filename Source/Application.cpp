@@ -29,7 +29,6 @@ namespace Forge
 		_inputManager = std::make_unique<InputManager>();
 		_mainWindow = std::make_unique<MainWindow>();
 
-
 		if (_mainWindow)
 		{
 			HWND hWnd = _mainWindow->GetHWND();
